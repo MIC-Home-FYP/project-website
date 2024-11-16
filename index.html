@@ -66,7 +66,7 @@
         <sl-tree-item expanded>
           <a href="#section-header-1">1. An Introduction To MIC@Home</a>
           <sl-tree-item>
-            <a href="#sub-section-1-header-1.1">1.1 Moving Care To The Home</a>
+            <a href="#sub-section-1-header-1">1.1 Moving Care To The Home</a>
           </sl-tree-item>
           <sl-tree-item expanded>
             <a href="#sub-section-1-header-2">1.2. Key Stakeholders</a>
@@ -229,7 +229,7 @@
     <div>
       <div id="section-header-1">
         <h2> 1. An Introduction To MIC@Home </h2>
-        <video-component tag="intro" source="https://www.youtube.com/embed/v=a5UuXfUBgXM" 
+        <video-component tag="intro" source="https://www.youtube.com/embed/eRxcN-WTJig" 
           subtitle="Video: An introduction to MIC@Home"></video-component>
         <p>
           The Mobile Inpatient Care @ Home (MIC@Home) initiative, launched by the Ministry of Health (MOH) through the MOH Office for Healthcare Transformation (MOHT), aims to offer eligible patients the option of receiving inpatient-level care in their own homes rather than in a hospital ward. The program was designed to alleviate the growing strain on hospital bed capacity in Singapore, which is particularly relevant in light of the aging population and increasing healthcare demands.
@@ -585,7 +585,7 @@
         </p>
       </div>
 
-      <div>
+      <div id="sub-section-3-header-4">
         <h3>3.4. Value Proposition (Nurses)</h3>
         <p>
           Based on the How-Might-We statements and pain points identified in the user journey maps, essential insights were organized into a value proposition canvas:
@@ -610,51 +610,178 @@
     <div>
       <!-- This is an example of what a section might look like -->
       <div id="section-header-4">
-        <h2> 1. Features </h2>
-        <p>       </p>
+        <h2>4. Concept generation</h2>
       </div>
 
       <div id="sub-section-4-header-1">
-        <h3>4.1 Wireframes</h3>
+        <h3>4.1. Design Statement</h3>
         <p>
-          Wireframes.
+          The project aims to develop a comprehensive solution for virtual patient monitoring that facilitates seamless communication between patients and the healthcare team. This will be achieved through a software system featuring modules tailored to meet the specific needs of patients, nurses, and hospital care teams. A key component of this solution is the integration of Large Language Models (LLMs) to power an advanced chatbot feature. This chatbot will enhance patient engagement by addressing secondary-level concerns in the absence of healthcare professionals, providing reminders for medication and vital signs monitoring, and generating concise summaries for nursing staff. This approach is designed to improve care coordination, streamline workflows, and ultimately enhance patient outcomes.
         </p>
       </div>
 
       <div id="sub-section-4-header-2">
-        <h3>4.2 List of features</h3>
-        <p>
-          We have a total of five features as part of our solution. Three of these features are for the patients' module and the other two features are for the nurses' module. 
-        </p>
+        <h3>4.2. Functional Requirements</h3>
+        <table style="margin-left:auto; margin-right:auto;">
+          <caption><i>Table 5. Functional Requirements Table</i></caption>
+          <!-- row 1 -->
+          <tr>
+            <th></th>
+            <th><b>Main Functional Requirements</b></th>
+            <th><b>Features that address functional requirements </b></th>
+          </tr>
+          <!-- row 2 -->
+          <tr>
+            <td rowspan="6">Patients’ application</td>
+            <td>Engaging patients in recovery journey</td>
+            <td>A chatbot can provide tailored advice, reminders, and resources that suits patient's unique recovery needs</td>
+          </tr>
+          <!-- row 3 -->
+          <tr>
+            <td>Handling secondary-level patient concerns</td>
+            <td>Well constrained chatbot to handle simple medical queries with appropriate escalation of patient concerns</td>
+          </tr>
+          <!-- row 4 -->
+          <tr>
+            <td>Automated medication and vitals monitoring</td>
+            <td rowspan="3">Patient application has the following features: 
+              <ul>
+                <li>regular reminders on medication and vitals</li>
+                <li>follow-ups by the chatbot to check-in and assist in query management</li>
+                <li>Vitals uploading</li>
+              </ul>
+            </td>
+          </tr>
+          <!-- row 5 -->
+          <tr>
+            <td>Easy vitals uploading</td>
+          </tr>
+          <!-- row 6 -->
+          <tr>
+            <td>Vitals measurement query handling</td>
+          </tr>
+          <!-- row 7 -->
+          <tr>
+            <td>Escalation or SOS for emergency situations</td>
+            <td>Patient app should have a feature that allows patients to connect with healthcare providers</td>
+          </tr>
+          <!-- row 8 -->
+          <tr>
+            <td rowspan="3">Nurses’ application</td>
+            <td>Care plan upload</td>
+            <td>The nurse module should have a dedicated screen and support for the upload of a patient’s care plan. This care plan should be in a commonly-used file format such as word document or pdf.</td>
+          </tr>
+          <!-- row 9 -->
+          <tr>
+            <td>Concise summary generation</td>
+            <td>Facilitates communication and updates across healthcare team (e.g third-party nurses from minmed) and highlighting patient concerns captured in chatbot</td>
+          </tr>
+          <!-- row 10 -->
+          <tr>
+            <td>Easy documentation for nurses</td>
+            <td>
+              <ul>
+                <li>Speech to text feature that facilitates easier documentation</li>
+                <li>Auto-formatting that ensures all necessary information is recorded</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br><br>
       </div>
-      <div id="sub-section-4-header-2.1">
-        <h4>4.2.1 Feature 1</h4>
-        <p>
-          Feature 1.
-        </p>
+
+      <div id="sub-section-4-header-3">
+        <h3>4.3. Non-Functional Requirements</h3>
+
+        <table style="margin-left:auto; margin-right:auto;">
+          <caption><i>Table 6. Non-Functional Requirements Table</i></caption>
+          <tr>
+            <th>Non-functional Requirement</th>
+            <th>Reason</th>
+          </tr>
+          <tr>
+            <td>
+              Platform Constraints:
+              <ul>
+                <li>
+                  The application must be developed for multi-platform use, specifically Android and iOS (phone), and Windows Desktop, macOS, and Linux (desktop).
+                </li>
+              </ul>
+            </td>
+            <td>Support both patient (phone) and nurse (desktop) modules in the app. All of the common desktop OSes are listed for this requirement as hospitals might have computers with different OSes.</td>
+          </tr>
+          <tr>
+            <td>
+              User Input:
+              <ul>
+                <li>
+                  The application must support both speech and text input.
+                </li>
+              </ul>
+            </td>
+            <td>Offers more choice to the patients (do not have to type to input), and assists nurses with their documentation workflow (no need to type out their treatment summaries/reports)</td>
+          </tr>
+          <tr>
+            <td>
+              Data Persistence:
+              <ul>
+                <li>
+                  Any patient conversations input into the system must be removed from the system after 7 days.
+                </li>
+                <li>
+                  After a user is no longer enrolled/involved in MIC@Home, their data must be removed from the system within 7 days.
+                </li>
+              </ul>
+            </td>
+            <td>This ensures that the database of patient data does not get exceedingly large and compromise the performance of the system. This also minimizes the data held by the system at any point in time and thus reduces the impact of a loss in confidentiality of the system data should such a data breach occur.</td>
+          </tr>
+          <tr>
+            <td>
+              Data Security:
+              <ul>
+                <li>
+                  Users are required to be authenticated before they can access any of the system’s services.
+                </li>
+                <li>
+                  Patient side should have a username and password system for authentication.
+                </li>
+                <li>
+                  Nurse side should have 2 factor authentication to have heightened security.
+                </li>
+              </ul>
+            </td>
+            <td>This ensures that unauthorized users cannot gain access to the system’s data. The heightened security measures for the nurse module is proportional to the amount and confidentiality of the data that nurses can gain access to.</td>
+          </tr>
+          <tr>
+            <td>
+              System Load:
+              <ul>
+                <li>
+                  The system should be able to accept 1000 patients and nurses as users simultaneously without any errors or reduced performance.
+                </li>
+              </ul>
+            </td>
+            <td>This ensures that the system can handle the load of the patients and nurses using it. In particular, 1000 is a conservative estimate for both patients and nurses given that MOH has around 100 concurrent patients as of early 2024 and seeks to triple their intake by end of 2024, and the ratio of nurse using the system to patients for MIC@Home will be significantly higher due to external nurses and rotations in nurse shifts (<i>DELIVERING CARE BEYOND HOSPITALS</i>, 2024).</td>
+          </tr>
+        </table>
+        <br><br>
       </div>
-      <div id="sub-section-4-header-2.2">
-        <h4>4.2.2 Feature 2</h4>
+
+      <div id="sub-section-4-header-4">
+        <h3>4.4. Morphological Chart</h3>
         <p>
-          Feature 2.
-        </p>
-      </div>
-      <div id="sub-section-4-header-2.3">
-        <h4>4.2.3 Feature 3</h4>
-        <p>
-          Feature 3.
-        </p>
-      </div>
-      <div id="sub-section-4-header-2.4">
-        <h4>4.2.1 Feature 4</h4>
-        <p>
-          Feature 4.
-        </p>
-      </div>
-      <div id="sub-section-4-header-2.5">
-        <h4>4.2.5 Feature 5</h4>
-        <p>
-          Feature 5.
+          Based on the key requirements that our solution should entail (Figure 13), we came up with several solution principles for the main functions on vitals update, patient query handling, patient summary update by nurses and the chatbot.
+          <br><br>
+
+          <image-component tag="image" source="assets/morph_chart.png"
+          subtitle="Figure 13: Morphological chart">
+          </image-component>
+          <br><br>
+
+          Considering the objectives of the MIC@Home program, which aims to alleviate the constraints faced by hospitals, we have selected to advance with Concept A. This concept incorporates several innovative features: an uploading mechanism for vital updates, a RAG-implemented knowledge-constrained AI chatbot, speech-to-text input for nurses to facilitate updates, and a voice recognition-based chatbot.
+          <br><br>
+
+          This approach minimizes the reliance on hospital resources, effectively reducing their workload while ensuring that patients continue to receive adequate care in the comfort of their homes. By leveraging technology, we can enhance communication between patients and healthcare providers, streamline vital updates, and improve overall patient engagement in their care journeys. This model not only supports effective patient management but also aligns with the broader goals of the MIC@Home initiative to provide equivalent hospital-level care outside traditional settings.
         </p>
       </div>
     </div>
@@ -665,100 +792,673 @@
     <div>
       <!-- This is an example of what a section might look like -->
       <div id="section-header-5">
-        <h2> 1. Features </h2>
-        <p>       </p>
-      </div>
-
-      <div id="sub-section-4-header-1">
-        <h3>4.1 Wireframes</h3>
+        <h2>5. Concept Development</h2>
         <p>
-          Wireframes.
+          Taking into account the specific requirements for patients and nurses. We came up with a wireframe with the features for the patients’(Figure 14) and nurses’ app (Figure 15). A detailed explanation of the functionalities of the features can be found in the appendix.
         </p>
       </div>
-
-      <div id="sub-section-4-header-2">
-        <h3>4.2 List of features</h3>
-        <p>
-          We have a total of five features as part of our solution. Three of these features are for the patients' module and the other two features are for the nurses' module. 
-        </p>
-      </div>
-      <div id="sub-section-4-header-2.1">
-        <h4>4.2.1 Feature 1</h4>
-        <p>
-          Feature 1.
-        </p>
-      </div>
-      <div id="sub-section-4-header-2.2">
-        <h4>4.2.2 Feature 2</h4>
-        <p>
-          Feature 2.
-        </p>
-      </div>
-      <div id="sub-section-4-header-2.3">
-        <h4>4.2.3 Feature 3</h4>
-        <p>
-          Feature 3.
-        </p>
-      </div>
-      <div id="sub-section-4-header-2.4">
-        <h4>4.2.1 Feature 4</h4>
-        <p>
-          Feature 4.
-        </p>
-      </div>
-      <div id="sub-section-4-header-2.5">
-        <h4>4.2.5 Feature 5</h4>
-        <p>
-          Feature 5.
-        </p>
-      </div>
-    </div>
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-
-    <div>
-      <!-- This is an example of what a section might look like -->
-      <div id="section-header-5">
-        <h2> 5. Solution Architecture </h2>
-        <p>
-        </p>
-      </div>
-
       <div id="sub-section-5-header-1">
-        <h3>5.1 Front-End</h3>
+        <h3>5.1. Wireframes (Patients’ Application)</h3>
         <p>
-          Front-End stuff. 
+          <image-component tag="image" source="assets/patient_wireframes.png"
+          subtitle="Figure 14: Wireframes of Patients’ Application">
+          </image-component>
+          <br><br>
+
+          The patient module consists of three key features: care plan to routine reminders, personalized health reports, and an AI-powered chatbot. Each of these features enhances patient engagement and support throughout the recovery process.
+          <br>
+          Key Features:
+          <ol>
+            <li>
+              <b>Care Plan to Routine Reminders</b>
+              <br>
+              This feature utilizes the patient's care plan to extract crucial information regarding medication schedules and vital sign monitoring. By analyzing prescribed medications and their dosages, the system generates timely reminders for patients, ensuring they know when to take their medications or check their vitals.
+            </li>
+            <li>
+              <b>Personalized Health Reports</b>
+              <br>
+              This feature generates comprehensive health reports based on the vital signs submitted by patients. These reports provide insights into health status, highlight trends and assist caregivers in monitoring patient progress.
+            </li>
+            <li>
+              <b>AI-Powered Chatbot</b>
+              <br>
+              The AI-powered chatbot is designed using Retrieval-Augmented Generation (RAG) techniques to ensure responses are accurate and relevant based on a curated knowledge base. It enhances engagement by offering immediate assistance for secondary-level concerns and facilitates communication within the healthcare team.
+            </li>
+          </ol>
         </p>
       </div>
 
       <div id="sub-section-5-header-2">
-        <h3>5.2 Back-End</h3>
+        <h3>5.2. Wireframe (Nurses’ Application)</h3>
         <p>
-          Back-End.
+          <image-component tag="image" source="assets/nurse_wireframes.png"
+          subtitle="Figure 15: Wireframe of Nurses’ Application">
+          </image-component>
+          <br><br>
+
+          The nurses’ module has two main features: Concise summary generation and easy documentation. 
+          <br>
+          Key features:
+          <ol>
+            <li>
+              <b>Concise summary generation</b>
+              <br>
+              This feature generates concise summaries for nurses, providing essential health details about the patients they will attend to throughout the day. The summaries include updates on patient progress from previous shifts with necessary tasks that need to be performed. Additionally, the system captures interactions between patients and the chatbot, highlighting unresolved queries to ensure that nurses are informed and can address any concerns promptly. This streamlined communication enhances care coordination and supports nurses in delivering effective patient care.
+            </li>
+            <li>
+              <b>Easy documentation</b>
+              <br>
+              The speech-to-text feature streamlines the documentation process by allowing nurses to dictate information verbally while performing their nursing procedure, significantly reducing the time and effort required for manual entry. This feature facilitates easier and more efficient documentation, enabling healthcare providers to focus more on patient care rather than administrative tasks. Additionally, the auto-formatting functionality ensures that all necessary information is accurately recorded in a structured manner. This feature automatically organizes dictated content into predefined formats, minimizing errors and ensuring compliance with documentation standards. Together, these capabilities enhance the overall efficiency of record-keeping and improve the quality of patient data management.
+            </li>
+          </ol>
+
+        </p>
+      </div>
+
+      <div id="sub-section-5-header-3">
+        <h3>5.3. Feedback from MOHT</h3>
+        <p>
+          Overall, the nurses from MOHT expressed a positive outlook on the concept of implementing a chatbot constrained by a knowledge base, recognizing its potential utility in patient care. They believe that an informative chatbot with a warm tone would provide reassurance to patients, enhancing their overall experience. Additionally, the nurses suggested incorporating features for monitoring other vital signs, including options for color selection and tracking changes over time. This enhancement would allow for more comprehensive health monitoring, further supporting patients on their recovery journey. Overall, the feedback highlights the importance of developing a user-friendly and supportive chatbot that meets both patient needs and healthcare provider expectations.
         </p>
       </div>
     </div>
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+    <div>
+      <!-- This is an example of what a section might look like -->
+      <div id="section-header-6">
+        <h2>6. Proposed Solution Architecture</h2>
+        <p>
+          From our initial concept development, functional requirements, and non-functional requirements, we can start narrowing down the use of technology in the development of our application to a few options. From there, we can compare the aspects of different alternatives to determine the best choice for us to use for the development of our solution. Then, we can start to construct the structure for our application.
+          <br><br>
+
+          As with most systems-level application projects, there is a separation of concerns regarding the application’s functionality into the frontend and the backend. The frontend serves as the main interface between the user and the application, covering the application’s main functionality with an aesthetically pleasing and user-friendly interface.
+        </p>
+      </div>
+
+      <div id="sub-section-6-header-1">
+        <h3>6.1. Frontend</h3>
+        <p>
+          Referring to the functional and non-functional requirements, there are some notable constraints for the frontend, mainly the constraint to be multi-platform and the constraint to allow speech and text as user input.
+        </p>
+      </div>
+
+      <div id="sub-section-6-header-1-1">
+        <h4>6.1.1. Comparison of Technology</h4>
+        <p>
+          With regards to the first constraint of multi-platform support, two options of frontend development environments will arise (Nowak, n.d.). The first is React Native, an established cross-platform framework built on React.js which is an open-source mobile-centric framework developed by Meta (Kaur, 2024). The second is Flutter, an emerging open-source cross-platform framework developed by Google. A table of comparison between the two frameworks is shown below.
+          <br><br>
+
+          <table style="margin-left:auto; margin-right:auto;">
+            <caption><i>Table 7. Comparison of React Native and Flutter Based on Key Criterias</i></caption>
+            <tr>
+              <th>Criteria</th>
+              <th>React Native</th>
+              <th>Flutter</th>
+            </tr>
+            <tr>
+              <td>
+                Language used
+              </td>
+              <td>
+                Javascript
+                <ul>
+                  <li>
+                    Very established programming language for frontend, used in nearly 98.8% of websites
+                  </li>
+                  <li>
+                    Dynamically-typed
+                  </li>
+                  <li>
+                    XML-style syntax
+                  </li>
+                </ul>
+              </td>
+              <td>
+                Dart
+                <ul>
+                  <li>
+                    Relatively new language, not a lot of adoption
+                  </li>
+                  <li>
+                    Static typing with compilation
+                  </li>
+                  <li>
+                    C-style syntax
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Package support
+              </td>
+              <td>
+                Wide array of packages from Node Package Manager and other package distributors but not all are guaranteed to work with React Native
+                <ul>
+                  <li>
+                    HTTP: React Native Networking
+                  </li>
+                  <li>
+                    Speech-to-text: Several open-source libraries from Node
+                  </li>
+                </ul>
+              </td>
+              <td>
+                Wide array of packages developed specifically for flutter
+                <ul>
+                  <li>
+                    HTTP: Flutter HTTP
+                  </li>
+                  <li>
+                    Speech-to-text: Flutter speech-to-text
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Developer-friendliness
+              </td>
+              <td>
+                Getting started: React Native requires a lot more time for a starting developer to set up; setup guide has less details
+                <br>
+                Learning curve: Steeper due to the variety of different packages with many nuances in their implementation and interaction with other packages
+
+              </td>
+              <td>
+                Getting started: Flutter is much easier to set up, with a detailed setup guide and an inbuilt package called Flutter Doctor that checks the setup of the installation and specifies any repairs needed
+                <br>
+                Learning curve: Not as steep due to flutter’s language being statically typed, which assists with static analysis and debugging
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Performance
+              </td>
+              <td>
+                Slower due to being mostly an interpreted language
+              </td>
+              <td>
+                Faster due to compilation of code
+              </td>
+            </tr>
+          </table>
+          <br><br>
+        </p>
+      </div>
+
+      <div id="sub-section-6-header-1-2">
+        <h4>6.1.2. Decision For Frontend</h4>
+        <p>
+          In the end, the framework that we chose is <b>Flutter</b> for a few main reasons. Firstly, most of the team have no experience with traditional frontend languages like Javascript or HTML, which means that the edge that React Native has over Flutter in terms of familiarity with the language is non-existent in the context of our team. Thus, the ease of setting up a Flutter development environment and the gentler learning curve associated with Flutter is comparatively beneficial for the team. In addition to that, when the team starts scaling the application up and implementing more features, debugging and maintenance is much easier due to static analysis being possible with Dart.
+        </p>
+      </div>
+
+      <div id="sub-section-6-header-1-3">
+        <h4>6.1.3. Proposed Frontend Architecture</h4>
+        <p>
+          Below is a graphical summary of what our proposed frontend architecture will look like.
+          <br><br>
+
+          <image-component tag="image" source="assets/frontend_archi.png"
+          subtitle="Figure 16: Proposed Frontend Architecture Overview">
+          </image-component>
+          <br><br>
+
+          When the user first accesses the app, they are brought to a landing page where they can choose between logging in as a patient or nurse, which will then bring the user to the respective home screen. From the home screen, all connections without arrows within the context means that the user is able to navigate between any of the screens to any other screen.
+          <br><br>
+          
+          For the patient module, the patient home page is present as well as the chatbot, vitals, medication and SOS screens, which are features discussed in the feature list.
+          <br><br>
+          
+          For the nurse module, the nurse home page is present, which contains the list of patients. The patient summary screen will be accessed when a particular patient is selected, and from there, the “generate patient conversation summary” screen can be accessed. The care plan upload screen is accessed from the home screen.
+        </p>
+      </div>
+
+      <div id="sub-section-6-header-2">
+        <h3>6.2. Backend</h3>
+        <p>
+          The backend has to support most of the functions of the frontend. From the functional requirements, the backend has to support LLM queries with the aid of RAG, together with many other data requests from the frontend. 
+        </p>
+      </div>
+
+      <div id="sub-section-6-header-2-1">
+        <h4>6.2.1. Comparison of Technology</h4>
+        <p>
+          There are many languages and frameworks that can be used for backend programming (The 5 Best Backend Development Languages to Master (2024), n.d.). 
+          <br><br>
+
+          <table style="margin-left:auto; margin-right:auto;">
+            <caption><i>Table 8: Comparison of 5 Programming Languages Based on Pros and Cons</i></caption>
+            <tr>
+              <th>Language</th>
+              <th>Pros</th>
+              <th>Cons</th>
+            </tr>
+            <tr>
+              <td>
+                Python
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Very beginner friendly
+                  </li>
+                  <li>
+                    Wide variety of packages to use
+                  </li>
+                  <li>
+                    A lot of support for Machine Learning (ML) and Artificial Intelligence (AI)
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Can be quite slow as a language due to being interpreted (mitigated by packages using C/C++ under the hood)
+                  </li>
+                  <li>
+                    Limited performance in multi-threading applications
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Java
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Object-Oriented Programming (OOP) language
+                  </li>
+                  <li>
+                    Robust ecosystem of libraries and frameworks
+                  </li>
+                  <li>
+                    Innate multi-threading support
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Strong typing and verbose syntax can steepen the learning curve and slow development
+                  </li>
+                  <li>
+                    Relatively high memory consumption
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Javascript (Node.js)
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Familiar language (if coming from frontend)
+                  </li>
+                  <li>
+                    Rich ecosystem
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Weak typing can cause problems when the codebase is sufficiently large
+                  </li>
+                  <li>
+                    Multi-threading not commonly-used
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                PHP
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Designed for backend web development
+                  </li>
+                  <li>
+                    Big community of developers due to the age of the language
+                  </li>
+                  <li>
+                    High performance
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Inconsistent syntax makes learning and development harder
+                  </li>
+                  <li>
+                    Poor quality of error handling
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Simple syntax makes it easy to learn
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Not a lot of support due to the language being new
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <br><br>
+        </p>
+      </div>
+
+      <div id="sub-section-6-header-2-2">
+        <h4>6.2.2. Decision For Backend</h4>
+        <p>
+          After considering the languages we should use, we decided on <b>Python</b>. A key consideration for this decision is that python has a lot of support for AI, with the Langchain package being very useful to meet the requirements of the application. This level of support is not really as extensive for the other languages mentioned. Additionally, of all of the languages mentioned, the team is the most familiar with Python due to having used it in prior courses. That, combined with the fact that Python has simple syntax makes Python very easy to pick up for the development of our backend.
+        </p>
+      </div>
+
+      <div id="sub-section-6-header-2-3">
+        <h4>6.2.3. Proposed Backend Architecture</h4>
+        <p>
+          Below is a graphical summary of what our proposed backend architecture will look like.
+          <br><br>
+
+          <image-component tag="image" source="assets/backend_archi_summary.png"
+          subtitle="Figure 17: Proposed Backend Architecture Overview">
+          </image-component>
+          <br><br>
+
+          There are two servers, one customized for supporting the chatbot interface and the other supporting the rest of the requests from the frontend, with both running with Python. This architecture of having two servers is mainly to meet the requirements of the chatbot interface, which is different from the rest of the interfaces that require information from the server.
+        </p>
+      </div>
+
+      <div id="sub-section-6-header-2-4">
+        <h4>6.2.4. Chatbot Server</h4>
+        <p>
+          The chatbot server is using Langchain, a framework for incorporating LLMs and databases into application logic. This logic is supported with LangServe and FastAPI, which serves to accept client requests and send back the processed responses. Below is a graphical representation of the chatbot server architecture.
+          <br><br>
+
+          <image-component tag="image" source="assets/backend_archi_chatbot.png"
+          subtitle="Figure 18: LangServe server structure">
+          </image-component>
+          <br><br>
+
+          The server accepts API requests with FastAPI, then using the credentials of the user sent in the request to query the patient interaction database and care plan to retrieve the patient’s care plan and past conversations with the chatbot. With the care plan and patient prompt, the knowledge database can then be queried to retrieve the most relevant documents based on the patient’s prompt and medical condition. All of the queried knowledge is then added as the context together with the system prompt and patient’s prompt to query the LLM, in this case Groq API, to receive a response. The information used as context constrains the LLM’s response, making it use the documents to retrieve information for its response, greatly reducing hallucinations from the LLM. The system prompt instructs the chatbot to construct its response with the appropriate tone and mannerisms that are desired, which in our case is to act like a nurse.
+          <br><br>
+
+          <image-component tag="image" source="assets/backend_archi_storage.png"
+          subtitle="Figure 19: Patient Prompt Storage">
+          </image-component>
+          <br><br>
+
+          In addition to sending back a response to the frontend chatbot interface, the chatbot server also processes and stores the patient’s prompt into databases. Notably, the patient’s raw prompt is stored in the patient interaction database together with the chatbot server’s generated response, and the patient prompt is passed through a LLM to extract and store the patient’s vitals data if present.
+        </p>
+      </div>
+
+      <div id="sub-section-6-header-2-5">
+        <h4>6.2.5. Flask Server</h4>
+        <p>
+          The server for all of the other responses uses Flask, a lightweight server framework for Python. This server services all of the other requests that come from the frontend, which can be seen in the diagram below.
+          <br><br>
+
+          <image-component tag="image" source="assets/backend_archi_flask.png"
+          subtitle="Figure 20: Flask server structure">
+          </image-component>
+          <br><br>
+
+          Most of the other requests from the frontend either constitute simple data storage or retrieval, with the exception of the patient summary generation feature. This feature requires a summary to be generated from the past patient conversation and so a LLM must be used to summarize the queried raw patient conversations.
+        </p>
+      </div>
+
+      <div id="sub-section-6-header-2-6">
+        <h4>6.2.6. LLM Choices</h4>
+        <p>
+          There are many choices of LLMs to use today, with ChatGPT, Gemini, Ollama, and many others. There are many benchmarks to show the relative performance of LLMs as well, as seen by figure 21 (LLM Leaderboard 2024, n.d.).
+          <br><br>
+
+          <image-component tag="image" source="assets/llm_comparison.png"
+          subtitle="Figure 21: Comparison of ChatGPT and Alternative APIs for LLM Integration">
+          </image-component>
+          <br><br>
+
+          Based on Figure 21, it can be seen that OpenAI’s ChatGPT is regarded as the best performing model for general applications and for reasoning, which suits our chatbot’s requirements well. Therefore, in the later iterations of the application, the backend is likely to use OpenAI’s GPT API for its LLM queries. However, as OpenAI’s APIs require money to be used, it is not advisable to use it to test the initial backend configuration. Hence, the team is using Groq API, a free API service with a selection of models like llama3, for initial stages of the application development.
+        </p>
+      </div>
+
+      <div id="sub-section-6-header-2-7">
+        <h4>6.2.7. Database Management System Choices</h4>
+        <p>
+          From the backend architecture, there are five databases that will be used to store information. As for what types of databases will be used, there are a specific few to be taken into consideration, namely relational databases like MySQL, document-based databases like MongoDB, and vector databases like ChromaDB.
+          <br><br>
+
+          Relational databases use a collection of tables with references to each other, allowing data retrieved from a table to be used as the key to query another. This compartmentalizes information in the tables and the relation between tables improves query timings even with many data entries. Thus, this style of database is suitable for user data such as the patient vitals and care plan.
+          <br><br>
+
+          Document-based databases envision collections of data as documents instead of tables, which is more intuitive for certain types of data to be stored (<i>Document Database - NoSQL</i>, n.d.). This means that related data is stored in similar documents, and querying the database does not require a structured query, hence this style of database also being termed NoSQL. This style of database is fit for our patient conversation data and nurse reports, which can be seen as more of a long document than snippets of information in a table.
+          <br><br>
+
+          Vector databases store data as vector embeddings of the data instead of the data itself. This is particularly useful in retrieval operations of data, allowing a query to retrieve data by similarity of embeddings (<i>What Is a Vector Database & How Does It Work? Use Cases + Examples</i>, 2023). This is particularly useful in the implementation of RAG as a prompt can be embedded to query the database and retrieve the documents most similar in context. Therefore, this style of database is the most suitable for our medical information database.
+          <br><br>
+        </p>
+      </div>
+    </div>
+    <sl-divider></sl-divider>
+
+    <div>
+      <div id="section-header-7">
+        <h2>7. Future plans</h2>
+        <p>
+          With the feedback from MOHT, we will be iterating on our concept design so that it could better fulfill our stakeholder needs.  We will continue to work with MOHT nurses to curate a database of medical knowledge for the chatbot and draft out a care plan for the routine reminder system. Additionally, we will assess the feasibility of the chatbot's constrained knowledge base in addressing patient queries. This will involve comparing its responses with those provided by trained healthcare professionals to ensure accuracy and reliability. By refining these elements, we aim to enhance the overall functionality and effectiveness of our solution in delivering quality patient care. Below is the image of the timeline of the tasks we will be carrying out from now till the end of the next semester (Figure 22). We aim to build a functional system for the nurses to test out the functionality of the chatbot and the app by semester 2 recess week for further iteration and refinement of the features.
+          <br><br>
+
+          <image-component tag="image" source="assets/gantt_sem2.png"
+          subtitle="Figure 22: Gantt Chart for Semester 2">
+          </image-component>
+          <br><br>
+        </p>
+      </div>
+    </div>
+    <sl-divider></sl-divider>
 
     <!-- This is an example of how you can use the references component to create references -->
     <div id="references" class="references">
-      <sl-divider></sl-divider>
       <h2>References</h2>
-      <ul>
+      <ol>
         <li>
-          Brody, J. E. (2007, December 11). Mental reserves keep brain agile. The New York Times. Retrieved from
-          http://www.dowjones.com/factiva/
+          <i>Singapore's public hospital bed crunch: Are radical solutions needed?</i> (2023, November 26). CNA. Retrieved November 11, 2024, from
+          <a href="https://www.channelnewsasia.com/cna-insider/singapore-public-hospital-bed-crunch-waiting-time-radical-solutions-3943586">
+            https://www.channelnewsasia.com/cna-insider/singapore-public-hospital-bed-crunch-waiting-time-radical-solutions-3943586
+          </a>
         </li>
         <li>
-          Chamberlin, J., Novotney, A., Packard, E., & Price, M. (2008, May). Enhancing worker well-being: Occupational
-          health psychologists convene to share their research on work, stress, and health. Monitor on Psychology,
-          39(5), 26-29.
+          <i>DELIVERING CARE BEYOND HOSPITALS</i>. (2024, March 6). Ministry of Health. Retrieved November 4, 2024, from 
+          <a href="https://www.moh.gov.sg/newsroom/delivering-care-beyond-hospitals">
+            https://www.moh.gov.sg/newsroom/delivering-care-beyond-hospitals
+
+          </a>
         </li>
         <li>
-          Jones, T. J., & Fields, N. (2003). Emotional quotient and personality. E-Journal of Applied Psychology, 2(2),
-          38-45. Retrieved from http://ejournalappliedpsyc/index.php/ejap
+          Kaur, G. (2024, June 14). <i>Top 34 JavaScript Stats You Must Know in 2024 to Level Up Your Business</i>. BigOhTech. Retrieved November 3, 2024, from 
+          <a href="https://bigohtech.com/top-javascript-statistics/">
+            https://bigohtech.com/top-javascript-statistics/
+          </a>
         </li>
-      </ul>
+        <li>
+          Nowak, M. (n.d.). <i>Flutter vs. React Native in 2024 — Detailed Analysis</i>. Nomtek. Retrieved November 7, 2024, from 
+          <a href="https://www.nomtek.com/blog/flutter-vs-react-native">
+            https://www.nomtek.com/blog/flutter-vs-react-native
+          </a>
+        </li>
+        <li>
+          <i>The 5 Best Backend Development Languages to Master (2024)</i>. (n.d.). Developer Roadmaps. Retrieved November 11, 2024, from 
+          <a href="https://roadmap.sh/backend/languages">
+            https://roadmap.sh/backend/languages
+          </a>
+        </li>
+        <li>
+          <i>LLM Leaderboard 2024</i>. (n.d.). Vellum AI. Retrieved November 16, 2024, from 
+          <a href="https://www.vellum.ai/llm-leaderboard">
+            https://www.vellum.ai/llm-leaderboard
+          </a>
+        </li>
+        <li>
+          <i>Document Database - NoSQL</i>. (n.d.). MongoDB. Retrieved November 16, 2024, from 
+          <a href="https://www.mongodb.com/resources/basics/databases/document-databases">
+            https://www.mongodb.com/resources/basics/databases/document-databases
+          </a>
+        </li>
+        <li>
+          <i>What is a Vector Database & How Does it Work? Use Cases + Examples</i>. (2023, May 3). Pinecone. Retrieved November 16, 2024, from 
+          <a href="https://www.pinecone.io/learn/vector-database/">
+            https://www.pinecone.io/learn/vector-database/
+          </a>
+        </li>
+      </ol>
+      <br><br>
+    </div>
+    <sl-divider></sl-divider>
+
+    <div id="appendix">
+      <h2>Appendix</h2>
+      <div id="appendix-1">
+        <h3>Appendix 1: Meeting with MOHT</h3>
+        <p>
+          This screenshot was taken with permission from the MOHT team during our discussion, where we identified potential areas with unmet needs and gaps where we could integrate artificial intelligence to improve the MIC@Home program.
+          <br><br>
+
+          <image-component tag="image" source="assets/moht_meeting_1.png"
+          subtitle="Picture of The MOHT Meeting">
+          </image-component>
+          <br><br>
+
+          <image-component tag="image" source="assets/moht_meeting_2.png"
+          subtitle="Picture of The MOHT Meeting">
+          </image-component>
+          <br><br>
+        </p>
+      </div>
+
+      <div id="appendix-2">
+        <h3>Appendix 2: User Journey Maps</h3>
+        <p>
+          This section presents user journey maps for both patients and nurses, highlighting pain points and design opportunities to help define the problem statement. A storyboard was also created based on our understanding and has been verified with the MOHT team.
+          <br><br>
+
+          <image-component tag="image" source="assets/patient_storyboard.png"
+          subtitle="Patients’ User Journey Storyboard">
+          </image-component>
+          <br><br>
+
+          <image-component tag="image" source="assets/patient_user_journey_map.png"
+          subtitle="Patients’ User Journey Map">
+          </image-component>
+          <br><br>
+
+          <image-component tag="image" source="assets/nurse_storyboard.png"
+          subtitle="Nurses’ User Journey Storyboard">
+          </image-component>
+          <br><br>
+
+          <image-component tag="image" source="assets/nurse_user_journey_map.png"
+          subtitle="Nurses’ User Journey Map">
+          </image-component>
+          <br><br>
+        </p>
+      </div>
+
+      <div id="appendix-3">
+        <h3>Appendix 3: List of Features (Patient Module)</h3>
+        <p>
+          There are three main features in the patient module. Namely, care plan to routine reminders, personalized health report and AI-powered chatbot. 
+          <br><br>
+
+          <ol>
+            <li>
+              <b>Feature 1- Care plan to routine reminders</b>
+              <br><br>
+
+              A care plan is a personalized document that outlines the specific health needs of individuals receiving care. It acts as a roadmap for healthcare providers, detailing the necessary interventions and strategies tailored to each patient's unique medical needs. Developed through comprehensive assessments by a doctor, care plans are regularly reviewed and updated to adapt to the changing needs of the patient. They encompass essential information on medical management, vital signs monitoring and patient allergies ensuring a coordinated and effective approach to patient care.
+              <br><br>
+
+              Patients are able to get the routine reminders in the following ways: 
+              <br><br>
+              <ul>
+                <li>
+                  Push notification 
+                </li>
+                <li>
+                  In app homepage notification section 
+                </li>
+                <li>
+                  During casual interaction with the AI-powered chatbot
+                </li>
+              </ul>
+              <br><br>
+
+              <image-component tag="image" source="assets/patient_notifs.png"
+              subtitle="Patient Module Wireframe for Feature 1">
+              </image-component>
+              <br><br>
+
+              With the care plan, patient information and medical history provided by the hospital team, we can extract key essential entities, including vital signs to be monitored and the specific times for monitoring. Additionally, we will capture details such as the names of medications, their dosages, and administration schedules, along with the patient's specific medical conditions. This information will be systematically stored in a patient information database in the backend. This information will firstly, be used to display or send push notification to patients when the medication or vitals has to be recorded. Secondly, the information can facilitate efficient access and management of patient data when interfacing with the Large Language Model (LLM) through Groq API to send reminders to patients through the chatbot feature.
+              <br><br>
+
+              <image-component tag="image" source="assets/feature1_flow.png"
+              subtitle="Overview of Routine Reminder System Based on Care Plan Data">
+              </image-component>
+              <br><br>
+            </li>
+            <li>
+              <b>Feature 2 - Personalized health report from vitals reported.</b>
+              <br><br>
+
+              The personalized health report feature enables the generation of comprehensive medical health reports based on the vital signs submitted by patients. As patients log their vitals, such as blood pressure, heart rate, temperature, SpO2 and blood glucose level, the system compiles this data into a user-friendly format that highlights trends and deviations from normal ranges. This report can be generated from the vitals recorded within the day to across a few days. This provides patients with insights into their health status. Regularly updated health reports foster proactive management of chronic conditions and encourage patient engagement in their own care.
+              <br><br>
+            </li>
+            <li>
+              <b>Feature 3 - AI powered Chatbot</b>
+              <br><br>
+
+              The AI-powered chatbot is designed using Retrieval-Augmented Generation (RAG) techniques to ensure responses are accurate and relevant based on a curated knowledge base. This chatbot serves as an interactive support tool for patients, addressing common inquiries related to their recovery journey and providing guidance on managing their health effectively. By offering immediate assistance for secondary-level concerns, the chatbot enhances patient engagement and satisfaction. Additionally, it can facilitate routine check-ins, remind patients of upcoming appointments, and generate concise summaries for nursing staff, thereby streamlining communication within the healthcare team.
+              <br><br>
+            </li>
+            <li>
+              <b>Feature 4 - Concise summary generation</b>
+              <br><br>
+
+              While the chatbot is equipped to handle patient queries effectively, it is essential that the medical advice provided by the chatbot is communicated to the nurses. This ensures that nurses are informed about the concerns and inquiries raised by patients, even in the absence of a medical professional. To address this need, we propose a feature that delivers a concise summary to nurses regarding the queries resolved by the chatbot, as well as any outstanding questions that remain unresolved. This functionality will enable nurses to better understand their patients' concerns and provide more informed care. 
+              <br><br>
+            </li>
+            <li>
+              <b>Feature 5- Easy documentation</b>
+              <br><br>
+
+              Recognizing that patients' homes may not provide an ideal environment for nurses to set up personal devices for documentation, we aim to alleviate this challenge by implementing a speech-to-text input with transcription functionality. This feature will enable nurses to efficiently perform documentation updates during patient visits, allowing them to focus more on patient care rather than the constraints of their documentation process. By streamlining the documentation workflow in this manner, we enhance the overall efficiency and effectiveness of home healthcare delivery.
+            </li>
+          </ol>
+        </p>
+      </div>
     </div>
   </div>
 
