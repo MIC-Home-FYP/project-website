@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Project Title</title>
+  <title>MIC@Home: Leveraging AI for Patient Care at Home to Enable Virtual Ward Operations</title>
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
@@ -31,6 +31,13 @@
   <script src="./components/table-component/table-component.js"></script>
 
   <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 7px;
+    }
+  </style>
 </head>
 
 <body>
@@ -216,10 +223,10 @@
         </sl-tree-item>
       </sl-tree>
     </div>
+    <br><br>
     <sl-divider></sl-divider>
 
     <div>
-      <!-- This is an example of what a section might look like -->
       <div id="section-header-1">
         <h2> 1. An Introduction To MIC@Home </h2>
         <video-component tag="intro" source="https://www.youtube.com/embed/v=a5UuXfUBgXM" 
@@ -232,25 +239,12 @@
       </div>
 
       <div id="sub-section-1-header-1">
-        <h3>1.1 Moving Care To The Home</h3>
+        <h3>1.1. Moving Care To The Home</h3>
         <p>
           The MIC@Home model allows patients with a range of conditions, including skin infections, urinary tract infections, and congestive heart failure, to receive care in the comfort of their own homes (Figure 1). Patients in this program receive hospital-level care at home, including vital sign monitoring, intravenous treatments, and blood tests, delivered by a combination of teleconsultations and home visits by a dedicated team of doctors, nurses, pharmacists, and other healthcare professionals.
         </p>
-      </div>
 
-      <div id="sub-section-1-header-2">
-        <h3>1.2 Key Stakeholders</h3>
-        <p>
-          Fermentum dui faucibus in ornare quam viverra orci. Donec ultrices tincidunt arcu non sodales. A diam maecenas
-          sed enim ut sem viverra. Semper viverra nam libero justo laoreet sit. Mi sit amet mauris commodo quis. Auctor
-          augue mauris augue neque gravida in fermentum et. Auctor elit sed vulputate mi sit amet. Maecenas pharetra
-          convallis posuere morbi leo urna. Sem nulla pharetra diam sit amet nisl. Id nibh tortor id aliquet lectus.
-          Nibh
-          nisl condimentum id venenatis a condimentum vitae sapien. Convallis posuere morbi leo urna molestie at
-          elementum.
-        </p>
-
-        <image-component tag="image" source="assets/fig1.png"
+        <image-component tag="image" source="assets/mic_intro.png"
           subtitle="Figure 1: Overview of MIC@home">
         </image-component>
 
@@ -260,103 +254,246 @@
           In line with the government's five-year plan to add 1,900 beds to the public healthcare system by 2026, MIC@Home serves as a critical tool in managing hospital bed shortages while maintaining high standards of care (<i>DELIVERING CARE BEYOND HOSPITALS</i>, 2024). The program is expected to increase the number of virtual beds to 300 by the end of 2024.
         </p>
       </div>
+
+      <div id="sub-section-1-header-2">
+        <h3>1.2. Key Stakeholders</h3>
+        <p>
+          The success of MIC@Home relies on the collaboration of several key stakeholders, each of whom plays a critical role in ensuring that patients receive the necessary care at home.
+        </p>
+      </div>
+
+      <div id="sub-section-1-header-2-1">
+        <h4>1.2.1. Hospital Department</h4>
+        <p>
+          The hospital department consists of doctors, nurses, therapists, and administrative staff who provide oversight and management of patient care. Their roles include:
+          <ul>
+            <li>Monitoring patient health through regular consultations and assessments.</li>
+            <li>Delivering care, including treatments such as intravenous medication, wound care, and other necessary procedures.</li>
+            <li>Educating and supporting patients on their conditions, treatment plans, and how to manage their care at home.</li>
+            <li>Responding to emergencies, either through home visits or activating emergency medical services if a patient's condition deteriorates.</li>
+          </ul>
+        </p>
+      </div>
+
+      <div id="sub-section-1-header-2-2">
+        <h4>1.2.2. Outsourced Medical Team</h4>
+        <p>
+          The outsourced medical team complements the hospital department by providing additional support tailored to the patient's needs. Their roles include:
+          <ul>
+            <li>Monitoring patient health remotely and in person, ensuring continuous care and early detection of any issues.</li>
+            <li>Administering care such as wound dressing, medication management, and other specialized treatments as required.</li>
+            <li>Filling in gaps in hospital coverage, with flexible scheduling that allows them to provide support on a case-by-case basis.</li>
+            <li>Responding to patient needs in emergencies, ensuring that appropriate actions are taken to maintain patient safety.</li>
+          </ul>
+        </p>
+      </div>
+
+      <div id="sub-section-1-header-2-3">
+        <h4>1.2.3. Patients and Caregivers</h4>
+        <p>
+          Patients and caregivers are at the heart of the MIC@Home program, ensuring effective care and monitoring at home. Their roles include:
+          <ul>
+            <li>Participating in daily consultations with clinicians and assisting in monitoring and recording vital signs.</li>
+            <li>Assisting with care procedures, such as medication administration and managing basic needs, under the guidance of healthcare professionals.</li>
+            <li>Communicating regularly with the medical team to provide updates on the patient's condition and receive guidance on next steps.</li>
+            <li>Acting as the first line of support in managing patient care at home, contributing to better recovery and reducing hospital readmissions.</li>
+          </ul>
+        </p>
+      </div>
     </div>
+    <br><br>
 
-
-    <br />
-    <br />
     <sl-divider></sl-divider>
     <div>
       <div id="section-header-2">
-        <h2>2. Problem Clarification</h2>
+        <h2>2. Problem Identification</h2>
+        <p>
+          With no initial problem statement provided by MOHT, our task began by identifying gaps and challenges within the MIC@Home model. Through in-depth interviews with MIC@Home nurses and discussions with the MOHT team, we examined patient and nurse journeys to identify specific pain points, limitations, and unmet needs (Appendix 1). This section outlines these insights and the resulting problem statements that will drive our approach to enhancing home-based patient care.
+        </p>
       </div>
 
       <div id="sub-section-2-header-1">
-        <h3>2.1 Pain points of Patients</h3>
-        <p>
-          Pellentesque nec nam aliquam sem et tortor consequat. Et netus et malesuada fames ac turpis egestas maecenas.
-          Eu tincidunt tortor aliquam nulla facilisi. Nunc aliquet bibendum enim facilisis gravida. Elementum pulvinar
-          etiam non quam lacus (Moll et al., 2011; Parker & Fox, 2010). Blandit cursus risus at ultrices mi. Arcu dui
-          vivamus arcu felis bibendum ut tristique. Porttitor rhoncus dolor purus non enim praesent elementum facilisis.
-          Mauris in aliquam sem fringilla. Non quam lacus suspendisse faucibus. Tristique senectus et netus et malesuada
-          fames ac. <a href="#image">Link to the image above</a>
-        </p>
-
-        <!-- This is an example of how you might use the video component -->
-        <video-component tag="rick" source="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          subtitle="Video: Never gonna give you up?"></video-component>
+        <h3>2.1. Pain points of Patients</h3>
       </div>
 
-      <div id="sub-section-2-header-1.1">
-        <h4>2.1.1 Patients' User Journey</h4>
+      <div id="sub-section-2-header-1-1">
+        <h4>2.1.1. Patients' User Journey</h4>
         <p>
-          Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Dignissim convallis aenean et tortor at
-          risus viverra adipiscing. Facilisi nullam vehicula ipsum a arcu cursus. Adipiscing elit pellentesque
-          habitant
-          morbi tristique senectus et netus. Turpis massa tincidunt dui ut ornare lectus. Suspendisse sed nisi lacus
-          sed. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Ut ornare lectus sit amet est
-          placerat in egestas. Magna fringilla urna porttitor rhoncus. Imperdiet dui accumsan sit amet.
+          To better understand the experiences of patients within the MIC@Home program, a user journey map was developed (Appendix 2).
+          <br><br>
+
+          <image-component tag="image" source="assets/patient_journey_map.png"
+          subtitle="Figure 2: Patient journey map with identified pain points">
+          </image-component>
+          <br><br>
+
+          In the Before Daily Visits phase, patients are responsible for managing their health independently. This involves monitoring vital signs such as blood pressure, temperature, heart rate and SPO2 using the medical devices provided by the hospital (Figure 3). They must then document these readings by writing them down and taking pictures of the notes, which are subsequently sent to the healthcare team via WhatsApp. Pain points in this phase include anxiety about recovery progress, as patients may be uncertain whether they are improving or if their health is stable. Additionally, there is uncertainty about the accuracy of vital sign measurements, as patients may not feel confident in using the devices correctly, leading to doubts about the reliability of their readings.
+          <br><br>
+
+          <image-component tag="image" source="assets/patient_recordings.png"
+          subtitle="Figure 3: A patient enrolled in the MIC@Home program using monitoring equipment and manually recording vitals">
+          </image-component>
+          <br><br>
+
+          During daily visits, healthcare providers check in on the patient's condition and assess their progress. One common pain point here is forgetting the medication schedule; patients may struggle to remember when to take their medications, which could lead to missed doses.
+          <br><br>
+
+          After the healthcare provider leaves, patients continue to monitor their health independently. One of the main pain points in this phase is difficulty remembering the instructions provided by the healthcare team. Since patients have to rely on manual methods of logging data, the process can feel cumbersome, and there’s a risk of missing important steps in their care plan. Another pain point is physical or emotional discomfort during or after medical exams, which can make patients feel overwhelmed or stressed.
+          <br><br>
+
+          During the recovery process, patients often feel disconnected from the healthcare team once the daily visits end. A key pain point is the lack of clarity around diagnosis and care plans, which leads to uncertainty about the recovery process. Additionally, patients experience feelings of emotional isolation, especially when they are left to manage their health without daily interaction with a healthcare provider.
+
+        </p>
+        
+      </div>
+
+      <div id="sub-section-2-header-1-2">
+        <h4>2.1.2. Current Limitations (Patients)</h4>
+        <p>
+          Based on insights derived from interviews and user journey maps, three key limitations were identified (Table 1).
+          <table style="margin-left:auto; margin-right:auto;">
+            <caption><i>Table 1. Key Challenges and Limitations (Patients)</i></caption>
+            <tr>
+              <th>No.</th>
+              <th>Patient's Insights</th>
+              <th>Identified Limitations</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>“I’m constantly worried I’ll forget a dose. It’s exhausting managing so many medications and keeping them all straight. I’m scared I’m making mistakes sometimes.</td>
+              <td>Patients struggle to <b>manage multiple medications</b> with complex schedules, leading to confusion, anxiety, and a higher risk of missed doses or incorrect intake.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>“I have many doubts to clarify but being left alone with my worries, not being able to reach anyone, just makes me feel very anxious and lost.”</td>
+              <td>Limited access to healthcare providers leaves patients <b>unable to clarify their doubts</b>, resulting in heightened anxiety and a sense of isolation when they have concerns about their health. </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>“I do log in my vitals but without any feedback, I worry if I’m making any progress in my recovery journey, how long will it take?”</td>
+              <td>The <b>lack of feedback on logged vitals</b> prevents patients from understanding their recovery progress, creating uncertainty and worry about their journey and timeline for recovery.</td>
+            </tr>
+          </table>
+          <br><br>
+
+          This highlights three main challenges that need to be addressed in order to improve the patient experience within the MIC@Home program. The solution should focus on simplifying medication management to reduce confusion and anxiety, addressing the communication gaps by improving access to healthcare providers for timely clarifications, and providing timely feedback on logged vitals to help patients track their recovery progress.
         </p>
       </div>
 
-      <div id="sub-section-2-header-1.2">
-        <h4>2.1.1 Current Limitations (Patients)</h4>
+      <div id="sub-section-2-header-1-3">
+        <h4>2.1.3. Persona and JTBD (Patients)</h4>
         <p>
-          Limitations. 
+          Adopting a user-centered design process, persona (Figure 4) and Jobs-To-Be-Done (JTBD) statements (Figure 5) were developed to capture the patients’ experiences and help guide the design process.
+          <br><br>
+
+          <image-component tag="image" source="assets/patient_persona.png"
+          subtitle="Figure 4: Persona for Patient – Lost Lin, a patient enrolled in the MIC@Home program managing adult jaundice">
+          </image-component>
+          <br><br>
+
+          <image-component tag="image" source="assets/patient_jtbd.png"
+          subtitle="Figure 5: Jobs To Be Done (Functional, Emotional, and Social) with Job statement for Patients">
+          </image-component>
         </p>
       </div>
 
-      <div id="sub-section-2-header-1.3">
-        <h4>2.1.1 Problem Statement (Patients)</h4>
+      <div id="sub-section-2-header-1-4">
+        <h4>2.1.4. Problem Statement (Patients)</h4>
         <p>
-          Problem Statement. 
+          Our exploration of user journeys, patient interviews, and identified pain points led to a clear problem statement:
+          <br><br>
+
+          Patients recovering at home need a supportive way to monitor their health, receive personalized feedback, and stay connected to their healthcare team because they often feel isolated and anxious without clear guidance and real-time insights into their condition. This lack of support diminishes their confidence in the recovery process and hinders their ability to actively engage in their own health journey.
+          <br><br>
         </p>
       </div>
 
       <div id="sub-section-2-header-2">
-        <h3>2.1 Pain points of Nurses</h3>
+        <h3>2.2. Pain points of Nurses</h3>
+      </div>
+
+      <div id="sub-section-2-header-2-1">
+        <h4>2.2.1. Nurses' User Journey</h4>
         <p>
-          Pain point of nurses
+          To gain a deeper understanding of the experiences of nurses within the MIC@Home program, a user journey map was created (Appendix 2).
+          <br><br>
+
+          <image-component tag="image" source="assets/nurse_journey_map.png"
+          subtitle="Figure 6: Nurse journey map with identified pain points">
+          </image-component>
+          <br><br>
+
+          The journey begins with the Before Daily Visits phase, where nurses prepare by reviewing patient records, checking for updates from other healthcare professionals, and ensuring they have the necessary equipment and medications for the visit. This phase is vital for setting up effective care, but nurses often face challenges such as managing large amounts of patient data and ensuring its accuracy. These issues can delay preparations and potentially hinder timely care delivery.
+          <br><br>
+
+          In the During Daily Visits phase, nurses assess patient conditions, administer treatments, and engage with patients and their families. Time constraints are a major issue in this phase, as nurses are expected to provide comprehensive care within limited timeframes. This pressure can make it difficult for nurses to fully understand a patient’s condition or address all of their concerns. The emotional demands of providing care, especially to patients who may feel isolated or anxious, add another layer of complexity.
+          <br><br>
+
+          Following the visit, nurses enter the Post-Visit Documentation phase, where they update patient records and adjust care plans based on their findings. The challenge here is the pressure to complete documentation quickly while managing other responsibilities. The sheer volume of paperwork can lead to missed details, which may affect the quality of patient care. Furthermore, the need to rely on informal communication channels, such as WhatsApp, to share information with other healthcare professionals increases the risk of miscommunication, which can have significant consequences on patient care. Nurses also report the additional burden of maintaining hardcopy records, which is time-consuming and prone to errors.
+          <br><br>
+
+          The Collaboration and Communication phase is essential as nurses must communicate with other healthcare team members to ensure seamless care. However, gaps in communication and incomplete handovers between teams or shifts can leave nurses with fragmented information, making it harder to make informed decisions and maintain continuity of care.
         </p>
       </div>
 
-      <div id="sub-section-2-header-2.1">
-        <h4>2.2.1 Nurses' User Journey</h4>
+      <div id="sub-section-2-header-2-2">
+        <h4>2.2.2. Current Limitations (Nurses)</h4>
         <p>
-          User Journey of nurses. 
+          Based on insights gathered from interviews and user journey maps, three key limitations were identified for nurses within the MIC@Home program:
+
+          <table style="margin-left:auto; margin-right:auto;">
+            <caption><i>Table 2. Key Challenges and Limitations (Nurses)</i></caption>
+            <tr>
+              <th>No.</th>
+              <th>Nurse's Insights</th>
+              <th>Identified Limitations</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>“I’m juggling so many tasks during the visit that keeping up with documentation feels impossible. I worry about forgetting important details later on in the case notes.”</td>
+              <td>Nurses <b>face challenges in keeping up with documentation</b> alongside multiple tasks, risking missed details in case notes, impacting patient care quality and increasing their stress.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>“With the limited time I have with my patients, I can’t get a full picture of their conditions, which makes it hard to give them holistic care. I feel like I’m missing key details that could make a difference.”</td>
+              <td>Limited patient interaction time <b>hinders nurses from fully understanding patient conditions</b>, affecting their ability to provide holistic care and potentially missing critical health aspects.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>“With so many teams taking different shifts, I’m not always clear on a patient’s situation as keeping up updates between teams is tough, and I often feel out of the loop on important patient details.”</td>
+              <td>Frequent handovers and <b>fragmented communication create gaps</b>, leaving nurses out of the loop on crucial patient information.</td>
+            </tr>
+          </table>
+          <br><br>
+
+          The primary challenges faced by nurses in the MIC@Home program include managing extensive patient data, navigating time constraints during home visits, and overcoming communication gaps between healthcare teams. To address these issues, solutions should focus on streamlining data management, enhancing time management capabilities, and improving communication channels to ensure seamless care coordination and support nurses in delivering efficient and high-quality patient care.
         </p>
       </div>
 
-      <div id="sub-section-2-header-2.2">
-        <h4>2.2.1 Current Limitations (Nurses)</h4>
+      <div id="sub-section-2-header-2-3">
+        <h4>2.2.3. Persona and JTBD (Nurses)</h4>
         <p>
-          Limitations. 
+          A user-centered design approach was employed to create personas (Figure 7) and Jobs-To-Be-Done (JTBD) statements (Figure 8) that accurately reflect the experiences of nurses. These tools were developed to inform and guide the design process, ensuring that the solutions align with the needs and challenges faced by nurses in the MIC@Home program.
+          <br><br>
+
+          <image-component tag="image" source="assets/nurse_persona.png"
+          subtitle="Figure 7: Persona for Nurse – Overwhelmed Olivia, a registered practice nurse under the MIC@Home program">
+          </image-component>
+          <br><br>
+
+          <image-component tag="image" source="assets/nurse_jtbd.png"
+          subtitle="Figure 8: Jobs To Be Done (Functional, Emotional, and Social) with Job statement for Nurses">
+          </image-component>
         </p>
       </div>
 
-      <div id="sub-section-2-header-2.3">
-        <h4>2.2.1 Problem Statement (Nurses)</h4>
+      <div id="sub-section-2-header-2-4">
+        <h4>2.2.4. Problem Statement (Nurses)</h4>
         <p>
-          Problem Statement. 
-        </p>
-      </div>
+          Through our analysis of user journeys, nurse interviews, and the identification of key pain points, we have developed a clear problem statement:
+          <br><br>
 
-      <div id="sub-section-2-header-3">
-        <h3>2.3 How Might We Statements(HMW)</h3>
-        <p></p>
-      </div>
-
-      <div id="sub-section-2-header-3.1">
-        <h4>2.3.1 HMW of Patients</h4>
-        <p>
-          HMW of patients. 
-        </p>
-      </div>
-
-      <div id="sub-section-2-header-3.2">
-        <h4>2.3.2 HMW of Nurses</h4>
-        <p>
-          HMW of nurses. 
+          Nurses need a way to <b>manage documentation</b> and <b>communicate more effectively</b> while accessing real-time, holistic patient information because they <u>often face overwhelming administrative tasks and fragmented information flow</u>. This challenge creates stress, limits their ability to prioritize patient care, and impacts their confidence in making informed, timely decisions.
         </p>
       </div>
     </div>
@@ -367,21 +504,102 @@
     <div>
       <!-- This is an example of what a section might look like -->
       <div id="section-header-3">
-        <h2> 1. Solution Overview </h2>
-        <p>       </p>
+        <h2>3. Problem Clarification</h2>
       </div>
 
       <div id="sub-section-3-header-1">
-        <h3>3.1 Value Proposition</h3>
+        <h3>3.1. How Might We Statements (Patients)</h3>
         <p>
-          Value Proposition.
+          To address the key challenges within the MIC@Home program, we developed two "How Might We" (HMW) statements that focus on enhancing patient support and promoting self-management:
+
+          <table style="margin-left:auto; margin-right:auto;">
+            <caption><i>Table 3. Forming HMW and zooming in and out (Patients)</i></caption>
+            <tr style="background-color: rgb(234, 209, 220);">
+              <th>Original HMW statement</th>
+              <th>Zoomed In</th>
+              <th>Zoomed Out</th>
+            </tr>
+            <tr>
+              <td>How might we create continuous support systems that connect patients to their healthcare team, reducing feelings of isolation and anxiety about their health?</td>
+              <td>How might we design a system that allows patients to check in with their healthcare team regularly, receiving real-time reassurance and advice when they need it most?</td>
+              <td>How might we develop a holistic ecosystem that integrates patients, caregivers, and healthcare professionals, fostering an ongoing sense of community and support throughout the entire treatment journey?</td>
+            </tr>
+            <tr>
+              <td>How might we empower patients to confidently manage their daily care routines, reducing dependence on healthcare providers while ensuring safety and adherence to treatment?</td>
+              <td>How might we provide patients with simple, personalized reminders and guides to help them manage medication, monitor vitals, and follow daily care routines independently?</td>
+              <td>How might we create a comprehensive self-management system that enables patients to take control of their health journey, fostering self-efficacy and reducing the need for frequent in-person interventions?</td>
+            </tr>
+          </table>
+          <br><br>
         </p>
       </div>
 
       <div id="sub-section-3-header-2">
-        <h3>3.2 Key Requirements & Specifications</h3>
+        <h3>3.2. Value Proposition (Patients)</h3>
         <p>
-          Requirements + specifications. 
+          Based on the How-Might-We statements and pain points identified in the user journey maps, essential insights were organized into a value proposition canvas:
+          <br><br>
+
+          <image-component tag="image" source="assets/patient_value_prop_1.png"
+          subtitle="Figure 9: Value Proposition Canvas Zoomed-In (Patients)">
+          </image-component>
+          <br><br>
+
+          <image-component tag="image" source="assets/patient_value_prop_2.png"
+          subtitle="Figure 9: Value Proposition Canvas Zoomed-In (Patients)">
+          </image-component>
+          <br><br>
+        </p>
+      </div>
+
+      <div id="sub-section-3-header-3">
+        <h3>3.3. How Might We Statements (Nurses)</h3>
+        <p>
+          We created 3 potential "How Might We" statements to define the areas we should focus on, with one of the statements being rejected due to its advanced nature and being out of scope (highlighted in red).
+          <br><br>
+
+          <table style="margin-left:auto; margin-right:auto;">
+            <caption><i>Table 4. Forming HMW and zooming in and out (Nurses)</i></caption>
+            <tr style="background-color: rgb(234, 209, 220);">
+              <th>Original HMW statement</th>
+              <th>Zoomed In</th>
+              <th>Zoomed Out</th>
+            </tr>
+            <tr>
+              <td style="background-color: rgb(230, 184, 175)">How might we streamline documentation processes for nurses to reduce administrative workload and ensure accurate, real-time updates on patient care?</td>
+              <td>How might we design an intuitive digital tool that allows nurses to quickly input patient data during home visits, minimizing time spent on documentation?</td>
+              <td>How might we create an integrated system that automates data entry, connects patient records across all healthcare platforms, and ensures nurses can focus on care delivery rather than paperwork?</td>
+            </tr>
+            <tr>
+              <td>How might we provide nurses with time-efficient tools to gain a comprehensive understanding of each patient’s condition within the limited time of home visits?</td>
+              <td>How might we design a patient assessment tool that highlights key health indicators for nurses, allowing them to assess patients’ conditions quickly and effectively?</td>
+              <td>How might we create a time management system that streamlines patient visits by prioritizing tasks, allowing nurses to deliver holistic care within tight time constraints?</td>
+            </tr>
+            <tr>
+              <td>How might we improve communication between healthcare teams to ensure seamless and continuous access to up-to-date, comprehensive patient information?</td>
+              <td>How might we create a unified digital platform where all healthcare teams can update, access, and view patient information in real-time, ensuring everyone is on the same page during care delivery?</td>
+              <td>How might we develop an integrated healthcare communication system that consolidates patient data and enables seamless, transparent communication across all healthcare teams and shifts?</td>
+            </tr>
+          </table>
+          <br><br>
+        </p>
+      </div>
+
+      <div>
+        <h3>3.4. Value Proposition (Nurses)</h3>
+        <p>
+          Based on the How-Might-We statements and pain points identified in the user journey maps, essential insights were organized into a value proposition canvas:
+          <br><br>
+
+          <image-component tag="image" source="assets/nurse_value_prop_1.png"
+          subtitle="Figure 11: Value Proposition Canvas Zoomed-In (Nurses)">
+          </image-component>
+          <br><br>
+
+          <image-component tag="image" source="assets/nurse_value_prop_2.png"
+          subtitle="Figure 12: Value Proposition Canvas Zoomed-In (Nurses)">
+          </image-component>
+          <br><br>
         </p>
       </div>
     </div>
@@ -392,6 +610,61 @@
     <div>
       <!-- This is an example of what a section might look like -->
       <div id="section-header-4">
+        <h2> 1. Features </h2>
+        <p>       </p>
+      </div>
+
+      <div id="sub-section-4-header-1">
+        <h3>4.1 Wireframes</h3>
+        <p>
+          Wireframes.
+        </p>
+      </div>
+
+      <div id="sub-section-4-header-2">
+        <h3>4.2 List of features</h3>
+        <p>
+          We have a total of five features as part of our solution. Three of these features are for the patients' module and the other two features are for the nurses' module. 
+        </p>
+      </div>
+      <div id="sub-section-4-header-2.1">
+        <h4>4.2.1 Feature 1</h4>
+        <p>
+          Feature 1.
+        </p>
+      </div>
+      <div id="sub-section-4-header-2.2">
+        <h4>4.2.2 Feature 2</h4>
+        <p>
+          Feature 2.
+        </p>
+      </div>
+      <div id="sub-section-4-header-2.3">
+        <h4>4.2.3 Feature 3</h4>
+        <p>
+          Feature 3.
+        </p>
+      </div>
+      <div id="sub-section-4-header-2.4">
+        <h4>4.2.1 Feature 4</h4>
+        <p>
+          Feature 4.
+        </p>
+      </div>
+      <div id="sub-section-4-header-2.5">
+        <h4>4.2.5 Feature 5</h4>
+        <p>
+          Feature 5.
+        </p>
+      </div>
+    </div>
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+    <div>
+      <!-- This is an example of what a section might look like -->
+      <div id="section-header-5">
         <h2> 1. Features </h2>
         <p>       </p>
       </div>
@@ -499,5 +772,4 @@
   <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
   <script type="module" src="./components/table-component/table-component.js"></script>
 </body>
-
 </html>
