@@ -302,16 +302,16 @@
         <sl-tree-item expanded>
           <a href="#appendix">Appendix</a>
           <sl-tree-item>
-            <a href="#appendix-A">Meeting With MOHT</a>
+            <a href="#appendix-A">Appendix A: All Wireframes of 3 iterations</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#appendix-B">User Journey Maps</a>
+            <a href="#appendix-B">Appendix B: SUS Survey Instrument and Scoring Methodology</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#appendix-C">List of Features (Patient Module)</a>
+            <a href="#appendix-C">Appendix C: Information flow and AI integration</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#appendix-D">List of Features (Patient Module)</a>
+            <a href="#appendix-D">Appendix D: Data Collected from Integrated User Tests</a>
           </sl-tree-item>
         </sl-tree-item>
       </sl-tree>
@@ -2535,6 +2535,127 @@
         </ul>
       </div>
     </div>
+    <br><br>
+    <sl-divider></sl-divider>
+
+    <div id="section-header-10">
+      <h2>10. Integrated User Tests</h2>
+
+      <div id="sub-section-10-header-1">
+        <h3>10.1 Test Methodology</h3>
+
+        <div id="sub-section-10-header-1-1">
+          <h4>10.1.1 Test Objectives</h4>
+          <p>
+            The main objective of these user tests is to understand how users interact with the app, identify areas for
+            improvement, and ensure the app meets user needs effectively. Specifically, we seek to answer 6 questions
+            regarding the users' experience with our application.
+          </p>
+          <ol>
+            <li>Is the app easy to navigate, and are key features accessible?</li>
+            <li>Are users able to log medications and track vital signs without confusion?</li>
+            <li>Do users find the chatbot helpful for answering health-related questions?</li>
+            <li>Are there any features or information missing that users would find useful?</li>
+            <li>How intuitive are the medication reminders and notifications?</li>
+            <li>Are users able to view and interpret historical health data easily?</li>
+          </ol>
+        </div>
+
+        <div id="sub-section-10-header-1-2">
+          <h4>10.1.2 Test Environment</h4>
+          <p>
+            The tests are conducted both online and in-person in a semi-guided fashion, with directed scenarios laid out
+            as well as an exploratory testing phase. For the online tests, the application is loaded onto an emulator on
+            the host's device and the testers direct the host to interact with the application. For in-person tests, a
+            provided mobile device has the application loaded onto it for the testers to interact with.
+            <br><br>
+            Participants are first made known of the context of MIC@Home. Then, they are given a short introduction to
+            the MediHeal application and its features. They will run through a set of scenarios assuming the role of a
+            certain demographic as specified in our use cases, then they will be free to conduct exploratory testing on
+            the application.
+          </p>
+        </div>
+
+        <div id="sub-section-10-header-1-3">
+          <h4>10.1.3 Test Participants</h4>
+          <p>
+            A total of six participants were recruited to be involved in two sessions of user tests, three in-person and
+            three online. The participants are fluent in English and have previously had experience as a patient in the
+            hospital.
+          </p>
+        </div>
+
+        <div id="sub-section-10-header-1-4">
+          <h4>10.1.4 Test Scenarios</h4>
+          <table id="table-27" style="margin-left:auto; margin-right:auto; border:none; padding:0px;">
+            <caption><i>Table 27. Testing Procedure for User Test</i></caption>
+            <th style="border: none;">
+              <img src="assets/table27.png" style="max-width:800px;">
+            </th>
+          </table>
+        </div>
+
+        <div id="sub-section-10-header-1-5">
+          <h4>10.1.5 Data Collection</h4>
+          <p>
+            Data collection is done via a questionnaire, which has three sections of questions with the Likert scale as
+            answers. These three sections are overall chatbot satisfaction, chatbot functionality, and application UI/UX
+            satisfaction. After the three sections is a section for open ended questions.The full questionnaire is in
+            <b>Appendix D</b>.
+          </p>
+        </div>
+      </div>
+
+      <div id="sub-section-10-header-2">
+        <h3>10.2 Test Results</h3>
+
+        <div id="sub-section-10-header-2-1">
+          <h4>10.2.1 Result Summary</h4>
+          <table id="table-28" style="margin-left:auto; margin-right:auto; border:none; padding:0px;">
+            <caption><i>Table 28. Results Summary</i></caption>
+            <th style="border: none;">
+              <img src="assets/table28.png" style="max-width:800px;">
+            </th>
+          </table>
+          <br>
+          <table id="table-29" style="margin-left:auto; margin-right:auto; border:none; padding:0px;">
+            <caption><i>Table 29. Summary of User Test Responses</i></caption>
+            <th style="border: none;">
+              <img src="assets/table29.png" style="max-width:800px;">
+            </th>
+          </table>
+        </div>
+
+        <div id="sub-section-10-header-2-2">
+          <h4>10.2.2 Key Takeaways and Conclusion</h4>
+          <p>
+            From this round of user tests, three major issues can be highlighted.
+          </p>
+          <ol>
+            <li>The accuracy and reliability of suggestions given by the chatbot</li>
+            <li>The ability of the chatbot to properly resolve issues raised by the user</li>
+            <li>The humanisation of the chatbot's responses</li>
+            <li>The ability of reminders to alert the user</li>
+          </ol>
+          <p>
+            Most of these issues stem from the chatbot. In particular, these are issues with the size of the knowledge
+            base and with the system prompt in the backend. These necessitate the expansion of our current knowledge
+            base and fine tuning of the system prompt to introduce more variation in sentence structure and to encourage
+            resolution of a patient's issues over referring the patient to their health provider. The ability for the
+            chatbot to give useful suggestions is integral to the functioning of the chatbot, and thus the system prompt
+            modification will be worked on for the final prototype.
+            <br><br>
+            On the frontend, the current notifications system is deemed by some users not to be sustained and impactful
+            enough. This can be improved with an opt-in calling or alarm system that can better incentivise these
+            patients to conduct their daily routine tasks. The chatbot interface can also be overhauled to allow the
+            display of links from relevant websites to assure patients that the chatbot's information comes from
+            reliable sources. These issues are less critical to the function of the application, and so the priority for
+            the resolution of these issues is medium to low and can be slated for future works.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br><br>
     <sl-divider></sl-divider>
 
     <!-- This is an example of how you can use the references component to create references -->
