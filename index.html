@@ -1281,15 +1281,11 @@
       <div id="sub-section-9-header-2">
         <h3>9.2. Responsibilities and Deliverables</h3>
         <table id="table-23" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
-          <caption style="caption-side: top; text-align: center;">
-            <i>Table 23. Backend Group Members’ Responsibilities</i>
-          </caption>
-          <tr>
-            <td style="border: none; padding: 0;">
-              <image-component id="image" source="assets/backend_tasks.png" subtitle="">
+          <caption><i>Table 23. Backend Group Members’ Responsibilities</i></caption>
+            <th style="border: none;">
+              <img src="assets/backend_tasks.png" style="max-width:800px;">
               </image-component>
-            </td>
-          </tr>
+            </th>
         </table>
       </div>
       <div id="sub-section-9-header-3">
@@ -1297,8 +1293,8 @@
         <p>
           The backend architecture for our application is as follows:
         </p>
-        <image-component tag="image" source="assets/backend_architecture.png"
-          subtitle="Figure 18. Backend architecture">
+        <image-component id="fig-19" tag="image" source="assets/backend_architecture.png"
+          subtitle="Figure 19. Backend architecture">
         </image-component>
         <br><br>
         <p>
@@ -1319,29 +1315,21 @@
           interaction and user engagement.
           <br><br>
         <table id="table-24" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
-          <caption style="caption-side: top; text-align: center;">
-            <i>Table 24. Functional Requirements of Backend</i>
-          </caption>
-          <tr>
-            <td style="border: none; padding: 0;">
-              <image-component id="image" source="assets/backend_func_req.png" subtitle="">
-              </image-component>
-            </td>
-          </tr>
+            <caption><i>Table 24. Functional Requirements of Backend</i></caption>
+              <th style="border: none;">
+                <img src="assets/backend_func_req.png" style="max-width:800px;">
+                </image-component>
+              </th>
         </table>
         <br><br>
         <b> B. Non-Functional Requirements </b>
         <br><br>
         <table id="table-25" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
-          <caption style="caption-side: top; text-align: center;">
-            <i>Table 25. Non-Functional Requirements for Backend</i>
-          </caption>
-          <tr>
-            <td style="border: none; padding: 0;">
-              <image-component id="image" source="assets/backend_nonfunc_req.png" subtitle="">
+          <caption><i>Table 25. Non-Functional Requirements for Backend</i></caption>
+            <th style="border: none;">
+              <img src="assets/backend_nonfunc_req.png" style="max-width:800px;">
               </image-component>
-            </td>
-          </tr>
+            </th>
         </table>
         <br><br>
         <b> C. Endpoints </b>
@@ -1350,15 +1338,11 @@
         communication between the front end, AI chatbot and data storage components. The following table outlines the
         available API endpoints, their functions, inputs, responses and HTTP methods used.
         <table id="table-26" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
-          <caption style="caption-side: top; text-align: center;">
-            <i>Table 26. Endpoints of Backend</i>
-          </caption>
-          <tr>
-            <td style="border: none; padding: 0;">
-              <image-component id="image" source="assets/backend_endpoints.png" subtitle="">
+          <caption><i>Table 26. Endpoints of Backend</i></caption>
+            <th style="border: none;">
+              <img src="assets/backend_endpoints.png" style="max-width:800px;">
               </image-component>
-            </td>
-          </tr>
+            </th>
         </table>
         </p>
       </div>
@@ -1373,8 +1357,8 @@
           efficiently retrieve relevant information while maintaining a structured dialogue with the user. The figure
           below shows the set up of the chatbot architecture.
         </p>
-        <image-component id="fig-19" tag="image" source="assets/fig19.png"
-          subtitle="Figure 19. Diagrammatic overview of the chatbot's graph-based structure">
+        <image-component id="fig-20" tag="image" source="assets/fig19.png"
+          subtitle="Figure 20. Diagrammatic overview of the chatbot's graph-based structure">
         </image-component>
         <p>
           The conversation flow is structured around interconnected nodes, each serving a specific function:
@@ -1442,7 +1426,8 @@
           general role but also highly relevant to the individual user's medical context and history as well as within
           the guidelines set by the healthcare professionals.
         </p>
-        <image-component id="fig-20" tag="image" source="assets/fig20.png" subtitle="Figure 20. System Prompt Template">
+        <image-component id="fig-21" tag="image" source="assets/fig20.png" 
+        subtitle="Figure 21. System Prompt Template">
         </image-component>
       </div>
       <div id="sub-section-9-header-4-3">
@@ -1471,8 +1456,8 @@
             Chat History Table – Captures patient-chatbot interactions, enabling review by healthcare professionals.
           </li>
         </ol>
-        <image-component id="fig-21" tag="image" source="assets/fig21.png"
-          subtitle="Figure 21. Overview of Patient Database Schema">
+        <image-component id="fig-22" tag="image" source="assets/fig21.png"
+          subtitle="Figure 22. Overview of Patient Database Schema">
         </image-component>
         <p>
           <b>AI Integrations</b>
@@ -1500,14 +1485,14 @@
           Firebase, reminding users when medications or vitals checks are due. An example of the prompt template for the
           AI extraction and output is shown in the figure below.
         </p>
-        <image-component id="fig-22" tag="image" source="assets/fig22.png"
-          subtitle="Figure 22. Prompt Template for Medication and Vitals Extraction">
+        <image-component id="fig-23" tag="image" source="assets/fig22.png" style="max-width:800px;"
+          subtitle="Figure 23. Prompt Template for Medication and Vitals Extraction">
         </image-component>
-        <image-component id="fig-23" tag="image" source="assets/fig23.png"
-          subtitle="Figure 23.  JSON Output from AI Extraction">
+        <image-component id="fig-24" tag="image" source="assets/fig23.png"
+          subtitle="Figure 24.  JSON Output from AI Extraction">
         </image-component>
-        <image-component id="fig-24" tag="image" source="assets/fig24.png"
-          subtitle="Figure 24. Tracker Table with Daily Medication and Vital Reminders">
+        <image-component id="fig-25" tag="image" source="assets/fig24.png"
+          subtitle="Figure 25. Tracker Table with Daily Medication and Vital Reminders">
         </image-component>
         <p>
           <br><br>
@@ -1533,18 +1518,139 @@
           patient monitoring and proactive healthcare intervention, improving patient outcomes and adherence to
           treatment plans.
         </p>
-        <image-component id="fig-25" tag="image" source="assets/fig25.png"
-          subtitle="Figure 25. JSON Output from Chat History and Updating Tracker Table">
+        <image-component id="fig-26" tag="image" source="assets/fig25.png"
+          subtitle="Figure 26. JSON Output from Chat History and Updating Tracker Table">
         </image-component>
       </div>
       <div id="sub-section-9-header-5">
         <h3>9.5. Backend testing for iteration 1</h3>
+        <p>
+          Since the frontend was still under development, the initial phase of testing focused on evaluating the chatbot's response accuracy and retrieval process within the Retrieval-Augmented Generation (RAG) framework. The primary goal was to assess whether the chatbot could effectively handle frequently asked questions (FAQs) related to a given disease type, ensuring that responses were both relevant and medically appropriate.
+          <br><br>
+          For this test, the user’s care plan context was set to dengue. However, the chatbot’s retrieval tools included multiple vector search tools trained on different medical conditions, such as jaundice, dengue and urinary tract infections (UTI). This setup allowed us to test whether the Language Model (LLM) and chatbot node could correctly invoke only the vector search tool relevant to the user's specified context rather than retrieving unrelated information.
+          <br><br>
+          To conduct the evaluation, a set of common dengue-related queries was compiled by consulting individuals who had previously experienced the illness as well as nursing students. These queries were then submitted to the backend chatbot endpoint using Postman (Figure 27), simulating real user interactions. The chatbot’s responses were collected and analyzed based on:
+        </p>
+        <ul>
+          <li>
+            Medical Relevance – Whether the response aligned with established medical guidelines and the user’s care plan.
+          </li>
+          <li>
+            Retrieval Efficiency – Whether the chatbot invoked the appropriate semantic search tool, schedule retrieval tool, or internet search tool based on the query.
+          </li>
+        </ul>
+        <image-component id="fig-27" tag="image" source="assets/fig27.png"
+          subtitle="Figure 27. JSON Output from Chat History and Updating Tracker Table">
+        </image-component>
+        <p>
+          Additionally, the tool invocation logs were traced in the terminal (Figure 28) to determine whether the chatbot correctly selected the appropriate vector search tool based on the user’s condition. This step was crucial in verifying that the LLM-based decision-making process effectively filtered information specific to the user's medical context. 
+        </p>
+        <image-component id="fig-28" tag="image" source="assets/fig28.png"
+          subtitle="Figure 28. Tracking of Tools Used Through The Terminal">
+        </image-component>
+        <p>
+          The initial testing provided critical insights into preliminary chatbot response and the usage of tools given the background context of the user. It also provided insights into the chatbot’s retrieval accuracy and tool selection process. For the next stage of assessment, we consolidated the responses from the chatbot to assess the chatbot accuracy and user friendliness. Below are the chatbot responses and the assessment we conducted (figure 29). 
+        </p>
+        <image-component id="fig-29" tag="image" source="assets/fig29.png"
+          subtitle="Figure 29. Output of Chatbot for Assessment">
+        </image-component>
+        <p>
+          During testing, a key issue identified was the chatbot's tendency to explicitly mention the sources of its retrieved information, such as referencing the tools used or directly stating that the response was derived from the care plan. While this approach provides transparency, it was found to be less user-friendly and detracted from a natural conversational experience. Users may not need to know the technical details of how responses are generated, instead, they expect clear and human-like interactions that provide relevant information without unnecessary system references.
+        </p>
       </div>
       <div id="sub-section-9-header-6">
         <h3>9.6. Second Iteration</h3>
+        <p>
+          While the initial LangGraph architecture successfully retrieved accurate information for a single disease state given a single care plan, it needed to be enhanced to accommodate multiple users with other medical conditions, each with a unique care plan and personal medical history. Additionally, the chatbot's responses required improved user friendliness response to ensure better engagement and clarity for patients.
+          <br><br>
+          To address these challenges, we introduced two key modifications to the LangGraph architecture:
+        </p>
+        <ol>
+          <li>
+            <b>Retrieval Node for User-Specific Information </b>
+            <p>
+              A Retrieval Node was added before the chatbot node to ensure that each chatbot interaction is personalized. This node is responsible for retrieving:
+            </p>
+            <ul>
+              <li>
+                The user’s care plan, including prescribed medications and vital monitoring schedules.
+              </li>
+              <li>
+                Previous interactions with the chatbot to provide contextual continuity.
+              </li>
+              <li>
+                Current medication and vitals schedule for the day, ensuring accurate reminders and health tracking.
+              </li>
+            </ul>
+            <p>
+              By integrating this user-specific retrieval step, the chatbot can tailor responses based on individual health conditions while maintaining modularity to accommodate multiple users. 
+            </p>
+          </li>
+          <li>
+            <b>Supervisor Node for User Friendly Responses</b>
+            <p>
+              To enhance the clarity, coherence, and user-friendliness of chatbot interactions, a Supervisor Node was integrated into the system. This node evaluates and refines the chatbot's responses before they are delivered to the user, ensuring that the output is both medically relevant and easy to understand.
+              <br><br>
+              The Supervisor Node is responsible for:
+            </p>
+            <ul>
+              <li>
+                Ensuring clarity and structure – Responses are formatted in a conversational and easily comprehensible manner, avoiding overly technical language.
+              </li>
+              <li>
+                Maintaining medical accuracy – All recommendations align with the user’s individualized care plan and the procedural guidelines set by healthcare professionals.
+              </li>
+              <li>
+                Enhancing engagement and empathy – The chatbot consistently communicates in a compassionate and supportive tone, fostering better patient interaction.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <p>
+          By implementing the Supervisor Node, the chatbot now delivers well-structured and user-friendly responses, enhancing patient engagement while maintaining medical accuracy and consistency in interactions. The figure below shows the revised architecture of the chatbot. 
+        </p>
+        <image-component id="fig-30" tag="image" source="assets/fig30.png" style="max-width:800px;"
+          subtitle="Figure 30. Revised Chatbot Architecture">
+        </image-component>
       </div>
       <div id="sub-section-9-header-7">
         <h3>9.7. Backend testing for iteration 2 </h3>
+        <p>
+          To evaluate the backend's ability to accommodate multiple concurrent users, we conducted a load test by sending 10 HTTP requests to the server. The test aimed to measure response time and system scalability under increased demand. The results indicated an average response time of 67,797.36 ms ( 67.8 s or 1.13 min). Notably, after processing the third request, the response time experienced a significant delay, highlighting a potential latency issue in the backend system.
+          <br><br> 
+          Upon further investigation, we identified the primary cause of latency as the waiting time for the backend to send requests to the Groq API. This delay was likely due to rate limitations associated with the free-tier version of Groq, which we were using for initial testing.
+        </p>
+        <image-component id="fig-31" tag="image" source="assets/fig31.png" style="max-width:800px;"
+          subtitle="Figure 31. Latency Analysis Results">
+        </image-component>
+        <p>
+          A function call analysis was performed to trace execution times and identify performance bottlenecks. The key observations from the test were:
+        </p>
+        <ul>
+          <li>
+            High Latency Due to API Requests: The primary cause of delay was identified as the waiting time for the backend to send requests to the Groq API. The system experienced prolonged delays in response time, which could be attributed to the rate limitations associated with the free-tier version of Groq, which was used for initial testing.
+          </li>
+          <li>
+            Excessive Wait Time (time.sleep): A significant portion of execution time (35.002 seconds) was consumed by the time.sleep function, which may indicate an inefficient waiting mechanism within the chatbot’s process.
+          </li>
+          <li>
+            Network Latency and SSL Handshake: The Secure Socket Layer (SSL) handshake and read operations accounted for additional delays (1.77 seconds), suggesting that network latency contributed to slow response times.
+          </li>
+        </ul>
+        <p>
+          To mitigate this issue and ensure faster response times, we concluded that moving to a locally hosted LLM would be a more reliable approach when deploying to a real world context. This requires:
+        </p>
+        <ul>
+          <li>
+            Deploying a locally hosted LLM to reduce dependence on external API calls. Perhaps the use of quantized LLMs can be explored for faster real-time interactions.
+          </li>
+          <li>
+            Ensuring the local machine has sufficient computational resources, including high-performance GPU drivers capable of handling large-scale model inference.
+          </li>
+          <li>
+            Optimizing request handling by improving parallel processing and reducing unnecessary network latency.
+          </li>
+        </ul>
       </div>
     </div>
     <sl-divider></sl-divider>
