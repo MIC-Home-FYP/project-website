@@ -957,19 +957,19 @@
             <td>
               <ul>
                 <li>
-                  <em>Smart Triage:</em> Using predefined clinical protocols, chatbot can access patient concerns and
+                  <b>Smart Triage:</b> Using predefined clinical protocols, chatbot can access patient concerns and
                   escalate when necessary
                 </li>
                 <li>
-                  <em>Natural Language Symptom Input:</em> Chatbot understands and clarifies symptoms described in
+                  <b>Natural Language Symptom Input:</b> Chatbot understands and clarifies symptoms described in
                   everyday language
                 </li>
                 <li>
-                  <em>Automated Summaries:</em> Generates concise summaries of patient issues for efficient clinical
+                  <b>Automated Summaries:</b> Generates concise summaries of patient issues for efficient clinical
                   follow-up
                 </li>
                 <li>
-                  <Em>Domain-constrained responses:</Em> Uses a tailored system prompt and medical database to ensure
+                  <b>Domain-constrained responses:</b> Uses a tailored system prompt and medical database to ensure
                   safe, accurate replies
                 </li>
               </ul>
@@ -1200,69 +1200,817 @@
         subtitle="Figure 6. Must-Have vs. Nice-to-Have Feature Classification">
       </image-component>
     </div>
-
+    <br><br>
     <sl-divider></sl-divider>
 
-    <div>
-      <div id="section-header-8">
-        <h2>8. Frontend Prototyping</h2>
-      </div>
+    <div id="section-header-8">
+      <h2>8. Frontend Prototyping</h2>
 
       <div id="sub-section-8-header-1">
-        <h3>8.1. Purpose and Objectives</h3>
+        <h3>8.1 Purpose and Objectives</h3>
+        <p>
+          The UI/UX development framework establishes a rigorous methodology for creating optimal healthcare management
+          interfaces through close collaboration between design and engineering disciplines. This process harmonizes
+          aesthetic design principles with technical implementation requirements to deliver solutions that meet three
+          fundamental objectives:
+        </p>
+        <ul>
+          <li>
+            The framework prioritizes enhanced usability by transforming complex medical data into intuitive visual
+            representations, optimizing navigation pathways between critical functions, and refining interactive
+            elements to maximize patient engagement and comprehension.
+          </li>
+          <li>
+            Ensures clinical effectiveness through precise data visualization techniques, implementation of fail-safe
+            alert notification systems, and strict compliance with WCAG 2.1 accessibility standards to accommodate
+            diverse user needs.
+          </li>
+          <li>
+            The methodology guarantees technical excellence by achieving consistent performance across all target
+            devices, maintaining sub-500 ms interface response times, and implementing enterprise-grade security
+            protocols for sensitive health data protection.
+          </li>
+        </ul>
       </div>
+
       <div id="sub-section-8-header-2">
-        <h3>8.2. Responsibilities and Deliverables</h3>
+        <h3>8.2 Responsibilities and Deliverables</h3>
+        <table id="table-5" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+          <caption><i>Table 5. Frontend Group Members' Responsibilities</i></caption>
+          <th style="border:none;">
+            <img src="assets/table5.png" style="max-width:800px;">
+          </th>
+        </table>
       </div>
+
       <div id="sub-section-8-header-3">
-        <h3>8.3. Overview of Frontend Architecture</h3>
+        <h3>8.3 Overview of Frontend Architecture</h3>
+        <p>
+          The frontend architecture for our application is as follows:
+        </p>
+        <image-component id="fig-7" tag="image" source="assets/fig7.png" subtitle="Figure 7. Frontend Architecture">
+        </image-component>
+        <p>
+          The above illustration is a summary of the frontend architecture of our implementation, with different control
+          flows if the user is authenticated or not. The arrows within the frontend block also display the navigability
+          between screens and components. This is the result of the design specifications outlined in the planning phase
+          as shown below.
+        </p>
+        <table id="table-6" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+          <caption><i>Table 6. Feature List for Frontend</i></caption>
+          <th style="border:none;">
+            <img src="assets/table6.png" style="max-width:800px;">
+          </th>
+        </table>
+        <p>
+          In addition to the features mentioned above, there are a number of non-functional requirements specified for
+          the frontend implementation.
+        </p>
+        <table id="table-7" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+          <caption><i>Table 7. Non-Functional Requirements for Frontend</i></caption>
+          <th style="border:none;">
+            <img src="assets/table7.png" style="max-width:800px;">
+          </th>
+        </table>
+        <p>
+          With these requirements laid out, the initial design of the UI layout was created for the first iteration of
+          the application in Semester 1.
+        </p>
       </div>
+
       <div id="sub-section-8-header-4">
-        <h3>8.4. First Iteration Prototype</h3>
+        <h3>8.4 First Iteration Prototype</h3>
+        <p>
+          The overall structure of this application is shown in the sitemap below.
+        </p>
+        <image-component id="fig-8" tag="image" source="assets/fig8.png"
+          subtitle="Figure 8. Sitemap of mobile app structure">
+        </image-component>
+        <p>
+          The design tools were strategically selected based on each phase's requirements. Canva was used initially for
+          rapid concept visualization and foundational design establishment, leveraging its templated environment for
+          efficient early iterations. For advanced stages, Figma was adopted to handle complex technical demands,
+          offering robust features for creating interactive prototypes, reusable components, and seamless developer
+          handoffs. This progression from low-fidelity exploration to high-fidelity implementation ensured optimal
+          resource use and design fidelity at each development phase. All wireframe iterations (1-3) are archived in
+          Appendix A for comprehensive reference.
+        </p>
+        <image-component id="fig-9" tag="image" source="assets/fig9.png" subtitle="Figure 9. Login Page (Iteration 1)">
+        </image-component>
+        <br>
+        <image-component id="fig-10" tag="image" source="assets/fig10.png"
+          subtitle="Figure 10. Home Page (Iteration 1)">
+        </image-component>
+        <br>
+        <image-component id="fig-11" tag="image" source="assets/fig11.png"
+          subtitle="Figure 11. Progress Charts (Iteration 1)">
+        </image-component>
+        <br>
+        <image-component id="fig-12" tag="image" source="assets/fig12.png"
+          subtitle="Figure 12. Chatbot Page (Iteration 1)">
+        </image-component>
+        <br>
+        <image-component id="fig-13" tag="image" source="assets/fig13.png"
+          subtitle="Figure 13. Medications Page (Iteration 1)">
+        </image-component>
+
+        <div id="sub-section-8-header-4-1">
+          <h4>8.4.1 Feedback for first iteration</h4>
+          <p>
+            For the initial prototype evaluation, MOHT representatives and experienced MIC@home patients were selected
+            as the target audience. Their feedback was instrumental in assessing whether the proposed MediHeal
+            application aligned with user expectations and operational requirements. The inputs obtained have been
+            systematically documented in the table below, accompanied by actionable recommendations for integration into
+            the next design iteration.
+          </p>
+          <table id="table-8" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+            <caption><i>Table 8. First Iteration Feedback</i></caption>
+            <th style="border:none;">
+              <img src="assets/table8.png" style="max-width:800px;">
+            </th>
+          </table>
+          <p>
+            After the first round of UI testing and feedback was received, the first iteration of UI tweaks was
+            designed, with the frontend implementation being sufficiently functional to seek to match the UI layout.
+          </p>
+        </div>
       </div>
-      <div id="sub-section-8-header-4-1">
-        <h3>8.4.1. Feedback for first iteration</h3>
-      </div>
+
       <div id="sub-section-8-header-5">
         <h3>8.5. Second Iteration Prototype</h3>
+        <div id="sub-section-8-header-5-1">
+          <h4>8.5.1 Design Phase</h4>
+          <p>
+            During the design phase for MediHeal's second iteration, a Mood Board was created to systematically evaluate
+            and incorporate proven healthcare app interfaces. The Mood Board served as a critical reference point to
+            balance established best practices with MediHeal's specific user needs.
+          </p>
+          <image-component id="fig-14" tag="image" source="assets/fig14.png"
+            subtitle="Figure 14. Mood Board for Design Reference">
+          </image-component>
+          <p>
+            The color scheme (#6290C3, #F0F7EE, #2F3061) was selected to meet healthcare interface requirements while
+            optimizing usability. The primary blue (#6290C3) balances professionalism and approachability for
+            interactive elements, while the light mint background (#F0F7EE) ensures readability and reduces eye strain.
+            The deep navy (#2F3061) provides authoritative contrast for critical information. This palette adheres to
+            WCAG 2.1 AA accessibility standards, maintains distinction for colorblind users, and aligns with clinical
+            environments by avoiding overstimulating hues—prioritizing both patient comfort and functional clarity.
+          </p>
+          <image-component id="fig-15" tag="image" source="assets/fig15.png"
+            subtitle="Figure 15. Preliminary Wireframes">
+          </image-component>
+          <p>
+            Preliminary wireframes were constructed to define the structural composition and functional organization of
+            interface elements across all application screens. These schematic representations establish the
+            foundational layout architecture prior to the application of aesthetic treatments or content population,
+            serving as the primary reference for subsequent high-fidelity design implementation.
+          </p>
+          <table id="table-9" style="margin-left:auto; margin-right:auto; padding:0px;">
+            <caption><i>Table 9. Second Iteration Wireframes</i></caption>
+            <tr>
+              <th>Login Page</th>
+            </tr>
+            <tr>
+              <td><img src="assets/table9.png" style="max-width:800px;"></td>
+            </tr>
+            <tr>
+              <td>
+                The MediHeal login interface has undergone targeted refinements to enhance usability while preserving
+                its foundational structure. A secondary "Sign Up" option has been introduced beneath the primary login
+                form to accommodate new users without disrupting the existing authentication workflow. The tagline
+                "MediHeal recovery made simpler!" has been prominently positioned to reinforce brand identity and
+                application purpose.
+              </td>
+            </tr>
+          </table>
+          <br>
+          <table id="table-10" style="margin-left:auto; margin-right:auto; padding:0px;">
+            <caption><i>Table 10. Post-Iteration 1 Home Page Changes</i></caption>
+            <tr>
+              <th>Home Page</th>
+            </tr>
+            <tr>
+              <td><img src="assets/table10.png" style="max-width:800px;"></td>
+            </tr>
+            <tr>
+              <td>
+                The redesigned homepage introduces a streamlined clinical interface prioritizing time-sensitive patient
+                needs. Key modifications include a consolidated task dashboard replacing fragmented notifications, with
+                medication and vital measurement reminders now displayed as chronologically ordered action cards. A
+                reconfigured vitals panel presents last-recorded metrics with clinical status indicators, while
+                integrated nurse visit schedules provide transparent care coordination. Non-essential content has been
+                removed to reduce cognitive load, including the emergency button which was relocated to a more prominent
+                position in the app's navigation hub to prevent accidental activation while maintaining immediate
+                access. The layout employs consistent visual hierarchies and standardized interactive elements to reduce
+                cognitive load, with all modifications validated against healthcare usability benchmarks.
+              </td>
+            </tr>
+          </table>
+          <br>
+          <table id="table-11" style="margin-left:auto; margin-right:auto; padding:0px;">
+            <caption><i>Table 11. Post-Iteration 1 Pills Page Changes</i></caption>
+            <tr>
+              <th>Medication/Pills Page</th>
+            </tr>
+            <tr>
+              <td><img src="assets/table11.png" style="max-width:800px;"></td>
+            </tr>
+            <tr>
+              <td>
+                The redesigned medication management system introduces comprehensive structural and functional
+                improvements to optimize patient adherence and usability. A new calendar view has been implemented,
+                enabling patients to toggle between weekly and daily medication schedules, with horizontal scrolling
+                functionality for seamless temporal navigation. The interface now incorporates interactive checkboxes
+                adjacent to each medication entry, allowing users to track dose administration in real-time. These
+                enhancements complement the previously established temporal grouping of medications (Before/After Food
+                categories) and chronological dosage display, while maintaining consistent bottom navigation. The
+                calendar integration provides longitudinal treatment visibility, with visual indicators distinguishing
+                planned, completed, and missed doses.
+              </td>
+            </tr>
+          </table>
+          <br>
+          <table id="table-12" style="margin-left:auto; margin-right:auto; padding:0px;">
+            <caption><i>Table 12. Post-Iteration 1 Vitals Page Changes</i></caption>
+            <tr>
+              <th>Vitals Page</th>
+            </tr>
+            <tr>
+              <td><img src="assets/table12.png" style="max-width:800px;"></td>
+            </tr>
+            <tr>
+              <td>
+                The redesigned vital signs monitoring system introduces comprehensive structural and functional
+                improvements to optimize clinical data comprehension and patient engagement. A dual-view interface has
+                been implemented, separating real-time metrics from historical trend analysis to reduce cognitive
+                overload. The trend visualization incorporates a three-tier color-coding system (green/yellow/red) to
+                provide immediate visual indicators of measurement status when accessing graphical data. Continuous
+                monitoring capabilities now record measurements throughout the day and aggregated weekly summaries for
+                longitudinal review. These enhancements complement the existing timeframe flexibility (daily/weekly view
+                toggle) and status classification system (Good/Below Average/Above Average), while maintaining strict
+                adherence to WCAG 2.1 AA accessibility standards for color contrast.
+              </td>
+            </tr>
+          </table>
+          <br>
+          <table id="table-13" style="margin-left:auto; margin-right:auto; padding:0px;">
+            <caption><i>Table 13. Post-Iteration 1 Chatbot Page Changes</i></caption>
+            <tr>
+              <th>Chatbot Page</th>
+            </tr>
+            <tr>
+              <td><img src="assets/table13-1.png" style="max-width:800px;"></td>
+            </tr>
+            <tr>
+              <td style="text-align:center;"><img src="assets/table13-2.png" style="max-width:800px;"></td>
+            </tr>
+            <tr>
+              <td>
+                The redesigned chatbot interface introduces comprehensive improvements to enhance usability and
+                functionality. Key modifications include the implementation of structured prompts to guide users through
+                medical queries, such as condition-specific recovery timelines (e.g., dengue) and measurement
+                instructions (e.g., blood pressure). A personalized greeting ("How are you feeling today?") has been
+                added to foster engagement, while maintaining a warm and approachable tone throughout interactions. New
+                features now allow users to bookmark clinically relevant responses for quick reference and review
+                conversation history, enabling seamless tracking of past discussions. These enhancements are
+                complemented by a streamlined navigation system, ensuring intuitive access to core functionalities.
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="sub-section-8-header-5-2">
+          <h4>8.5.2 Implementation Phase</h4>
+          <p>
+            In the second iteration, the UI layout is also used as a template to create the functioning application.
+            With the novelty of the flutter framework for the group, the UI layout of the application in the flutter
+            project was the focus of this iteration. In particular, we wanted to ensure that the implementation in
+            flutter matched the design created by the designer as closely as is possible within the limits of the
+            flutter framework. Thus, the scope of this iteration does not include the full functionality of components
+            and screens. The result of the implementation phase of the second iteration is the screens shown below.
+          </p>
+          <image-component id="fig-16" tag="image" source="assets/fig16.png"
+            subtitle="Figure 16. Screens implemented in flutter">
+          </image-component>
+          <p>
+            For the approach towards implementing the screens in flutter from the design templates given, each screen
+            had varying levels of difficulty in translating design to application.
+            <br><br>
+            The landing page, login page, and the signup page are the simplest to implement from the design, given that
+            they are mostly UI, and that the layout is relatively simple. The vitals page is also relatively simple due
+            to the above mentioned reasons.
+            <br><br>
+            In comparison, the home page is more difficult due to the sheer volume of customised UI components. In
+            addition, the specification for the design of the reminders is that each reminder UI element has to be able
+            to be checked and thus be stateful, making it more difficult to scale the screen component to an arbitrary
+            number of reminders.
+            <br><br>
+            The pills page was challenging to implement due to the complexities of managing dates, times, and scheduling
+            events. To save development time, an open-source Dart calendar package called calendar_view was used because
+            it closely matched the template designs. However, this choice also imposed restrictions on certain design
+            elements, such as the day view layout and event presentation.
+            <br><br>
+            The chat page was also challenging to implement due to the complexities of dynamically rendering incoming
+            messages and ensuring scalable design. To address these issues, the open-source package flutter_chat_ui was
+            utilized to manage the UI layout, allowing the development team to focus on optimizing backend communication
+            for chat functionality.
+          </p>
+        </div>
       </div>
-      <div id="sub-section-8-header-5-1">
-        <h3>8.5.1. Design Phase</h3>
-      </div>
-      <div id="sub-section-8-header-5-2">
-        <h3>8.5.2. Implementation Phase</h3>
-      </div>
+
       <div id="sub-section-8-header-6">
-        <h3>8.6. Testing of Iteration 2</h3>
+        <h3>8.6 Testing of Iteration 2</h3>
+        <p>
+          With the design and implementation done to an appropriate level, we conducted testing for both the design and
+          implementation aspect of the frontend. This consisted of a focus group discussion with 5 relevant users on the
+          design aspects of the UI, a review and discussion with a UI expert, and a series of frontend implementation
+          functionality tests.
+        </p>
+
+        <div id="sub-section-8-header-6-1">
+          <h3>8.6.1 Feedback by UI/UX Specialists</h3>
+          <p>
+            During Iteration 2, a comprehensive UX evaluation was conducted by expert UI/UX professionals from the
+            National University of Singapore—a professor and a graduate-level researcher. They performed a complete
+            heuristic walkthrough of the prototype interface, with all observations and recommendations systematically
+            documented for further analysis. The table below synthesizes their expert assessments and proposed
+            enhancements.
+          </p>
+          <table id="table-14" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+            <caption><i>Table 14. UI Feedback for MediHeal Screens</i></caption>
+            <th style="border:none;">
+              <img src="assets/table14.png" style="max-width:800px;">
+            </th>
+          </table>
+        </div>
+
+        <div id="sub-section-8-header-6-2">
+          <h3>8.6.2 User Testing: Patient Experience SUS Survey</h3>
+          <table id="table-15" style="margin-left:auto; margin-right:auto;">
+            <caption><i>Table 15. SUS Feedback for MediHeal</i></caption>
+
+            <!-- Row 1 -->
+            <tr>
+              <td>Introduction</td>
+              <td>
+                The System Usability Scale (SUS) is a widely recognized, standardized tool for evaluating the usability
+                of digital products [14]. It consists of a 10-item questionnaire with a 5-point Likert scale (1 =
+                Strongly Disagree to 5 = Strongly Agree), designed to measure users' perceptions of a system's
+                effectiveness, efficiency, and satisfaction.
+                <br><br>
+                For the MediHeal App, the SUS was administered to 5 participants (patients and nurses acting on behalf
+                of patients) to assess:
+                <ul>
+                  <li>
+                    Ease of use - Intuitiveness of navigation and features
+                  </li>
+                  <li>
+                    Learnability - Speed of understanding core functions
+                  </li>
+                  <li>
+                    Perceived complexity - Absence of unnecessary difficulty
+                  </li>
+                  <li>
+                    Confidence in use - Comfort level during interaction
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <!-- Row 2 -->
+            <tr>
+              <td>Methodology</td>
+              <td>
+                <b>Participant Demographics:</b>
+                <br>
+                The study included 5 carefully selected participants representing key user groups:
+                <ul>
+                  <li>3 active patients enrolled in the MIC@Home program</li>
+                  <li>2 experienced MIC@Home nurses familiar with patient care workflows</li>
+                </ul>
+                <b>Testing Environment:</b>
+                <br>
+                The SUS survey was conducted in a controlled yet realistic testing environment to ensure accurate
+                feedback. Participants interacted with a high-fidelity Figma prototype that faithfully replicated the
+                complete MediHeal App user experience, including:
+                <ol>
+                  <li>
+                    Full User Flow Simulation:
+                    <ul>
+                      <li>
+                        Landing Page → Login/Signup → Dashboard → Pills/Vitals Tracking → Chatbot Interaction
+                      </li>
+                      <li>
+                        All key screens were fully interactive, with navigation links mirroring the actual app
+                        functionality
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Evaluation Protocol:
+                    <ul>
+                      <li>
+                        SUS Administration: Following task completion, participants rated the standard 10-item SUS
+                        questionnaire
+                      </li>
+                      <li>
+                        Qualitative Feedback: Open-ended responses were collected to provide context for quantitative
+                        scores
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+              </td>
+            </tr>
+
+            <!-- Row 3 -->
+            <tr>
+              <td>Result/Findings</td>
+              <td>
+                <ol>
+                  <li>
+                    <b>Results</b>
+                    <br>
+                    The System Usability Scale assessment of the MediHeal application yielded the following quantitative
+                    results:
+                    <ul>
+                      <li>Mean SUS Score: 72.5 (SD = 8.3)</li>
+                      <li>Score Range: 62.5 - 85.0</li>
+                      <li>Benchmark Comparison: Exceeds the industry standard threshold of 68 for acceptable usability
+                      </li>
+                    </ul>
+                    Participant-level SUS scores demonstrated:
+                    <ul>
+                      <li>
+                        Two participants (1 patient, 1 nurse) achieved scores >80, indicating excellent perceived
+                        usability
+                      </li>
+                      <li>
+                        Three participants scored between 62.5-77.5, suggesting generally positive but variable
+                        experiences
+                      </li>
+                      <li>
+                        One patient participant scored 62.5, highlighting opportunities for improvement
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <b>Identified Strengths</b>
+                    <ul>
+                      <li>
+                        Intuitive Interface Design:
+                        <ul>
+                          <li>Mean score of 4.2 for ease of use (Q3)</li>
+                          <li>Participants particularly praised the chatbot functionality and medication reminder system
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        Rapid Learnability:
+                        <ul>
+                          <li>Mean score of 4.3 for quick adaptation (Q7)</li>
+                          <li>Nurses observed that patients required minimal instruction for core functions</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Effective Feature Integration:
+                        <ul>
+                          <li>Mean score of 4.1 for system coherence (Q5)</li>
+                          <li>Seamless transitions between tracking modules were frequently noted</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <b>Opportunities for Improvement</b>
+                    <ul>
+                      <li>
+                        Workflow Efficiency:
+                        <ul>
+                          <li>Medication logging complexity scored 2.6 (Q2)</li>
+                          <li>Multiple participants described the process as unnecessarily cumbersome</li>
+                        </ul>
+                      </li>
+                      <li>
+                        User Support Systems:
+                        <ul>
+                          <li>Need for support scored 3.0 (Q4)</li>
+                          <li>Nurses specifically recommended enhanced onboarding materials</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Interface Consistency:
+                        <ul>
+                          <li>UI inconsistency scored 2.8 (Q6)</li>
+                          <li>Variations in button styles and navigation patterns were observed</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <b>Qualitative Feedback Summary</b>
+                    <br>
+                    Participant comments provided valuable contextual insights:
+                    <ul>
+                      <li>Ability to submit images when recording vital signs</li>
+                      <li>Need for manual data entry options for both vitals and medication tracking</li>
+                      <li>Request to specify exact medication quantities (tablets/mL) when logging</li>
+                      <li>Desire for a history view to track previously taken medications</li>
+                      <li>Chatbot notifications about upcoming nurse visits would be helpful</li>
+                      <li>Routine well-being check-ins through the chatbot would be valuable</li>
+                      <li>Giving the chatbot a name could create more personal connection</li>
+                      <li>Progress overviews delivered by the chatbot would be appreciated</li>
+                      <li>Medication expiry date tracking and reminders when running low</li>
+                      <li>The bottom navigation bar was confusing to some users</li>
+                      <li>Chatbot interactions could feel more engaging after responses</li>
+                      <li>
+                        Individual notification system for:
+                        <ul>
+                          <li>Vital sign reminders</li>
+                          <li>Chatbot messages</li>
+                          <li>Medication alerts</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+              </td>
+            </tr>
+
+            <!-- Row 4 -->
+            <tr>
+              <td>Conclusion</td>
+              <td>
+                The SUS evaluation demonstrates that the MediHeal application achieves good overall usability, meeting
+                established benchmarks for patient-facing health technologies. The assessment confirms the app's
+                effectiveness in core functionality while identifying specific opportunities for optimization. These
+                findings support moving forward with implementation while prioritizing the identified improvements.
+                <br><br>
+                Complete methodology, scoring details, and raw data are available in Appendix B.
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="sub-section-8-header-6-3">
+          <h3>8.6.3 Frontend Functionality Tests</h3>
+          <p>
+            For this iteration, the scope of the functionality tests cover the functionality of the layout of the
+            frontend implementation, like the position of the UI elements, scrollability of certain elements, and
+            interactivity of others.
+            <br><br>
+            The testing methodology is as follows:
+          </p>
+          <ul>
+            <li>
+              Devices: 3 different models of Android devices to be used
+            </li>
+            <li>
+              For each device, go through all of the screens
+            </li>
+            <li>
+              Note down any issues with navigation
+            </li>
+            <li>
+              Note down any issues with UI element functionality
+            </li>
+            <li>
+              Note down any issues with smoothness of application
+            </li>
+          </ul>
+          <p>
+            The results are as follows:
+          </p>
+          <table id="table-16" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+            <caption><i>Table 16. Frontend Functionality Test Results Across Devices</i></caption>
+            <th style="border:none;">
+              <img src="assets/table16.png" style="max-width:800px;">
+            </th>
+          </table>
+          <p>
+            From the tests, a major issue can be observed, which is the flexibility of the UI in the implementation to
+            cater to devices of different screen aspect ratios and resolutions. As padding was necessary to be used to
+            mimic the UI layout of the design template, Many of the screens, especially the home screen, used padding to
+            fix the layout to a certain desired position. This is not flexible as smaller screens will experience the
+            rendering overflow as seen by the 2 Samsung devices tested while screens with bigger width will have the
+            elements not exactly in the right place. The solution to this issue is to incorporate more flexible forms of
+            padding that flutter offers as a framework, such as Spacer(), UI layout directives like
+            Alignment.spaceBetween, and Flexible containers like Expanded().
+            <br><br>
+            For the next iteration, these layout considerations will be taken into account and rectified.
+          </p>
+        </div>
       </div>
-      <div id="sub-section-8-header-6-1">
-        <h3>8.6.1. Feedback by UI/UX Specialists</h3>
-      </div>
-      <div id="sub-section-8-header-6-2">
-        <h3>8.6.2. User Testing: Patient Experience SUS Survey</h3>
-      </div>
-      <div id="sub-section-8-header-6-3">
-        <h3>8.6.2. Frontend Functionality Tests</h3>
-      </div>
+
       <div id="sub-section-8-header-7">
-        <h3>8.7. Third Iteration Prototype</h3>
+        <h3>8.7 Third Iteration Prototype</h3>
+        <p>
+          Following feedback from Iteration 2, which highlighted areas of the design requiring refinement, Iteration 3
+          introduced updates inspired by contemporary mobile app interfaces. The primary focus was enhancing visual
+          hierarchy throughout the prototype, ensuring elements were strategically positioned to reflect their
+          importance to users.
+          <br><br>
+          Additionally, a color contrast checker was integrated to optimize readability. This tool verified that text
+          and background color combinations met sufficient contrast ratios, improving user comfort and accessibility.
+        </p>
+        <table id="table-17" style="margin-left:auto; margin-right:auto;">
+          <caption><i>Table 17. Home Page Changes (Iteration 3)</i></caption>
+          <tr>
+            <th>Homepage</th>
+          </tr>
+          <tr>
+            <td><img src="assets/table17.png" style="max-width:800px;"></td>
+          </tr>
+          <tr>
+            <td>
+              The interface has been systematically redesigned to optimize information processing and workflow
+              efficiency. Through careful application of established design principles, textual content, visual
+              elements, and interactive components have been organized into a clear hierarchy that enhances both
+              readability and scannability. The implementation of balanced spacing creates distinct visual separation
+              between sections while maintaining logical relationships between related elements. This includes padding
+              between major content blocks, spacing between related items, and margins within components. The resulting
+              layout presents a clean, uncluttered interface that reduces cognitive load while intuitively guiding users
+              through clinical workflows.
+              <br><br>
+              The emergency call functionality has undergone a deliberate redesign based on extensive user research with
+              clinical staff. The button color has been changed from red to green to better align with healthcare
+              professionals' mental models, where green signifies accessible, ready-to-use systems while red is reserved
+              for critical equipment alarms. The redesigned button maintains WCAG AA compliance through appropriate
+              contrast ratios and has been enlarged to touch target to ensure reliable activation, even in high-stress
+              situations. This modification reflects the application's commitment to context-appropriate design
+              decisions grounded in user research.
+              <br><br>
+              The interface architecture has been refined through application of fundamental UX principles. Fitts's Law
+              has been implemented for critical actions, with enlarged touch targets and strategic positioning in
+              optimal reach zones [15]. Cognitive load has been reduced through simplified appointment cards that
+              display only four essential details: time of appointment, healthcare provider information, consultation
+              type (physical/online), and action options (link/reschedule). The layout follows eye-tracking optimized
+              patterns with left-aligned chronological organization and consistent visual grouping, while unnecessary
+              decorative elements have been removed to maintain focus on critical functionality.
+              <br><br>
+              The quick actions panel has been redesigned to support efficient one-handed operation. Positioned within
+              the natural thumb-zone, the panel features spaced equally apart to ensure reliable activation while
+              preventing accidental touches. The three core functions (Log Vitals, Add Medication, and Chat with
+              MediBot) are arranged to minimize thumb movement and maximize accessibility. This optimized layout
+              complements the overall information architecture while providing immediate access to frequently used
+              features, demonstrating how evidence-based design principles can enhance usability in critical healthcare
+              environments. The redesign maintains strict accessibility standards while improving operational efficiency
+              for clinical staff.
+            </td>
+          </tr>
+        </table>
+        <br>
+        <table id="table-18" style="margin-left:auto; margin-right:auto;">
+          <caption><i>Table 18. Pills Page Changes (Iteration 3)</i></caption>
+          <tr>
+            <th>Medication/Pills Page</th>
+          </tr>
+          <tr>
+            <td><img src="assets/table18.png" style="max-width:800px;"></td>
+          </tr>
+          <tr>
+            <td>
+              The redesigned interface applies Jakob's Law to maintain visual and functional consistency across
+              application modules [16]. The "Pills Schedule" header now matches the typography and styling of other
+              major sections, creating a unified visual language. Strategic placement of the date 24px below the header
+              aligns with the layout conventions used in the Vitals page and Chatbot page. Light grey divider lines (1px
+              at 20% opacity) between medication entries improve scannability while maintaining a clean aesthetic. These
+              refinements create a cohesive experience that reduces cognitive load as users navigate between different
+              application functions.
+              <br><br>
+              The system now employs color-coded visual cues to quickly communicate medication instructions. Blue
+              indicators and left-positioned meal icons (→🍽️) denote medications to be taken before food, while green
+              indicators with right-positioned icons (🍽️→) identify after-food medications. Interactive checkboxes
+              provide adequate touch targets in accordance with Fitts's Law, with completed medications automatically
+              displaying grey strikethrough text. This visual treatment enables users to rapidly assess their medication
+              status at a glance, particularly important for patients managing complex regimens.
+              <br><br>
+              The manual "Add Pill" workflow has been restructured as a step-by-step process adhering to Miller's 7±2
+              Rule for cognitive load management [17]. The redesigned form presents information in logical groupings:
+              medication selection (with autocomplete functionality), dosage specification (using intuitive +/-
+              buttons), duration setting, food relationship designation, and notification scheduling. Primary ("Done")
+              and secondary ("Cancel") action buttons employ distinct color treatments and meet WCAG 2.1 AA contrast
+              requirements. The progressive disclosure of information fields guides users through the medication entry
+              process while preventing them from feeling overwhelmed.
+            </td>
+          </tr>
+        </table>
+        <br>
+        <table id="table-19" style="margin-left:auto; margin-right:auto;">
+          <caption><i>Table 19. Vitals Page Changes (Iteration 3)</i></caption>
+          <tr>
+            <th>Vitals Page</th>
+          </tr>
+          <tr>
+            <td><img src="assets/table19-1.png" style="max-width:800px;"></td>
+          </tr>
+          <tr>
+            <td>
+              The most critical improvement involves the implementation of a standardized color-coding system for vital
+              status indicators. Normal ranges are now clearly marked in green, while abnormal or critical values appear
+              in red, creating immediate visual differentiation that follows universal medical conventions. This color
+              system is complemented by descriptive text labels ("Normal", "Below/Above Average") to ensure
+              accessibility for color-blind users. All color choices maintain WCAG 2.1 AA compliance with minimum 4.5:1
+              contrast ratios against their backgrounds, and have been tested under various lighting conditions common
+              in clinical environments.
+
+              Temporal context has been significantly enhanced through the consistent display of "Last Measured"
+              timestamps for each vital sign. These timestamps follow a standardized DD/MM/YYYY HH:MM format with clear
+              AM/PM designation, matching the temporal display conventions used throughout the application. The
+              timestamps are positioned directly below their respective measurements in a slightly smaller but equally
+              legible font size, creating a clear visual hierarchy between the current value and its recording time.
+
+              A "+ Add Vitals" button has been introduced, enabling users to manually log measurements. The input screen
+              follows a design pattern similar to the medication entry interface, ensuring familiarity and reducing
+              cognitive load. While not visually depicted here, this screen includes:
+              <ul>
+                <li>Structured fields for each vital sign.</li>
+                <li>Time/date selection with AM/PM clarity.</li>
+                <li>Input validation to prevent implausible entries.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="assets/table19-2.png" style="max-width:800px;"></td>
+          </tr>
+          <tr>
+            <td>
+              The implementation of stacked vertical bar charts adheres to ISO 9241-210 guidelines for ergonomic
+              human-system interaction, which recommends graphical representations for trend analysis to reduce
+              cognitive load [18]. This approach is further supported by Nielsen Norman Group research on dashboard
+              design, which validates stacked bars as effective for comparing multiple values while maintaining
+              individual data clarity. The dual-axis design presents absolute values alongside qualitative status
+              indicators, with a color-coding scheme (blue for normal ranges, red for critical values) that aligns with
+              clinical conventions. Horizontal reference lines have been added to contextualize measurements against
+              both personalized baselines and standard health ranges.
+              <br><br>
+              The time-scale toggle has been relocated to the bottom-middle, optimized as an interactive element with
+              clear visual distinction between active ("Daily") and inactive ("Weekly") states, improving accessibility
+              and selection speed. The bottom navigation bar remains consistent with the broader app for intuitive
+              navigation.
+              <br><br>
+              Medical terminology (e.g., "Elevated," "Hypertensive") has been standardized to match clinical guidelines.
+              The interface maintains visual harmony with other app modules through unified colors, typography, and time
+              formatting (24hr/AM-PM).
+              <br><br>
+              These changes ensure the vital trends page is intuitive, accessible, and clinically relevant, supporting
+              faster decision-making while maintaining regulatory compliance. Future iterations may include
+              pinch-to-zoom for detailed analysis and export options for care team collaboration.
+            </td>
+          </tr>
+        </table>
+        <br>
+        <table id="table-20" style="margin-left:auto; margin-right:auto;">
+          <caption><i>Table 20. Chatbot Page Changes (Iteration 3)</i></caption>
+          <tr>
+            <th>Chatbot Page</th>
+          </tr>
+          <tr>
+            <td><img src="assets/table20.png" style="max-width:800px;"></td>
+          </tr>
+          <tr>
+            <td>
+              The chatbot interface has been refined to enhance usability while maintaining its core functionality, with
+              several thoughtful modifications implemented to improve the user experience. The most notable change is
+              the rebranding from a generic "Chat" label to "MediHeal Chat", which better communicates the
+              healthcare-specific purpose of the feature and aligns with the app's medical identity. Upon opening the
+              chat, users now encounter a friendly robot icon, intentionally designed to foster emotional connectivity
+              while maintaining professionalism. This visual element serves dual purposes: it provides immediate system
+              feedback and creates a more approachable digital assistant persona, which is particularly valuable in
+              healthcare contexts where users may experience anxiety.
+              <br><br>
+              Key functional improvements include the addition of bookmark toggle bubbles positioned in the middle
+              corner of each chatbot response. These 24x24px interactive elements allow users to flag and easily
+              retrieve important medical information, addressing a critical need in healthcare communication where users
+              often need to reference previous advice. The bookmark design follows Material Design 3's interactive
+              component guidelines, ensuring visual consistency with modern UI patterns while maintaining sufficient
+              touch target sizes [19]. Furthermore, timestamps have been incorporated for all messages, providing
+              temporal context to conversations while using subtle, low-contrast styling that prevents visual clutter
+              but remains legible.
+              <br><br>
+              The redesign maintains strict adherence to accessibility standards, including WCAG 2.1 AA compliance for
+              color contrast and text readability. The color scheme and navigation positioning remain consistent with
+              other app modules, ensuring a cohesive user experience across features.
+            </td>
+          </tr>
       </div>
+
       <div id="sub-section-8-header-8">
-        <h3>8.8. Testing of Iteration 3</h3>
-      </div>
-      <div id="sub-section-8-header-8-1">
-        <h3>8.8.1. User Testing: Patient Experience SUS Survey (Round 2)</h3>
-      </div>
-      <div id="sub-section-8-header-8-2">
-        <h3>8.8.2. Integrated Testing</h3>
+        <h3>8.8 Testing of Iteration 3</h3>
+
+        <div id="sub-section-8-header-8-1">
+          <h3>8.8.1 User Testing: Patient Experience SUS Survey (Round 2)</h3>
+        </div>
+        <div id="sub-section-8-header-8-2">
+          <h3>8.8.2 Integrated Testing</h3>
+        </div>
       </div>
     </div>
+    <br><br>
     <sl-divider></sl-divider>
 
-    <div>
-      <div id="section-header-9">
-        <h2>9. Backend Prototyping</h2>
-      </div>
+    <div id="section-header-9">
+      <h2>9. Backend Prototyping</h2>
       <div id="sub-section-9-header-1">
         <h3>9.1. Purpose and Objectives</h3>
         <p>
