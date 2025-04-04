@@ -3064,6 +3064,64 @@
 
       <div id="appendix-C">
         <h3>Appendix C: Information Flow and AI Integration</h3>
+        <p>
+          This section outlines the information flow within the backend, detailing how patient interactions, medication adherence and hospital dashboards function together. Additionally, the AI tools set up and utilization  in LangChain are explained in the context of chatbot interactions and patient engagement.
+        </p>
+        <image-component tag="image" source="assets/backend_architecture.png"
+          subtitle="Figure 1. Backend architecture">
+        </image-component>
+        <ul>
+          <li>
+            Information Flow
+            <ol>
+              <li>
+                <b> User-Chatbot Interaction Logging (Orange)</b>
+                <p>
+                  All interactions between the user and chatbot are recorded and saved in the database. Hospital management can access this data when needed, ensuring transparency and enabling better patient oversight. Additionally, a summarized version of these interactions is made available on the nurses’ dashboard, allowing them to monitor patient engagement and address any critical concerns raised by the chatbot.
+                </p>
+              </li>
+              <li>
+                <b> Medication & Vitals Compliance Tracking (Red)</b>
+                <p>
+                  Based on the prescribed care plan, the Medication and Vitals tables in the database store the schedule for medication administration and vital signs monitoring. A daily query extracts this scheduled information and leverages Firebase to send timely push notifications to the relevant users (patients or caregivers), ensuring adherence to the care plan and promoting proactive health management.
+                </p>
+              </li>
+              <li>
+                <b> Hospital Dashboard for Real-Time Monitoring (Blue)</b>
+                <p>
+                  To facilitate comprehensive patient oversight, key data points are aggregated and presented on hospital dashboards. These dashboards provide nurses and healthcare providers with real-time insights, enabling them to efficiently track patient progress, identify potential adherence issues and intervene promptly when necessary. The dashboard serves as a centralized hub for monitoring recovery trends and ensuring timely interventions.
+                </p>
+              </li>
+            </ol>
+          </li>
+          <li>
+            LangChain Tools Integration
+            <p>
+              To enhance chatbot interactions and ensure patients receive accurate and relevant responses, the system leverages various LangChain tools:
+            </p>
+            <ul>
+              <li>
+                <b>RAG Tool (Retrieval-Augmented Generation)</b>
+                <p>
+                  This tool is designed to perform semantic search from the knowledge base relevant to the query of the users to get answers that are related to the condition type that the user is suffering from.
+                </p>
+              </li>
+              <li>
+                <b>SQL Query Tool</b>
+                <p>
+                  This is a custom function tool that does a query for the medication and vital schedule and record to remind users when asked about the schedule for the day.  
+                </p>
+              </li>
+              <li>
+                <b>Tavily Search Tool</b>
+                <p>
+                  This is an internet search tool that does an internet search if in the case the rag tool does not have any relevant information as requested by the user, this tool is only activated when the “look up “ key word is provided by the user.
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
       </div>
       <sl-divider></sl-divider>
       <div id="appendix-D">
