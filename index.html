@@ -1966,7 +1966,7 @@
             <th>Chatbot Page</th>
           </tr>
           <tr>
-            <td><img src="assets/table20.png" style="max-width:800px;"></td>
+            <td style="text-align:center;"><img src="assets/table20.png" style="max-width:800px;"></td>
           </tr>
           <tr>
             <td>
@@ -1993,16 +1993,100 @@
               other app modules, ensuring a cohesive user experience across features.
             </td>
           </tr>
+        </table>
+        <br>
+        <p>
+          The notifications for vitals, medications, and chatbot check-ins will follow a consistent and structured
+          format, as illustrated in the provided example below.
+        </p>
+        <image-component id="fig-17" tag="image" source="assets/fig17.png"
+          subtitle="Figure 17. Notification Reminder Designs in Figma">
+        </image-component>
+        <p>
+          The implementation for this iteration seeks to implement the UI changes from the design phase, as well as to
+          fix the UI bugs discovered from the tests done in the previous phase. In addition, the full implementation of
+          two crucial functions of the app is a target. These are the chatbot integration with the backend, and the
+          frontend flow involving push notifications from the backend. All new and modified screens are shown below.
+        </p>
+        <image-component id="fig-18" tag="image" source="assets/fig18.png"
+          subtitle="Figure 18. New and Modified Screens Compared to Iteration 2">
+        </image-component>
+        <p>
+          Of the design changes, the vitals summary and the chatbot title and background changes were simple enough to
+          implement while following the design template of iteration 3's design phase. The more significant changes
+          implemented were towards functionality of key features of the application.
+          <br><br>
+          In the case of the chat page, user inputs will be recorded and rendered in the UI interface as user messages,
+          while the application sends a http request to the backend with the user input to invoke a response. The
+          application awaits the response, and then renders them in the UI interface as messages from the chatbot.
+          <br><br>
+          Enabling push notifications required backend support and Firebase integration. The process begins with
+          Firebase assigning a unique device registration token. Once the user grants permission, this token is sent to
+          the backend along with their ID. The backend scheduler then sends reminder notifications containing a title,
+          description, and a prompt statement as a payload. These notifications go through Firebase, which delivers them
+          to the user's device. When the user taps the notification, the app navigates to the chat page via its global
+          navigator. Simultaneously, the notification message is added to a message stream. The chatbot listens to this
+          stream, retrieves the most recent message, extracts the prompt, and sends it to the backend. The chatbot then
+          responds, prompting the user for input.
+          <br><br>
+          With the implementation of the main chatbot functions and push notification workflow, the application is ready
+          for integration testing and user testing.
+        </p>
       </div>
 
       <div id="sub-section-8-header-8">
         <h3>8.8 Testing of Iteration 3</h3>
 
         <div id="sub-section-8-header-8-1">
-          <h3>8.8.1 User Testing: Patient Experience SUS Survey (Round 2)</h3>
+          <h4>8.8.1 User Testing: Patient Experience SUS Survey (Round 2)</h4>
+          <table id="table-21" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+            <caption><i>Table 21. SUS Survey Round 2</i></caption>
+            <th style="border:none;">
+              <img src="assets/table21.png" style="max-width:800px;">
+            </th>
+          </table>
         </div>
         <div id="sub-section-8-header-8-2">
-          <h3>8.8.2 Integrated Testing</h3>
+          <h4>8.8.2 Integrated Testing</h4>
+          <p>
+            This suite of tests are designed to test the integration between the frontend and the backend, specifically
+            assessing the functionality of the frontend outcomes.
+            <br><br>
+            Two workflows are to be tested:
+          </p>
+          <ol>
+            <li>The chatbot query and response workflow</li>
+            <li>The push notification workflow</li>
+          </ol>
+          <p>
+            Test Suite:
+          </p>
+          <table id="table-22" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+            <caption><i>Table 22. Integration Testing with Backend</i></caption>
+            <th style="border:none;">
+              <img src="assets/table22.png" style="max-width:800px;">
+            </th>
+          </table>
+          <p>
+            From the tests conducted, a few implementation-specific issues are raised.
+            <br><br>
+            The first is the high chatbot latency after 3 consecutive responses, which has been discovered to be a
+            backend issue and is discussed in the backend testing section. Since this is primarily a backend issue, it
+            is out of scope of the frontend to address it.
+            <br><br>
+            Next is a bug in the notification data flow causing there not to be a chatbot response registered even
+            though the application opens to the chat page. After much investigation, the issue was discovered to be due
+            to duplicate instances of the plugin object used to handle the notification in flutter,
+            FlutterLocalNotificationsPlugin, leading to the notification not being streamed to the chat page. The simple
+            remedy for this is to use the same global instance of FlutterLocalNotificationsPlugin to handle function
+            calls.
+            <br><br>
+            Lastly, the bug in foreground notifications was investigated to be caused by the function calls to retrieve
+            the message and get a response being in the inappropriate listening function. Specifically, the function
+            calls were in initState(), which is a widget function that is only called when the chat page is first
+            loaded. To remedy this, instead of using initState(), didChangeDependencies(), which is called every time
+            the message stream is changed, should be used instead.
+          </p>
         </div>
       </div>
     </div>
@@ -2030,10 +2114,10 @@
         <h3>9.2. Responsibilities and Deliverables</h3>
         <table id="table-23" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
           <caption><i>Table 23. Backend Group Members’ Responsibilities</i></caption>
-            <th style="border: none;">
-              <img src="assets/backend_tasks.png" style="max-width:800px;">
-              </image-component>
-            </th>
+          <th style="border: none;">
+            <img src="assets/backend_tasks.png" style="max-width:800px;">
+            </image-component>
+          </th>
         </table>
       </div>
       <div id="sub-section-9-header-3">
@@ -2063,21 +2147,21 @@
           interaction and user engagement.
           <br><br>
         <table id="table-24" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
-            <caption><i>Table 24. Functional Requirements of Backend</i></caption>
-              <th style="border: none;">
-                <img src="assets/backend_func_req.png" style="max-width:800px;">
-                </image-component>
-              </th>
+          <caption><i>Table 24. Functional Requirements of Backend</i></caption>
+          <th style="border: none;">
+            <img src="assets/backend_func_req.png" style="max-width:800px;">
+            </image-component>
+          </th>
         </table>
         <br><br>
         <b> B. Non-Functional Requirements </b>
         <br><br>
         <table id="table-25" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
           <caption><i>Table 25. Non-Functional Requirements for Backend</i></caption>
-            <th style="border: none;">
-              <img src="assets/backend_nonfunc_req.png" style="max-width:800px;">
-              </image-component>
-            </th>
+          <th style="border: none;">
+            <img src="assets/backend_nonfunc_req.png" style="max-width:800px;">
+            </image-component>
+          </th>
         </table>
         <br><br>
         <b> C. Endpoints </b>
@@ -2087,10 +2171,10 @@
         available API endpoints, their functions, inputs, responses and HTTP methods used.
         <table id="table-26" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
           <caption><i>Table 26. Endpoints of Backend</i></caption>
-            <th style="border: none;">
-              <img src="assets/backend_endpoints.png" style="max-width:800px;">
-              </image-component>
-            </th>
+          <th style="border: none;">
+            <img src="assets/backend_endpoints.png" style="max-width:800px;">
+            </image-component>
+          </th>
         </table>
         </p>
       </div>
@@ -2174,8 +2258,7 @@
           general role but also highly relevant to the individual user's medical context and history as well as within
           the guidelines set by the healthcare professionals.
         </p>
-        <image-component id="fig-21" tag="image" source="assets/fig20.png" 
-        subtitle="Figure 21. System Prompt Template">
+        <image-component id="fig-21" tag="image" source="assets/fig20.png" subtitle="Figure 21. System Prompt Template">
         </image-component>
       </div>
       <div id="sub-section-9-header-4-3">
@@ -2273,43 +2356,70 @@
       <div id="sub-section-9-header-5">
         <h3>9.5. Backend testing for iteration 1</h3>
         <p>
-          Since the frontend was still under development, the initial phase of testing focused on evaluating the chatbot's response accuracy and retrieval process within the Retrieval-Augmented Generation (RAG) framework. The primary goal was to assess whether the chatbot could effectively handle frequently asked questions (FAQs) related to a given disease type, ensuring that responses were both relevant and medically appropriate.
+          Since the frontend was still under development, the initial phase of testing focused on evaluating the
+          chatbot's response accuracy and retrieval process within the Retrieval-Augmented Generation (RAG) framework.
+          The primary goal was to assess whether the chatbot could effectively handle frequently asked questions (FAQs)
+          related to a given disease type, ensuring that responses were both relevant and medically appropriate.
           <br><br>
-          For this test, the user’s care plan context was set to dengue. However, the chatbot’s retrieval tools included multiple vector search tools trained on different medical conditions, such as jaundice, dengue and urinary tract infections (UTI). This setup allowed us to test whether the Language Model (LLM) and chatbot node could correctly invoke only the vector search tool relevant to the user's specified context rather than retrieving unrelated information.
+          For this test, the user’s care plan context was set to dengue. However, the chatbot’s retrieval tools included
+          multiple vector search tools trained on different medical conditions, such as jaundice, dengue and urinary
+          tract infections (UTI). This setup allowed us to test whether the Language Model (LLM) and chatbot node could
+          correctly invoke only the vector search tool relevant to the user's specified context rather than retrieving
+          unrelated information.
           <br><br>
-          To conduct the evaluation, a set of common dengue-related queries was compiled by consulting individuals who had previously experienced the illness as well as nursing students. These queries were then submitted to the backend chatbot endpoint using Postman (Figure 27), simulating real user interactions. The chatbot’s responses were collected and analyzed based on:
+          To conduct the evaluation, a set of common dengue-related queries was compiled by consulting individuals who
+          had previously experienced the illness as well as nursing students. These queries were then submitted to the
+          backend chatbot endpoint using Postman (Figure 27), simulating real user interactions. The chatbot’s responses
+          were collected and analyzed based on:
         </p>
         <ul>
           <li>
-            Medical Relevance – Whether the response aligned with established medical guidelines and the user’s care plan.
+            Medical Relevance – Whether the response aligned with established medical guidelines and the user’s care
+            plan.
           </li>
           <li>
-            Retrieval Efficiency – Whether the chatbot invoked the appropriate semantic search tool, schedule retrieval tool, or internet search tool based on the query.
+            Retrieval Efficiency – Whether the chatbot invoked the appropriate semantic search tool, schedule retrieval
+            tool, or internet search tool based on the query.
           </li>
         </ul>
         <image-component id="fig-27" tag="image" source="assets/fig27.png"
           subtitle="Figure 27. JSON Output from Chat History and Updating Tracker Table">
         </image-component>
         <p>
-          Additionally, the tool invocation logs were traced in the terminal (Figure 28) to determine whether the chatbot correctly selected the appropriate vector search tool based on the user’s condition. This step was crucial in verifying that the LLM-based decision-making process effectively filtered information specific to the user's medical context. 
+          Additionally, the tool invocation logs were traced in the terminal (Figure 28) to determine whether the
+          chatbot correctly selected the appropriate vector search tool based on the user’s condition. This step was
+          crucial in verifying that the LLM-based decision-making process effectively filtered information specific to
+          the user's medical context.
         </p>
         <image-component id="fig-28" tag="image" source="assets/fig28.png"
           subtitle="Figure 28. Tracking of Tools Used Through The Terminal">
         </image-component>
         <p>
-          The initial testing provided critical insights into preliminary chatbot response and the usage of tools given the background context of the user. It also provided insights into the chatbot’s retrieval accuracy and tool selection process. For the next stage of assessment, we consolidated the responses from the chatbot to assess the chatbot accuracy and user friendliness. Below are the chatbot responses and the assessment we conducted (figure 29). 
+          The initial testing provided critical insights into preliminary chatbot response and the usage of tools given
+          the background context of the user. It also provided insights into the chatbot’s retrieval accuracy and tool
+          selection process. For the next stage of assessment, we consolidated the responses from the chatbot to assess
+          the chatbot accuracy and user friendliness. Below are the chatbot responses and the assessment we conducted
+          (figure 29).
         </p>
         <image-component id="fig-29" tag="image" source="assets/fig29.png"
           subtitle="Figure 29. Output of Chatbot for Assessment">
         </image-component>
         <p>
-          During testing, a key issue identified was the chatbot's tendency to explicitly mention the sources of its retrieved information, such as referencing the tools used or directly stating that the response was derived from the care plan. While this approach provides transparency, it was found to be less user-friendly and detracted from a natural conversational experience. Users may not need to know the technical details of how responses are generated, instead, they expect clear and human-like interactions that provide relevant information without unnecessary system references.
+          During testing, a key issue identified was the chatbot's tendency to explicitly mention the sources of its
+          retrieved information, such as referencing the tools used or directly stating that the response was derived
+          from the care plan. While this approach provides transparency, it was found to be less user-friendly and
+          detracted from a natural conversational experience. Users may not need to know the technical details of how
+          responses are generated, instead, they expect clear and human-like interactions that provide relevant
+          information without unnecessary system references.
         </p>
       </div>
       <div id="sub-section-9-header-6">
         <h3>9.6. Second Iteration</h3>
         <p>
-          While the initial LangGraph architecture successfully retrieved accurate information for a single disease state given a single care plan, it needed to be enhanced to accommodate multiple users with other medical conditions, each with a unique care plan and personal medical history. Additionally, the chatbot's responses required improved user friendliness response to ensure better engagement and clarity for patients.
+          While the initial LangGraph architecture successfully retrieved accurate information for a single disease
+          state given a single care plan, it needed to be enhanced to accommodate multiple users with other medical
+          conditions, each with a unique care plan and personal medical history. Additionally, the chatbot's responses
+          required improved user friendliness response to ensure better engagement and clarity for patients.
           <br><br>
           To address these challenges, we introduced two key modifications to the LangGraph architecture:
         </p>
@@ -2317,7 +2427,8 @@
           <li>
             <b>Retrieval Node for User-Specific Information </b>
             <p>
-              A Retrieval Node was added before the chatbot node to ensure that each chatbot interaction is personalized. This node is responsible for retrieving:
+              A Retrieval Node was added before the chatbot node to ensure that each chatbot interaction is
+              personalized. This node is responsible for retrieving:
             </p>
             <ul>
               <li>
@@ -2331,31 +2442,39 @@
               </li>
             </ul>
             <p>
-              By integrating this user-specific retrieval step, the chatbot can tailor responses based on individual health conditions while maintaining modularity to accommodate multiple users. 
+              By integrating this user-specific retrieval step, the chatbot can tailor responses based on individual
+              health conditions while maintaining modularity to accommodate multiple users.
             </p>
           </li>
           <li>
             <b>Supervisor Node for User Friendly Responses</b>
             <p>
-              To enhance the clarity, coherence, and user-friendliness of chatbot interactions, a Supervisor Node was integrated into the system. This node evaluates and refines the chatbot's responses before they are delivered to the user, ensuring that the output is both medically relevant and easy to understand.
+              To enhance the clarity, coherence, and user-friendliness of chatbot interactions, a Supervisor Node was
+              integrated into the system. This node evaluates and refines the chatbot's responses before they are
+              delivered to the user, ensuring that the output is both medically relevant and easy to understand.
               <br><br>
               The Supervisor Node is responsible for:
             </p>
             <ul>
               <li>
-                Ensuring clarity and structure – Responses are formatted in a conversational and easily comprehensible manner, avoiding overly technical language.
+                Ensuring clarity and structure – Responses are formatted in a conversational and easily comprehensible
+                manner, avoiding overly technical language.
               </li>
               <li>
-                Maintaining medical accuracy – All recommendations align with the user’s individualized care plan and the procedural guidelines set by healthcare professionals.
+                Maintaining medical accuracy – All recommendations align with the user’s individualized care plan and
+                the procedural guidelines set by healthcare professionals.
               </li>
               <li>
-                Enhancing engagement and empathy – The chatbot consistently communicates in a compassionate and supportive tone, fostering better patient interaction.
+                Enhancing engagement and empathy – The chatbot consistently communicates in a compassionate and
+                supportive tone, fostering better patient interaction.
               </li>
             </ul>
           </li>
         </ol>
         <p>
-          By implementing the Supervisor Node, the chatbot now delivers well-structured and user-friendly responses, enhancing patient engagement while maintaining medical accuracy and consistency in interactions. The figure below shows the revised architecture of the chatbot. 
+          By implementing the Supervisor Node, the chatbot now delivers well-structured and user-friendly responses,
+          enhancing patient engagement while maintaining medical accuracy and consistency in interactions. The figure
+          below shows the revised architecture of the chatbot.
         </p>
         <image-component id="fig-30" tag="image" source="assets/fig30.png" style="max-width:800px;"
           subtitle="Figure 30. Revised Chatbot Architecture">
@@ -2364,36 +2483,51 @@
       <div id="sub-section-9-header-7">
         <h3>9.7. Backend testing for iteration 2 </h3>
         <p>
-          To evaluate the backend's ability to accommodate multiple concurrent users, we conducted a load test by sending 10 HTTP requests to the server. The test aimed to measure response time and system scalability under increased demand. The results indicated an average response time of 67,797.36 ms ( 67.8 s or 1.13 min). Notably, after processing the third request, the response time experienced a significant delay, highlighting a potential latency issue in the backend system.
-          <br><br> 
-          Upon further investigation, we identified the primary cause of latency as the waiting time for the backend to send requests to the Groq API. This delay was likely due to rate limitations associated with the free-tier version of Groq, which we were using for initial testing.
+          To evaluate the backend's ability to accommodate multiple concurrent users, we conducted a load test by
+          sending 10 HTTP requests to the server. The test aimed to measure response time and system scalability under
+          increased demand. The results indicated an average response time of 67,797.36 ms ( 67.8 s or 1.13 min).
+          Notably, after processing the third request, the response time experienced a significant delay, highlighting a
+          potential latency issue in the backend system.
+          <br><br>
+          Upon further investigation, we identified the primary cause of latency as the waiting time for the backend to
+          send requests to the Groq API. This delay was likely due to rate limitations associated with the free-tier
+          version of Groq, which we were using for initial testing.
         </p>
         <image-component id="fig-31" tag="image" source="assets/fig31.png" style="max-width:800px;"
           subtitle="Figure 31. Latency Analysis Results">
         </image-component>
         <p>
-          A function call analysis was performed to trace execution times and identify performance bottlenecks. The key observations from the test were:
+          A function call analysis was performed to trace execution times and identify performance bottlenecks. The key
+          observations from the test were:
         </p>
         <ul>
           <li>
-            High Latency Due to API Requests: The primary cause of delay was identified as the waiting time for the backend to send requests to the Groq API. The system experienced prolonged delays in response time, which could be attributed to the rate limitations associated with the free-tier version of Groq, which was used for initial testing.
+            High Latency Due to API Requests: The primary cause of delay was identified as the waiting time for the
+            backend to send requests to the Groq API. The system experienced prolonged delays in response time, which
+            could be attributed to the rate limitations associated with the free-tier version of Groq, which was used
+            for initial testing.
           </li>
           <li>
-            Excessive Wait Time (time.sleep): A significant portion of execution time (35.002 seconds) was consumed by the time.sleep function, which may indicate an inefficient waiting mechanism within the chatbot’s process.
+            Excessive Wait Time (time.sleep): A significant portion of execution time (35.002 seconds) was consumed by
+            the time.sleep function, which may indicate an inefficient waiting mechanism within the chatbot’s process.
           </li>
           <li>
-            Network Latency and SSL Handshake: The Secure Socket Layer (SSL) handshake and read operations accounted for additional delays (1.77 seconds), suggesting that network latency contributed to slow response times.
+            Network Latency and SSL Handshake: The Secure Socket Layer (SSL) handshake and read operations accounted for
+            additional delays (1.77 seconds), suggesting that network latency contributed to slow response times.
           </li>
         </ul>
         <p>
-          To mitigate this issue and ensure faster response times, we concluded that moving to a locally hosted LLM would be a more reliable approach when deploying to a real world context. This requires:
+          To mitigate this issue and ensure faster response times, we concluded that moving to a locally hosted LLM
+          would be a more reliable approach when deploying to a real world context. This requires:
         </p>
         <ul>
           <li>
-            Deploying a locally hosted LLM to reduce dependence on external API calls. Perhaps the use of quantized LLMs can be explored for faster real-time interactions.
+            Deploying a locally hosted LLM to reduce dependence on external API calls. Perhaps the use of quantized LLMs
+            can be explored for faster real-time interactions.
           </li>
           <li>
-            Ensuring the local machine has sufficient computational resources, including high-performance GPU drivers capable of handling large-scale model inference.
+            Ensuring the local machine has sufficient computational resources, including high-performance GPU drivers
+            capable of handling large-scale model inference.
           </li>
           <li>
             Optimizing request handling by improving parallel processing and reducing unnecessary network latency.
