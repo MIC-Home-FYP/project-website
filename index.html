@@ -2476,7 +2476,7 @@
           enhancing patient engagement while maintaining medical accuracy and consistency in interactions. The figure
           below shows the revised architecture of the chatbot.
         </p>
-        <image-component id="fig-30" tag="image" source="assets/fig30.png" style="max-width:800px;"
+        <image-component id="fig-30" tag="image" source="assets/fig30.png" style="max-width:600px;"
           subtitle="Figure 30. Revised Chatbot Architecture">
         </image-component>
       </div>
@@ -2672,6 +2672,7 @@
         </th>
       </table>
     </div>
+    <sl-divider></sl-divider>
 
     <div id="section-header-12">
       <h2>12. Future Works and Conclusion</h2>
@@ -2768,6 +2769,7 @@
         </p>
       </div>
     </div>
+    <sl-divider></sl-divider>
 
     <!-- This is an example of how you can use the references component to create references -->
     <div id="references" class="references">
@@ -2927,14 +2929,143 @@
           </image-component>
         </p>
       </div>
+      <sl-divider></sl-divider>
 
       <div id="appendix-B">
         <h3>Appendix B: SUS Survey Instrument and Scoring Methodology</h3>
+        <ol>
+          <li>
+            <b> Complète SUS Questionnaire</b>
+            <p>
+              Participants rated the following 10 statements on a 5-point Likert scale (1 = Strongly Disagree to 5 = Strongly Agree):
+              <ol>
+                <li>
+                  I think I would like to use MediHeal frequently under MIC@Home.
+                </li>
+                <li>
+                  I feel MediHeal is unnecessarily complex. (Inverse-scored)
+                </li>
+                <li>
+                  I think MediHeal will be easy to use.
+                </li>
+                <li>
+                  I think I need support to use MediHeal. (Inverse-scored)
+                </li>
+                <li>
+                  I feel the features in MediHeal are well-integrated.
+                </li>
+                <li>
+                  I think there is too much inconsistency in MediHeal. (Inverse-scored)
+                </li>
+                <li>
+                  I feel that most patients would learn to use MediHeal quickly.
+                </li>
+                <li>
+                  I feel that MediHeal would be difficult or frustrating to use. (Inverse-scored)
+                </li>
+                <li>
+                  I feel confident using MediHeal. 
+                </li>
+                <li>
+                  I feel I need to learn a lot before I can use MediHeal properly. (Inverse-scored)
+                </li>
+              </ol>
+            </p>
+          </li>
+          <li>
+            <b>SUS Score Calculation </b>
+            <p>
+              Step 1: Adjust scores for inverse questions (marked above): 
+              <ul>
+                <li>
+                  For odd-numbered questions (Q1, Q3, Q5, Q7, Q9): → Adjusted Score = Raw Score - 1
+                </li>
+                <li>
+                  For even-numbered questions (Q2, Q4, Q6, Q8, Q10):  → Adjusted Score = 5 - Raw Score 
+                </li>
+              </ul>
+              Step 2: Sum all adjusted scores (range: 0–40)
+              Step 3: Multiply the total by 2.5 to convert to a 0–100 scale: 
+              <ul>
+                <li>
+                  Final SUS Score = Total Adjusted Score × 2.5
+                </li>
+              </ul>
+            </p>
+          </li>
+          <li>
+            <b>Benchmark Interpretation </b>
+            <ul>
+              <li>
+                more than 80.3: Excellent usability (top 10% of systems)  
+              </li>
+              <li>
+                68–80.3: Good usability 
+              </li>
+              <li>
+                less than 68: Below average; needs improvement 
+              </li>
+            </ul>
+          </li>
+          <br><br>
+          <li>
+            <b> Round 1 Results and Calculations </b>
+            <table style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
+              <caption><i>Table 1. Results of SUS round 1</i></caption>
+              <th style="border: none;">
+                <img src="assets/sus1.png" style="max-width:500px;">
+                </image-component>
+              </th>
+            </table>
+            <p>
+              <ul>
+                <li>
+                  Round 1 MediHeal App Average: 72.5 (Good, with room for refinement)
+                </li>
+                <li>
+                  Standard Deviation: 8.3
+                </li>
+                <li>
+                  Range: 62.5 - 85.0
+                </li>
+              </ul>
+            </p>
+          </li>
+          <li>
+            <b> Round 2 Results and Calculations</b>
+          </li>
+          <table style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
+            <caption><i>Table 2. Results of SUS round 2</i></caption>
+            <th style="border: none;">
+              <img src="assets/sus2.png" style="max-width:500px;">
+              </image-component>
+            </th>
+          </table>
+          <p>
+            <ul>
+              <li>
+                Round 2 MediHeal App Average: 76.8 (Good usability)
+              </li>
+              <li>
+                Standard Deviation: 6.2
+              </li>
+              <li>
+                Range: 70.0 - 85.0
+              </li>
+            </ul>
+            <br>
+            Qualitative feedback revealed several validated design improvements. The redesigned homepage received particular praise for its enhanced visual hierarchy, with participants specifically noting the effectiveness of balanced spacing and logical element grouping. The strategic repositioning and recoloring of the emergency call function (from red to green) successfully aligned with healthcare professionals' mental models while maintaining accessibility standards. Medication management enhancements, including color-coded meal timing indicators and completed-dose strikethroughs, were frequently cited as particularly valuable features that reduced cognitive load during testing scenarios.
+            <br><br>
+            However, the evaluation also identified persistent usability challenges requiring attention. Action button differentiation, especially between "Snooze" and "Skip" functions, continued to cause occasional confusion despite interface refinements. The vitals logging workflow, while improved, still presented friction points during manual data entry. Chatbot interactions, though enhanced with bookmarking functionality and improved visual identity, were noted to sometimes feel overly generic in their responses. 
+          </p>
+        </ol>
       </div>
+      <sl-divider></sl-divider>
 
       <div id="appendix-C">
         <h3>Appendix C: Information Flow and AI Integration</h3>
       </div>
+      <sl-divider></sl-divider>
       <div id="appendix-D">
         <h3>Appendix D: Data Collected from Integrated User Tests</h3>
       </div>
