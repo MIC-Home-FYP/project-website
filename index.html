@@ -541,139 +541,518 @@
         patients enrolled in MIC@Home.
       </p>
     </div>
+    <br><br>
 
     <sl-divider></sl-divider>
 
-    <div>
-      <div id="section-header-1">
-        <h2> 1. An Introduction To MIC@Home </h2>
-        <video-component tag="intro" source="https://www.youtube.com/embed/eRxcN-WTJig"
-          subtitle="Video: An introduction to MIC@Home"></video-component>
-        <p>
-          The Mobile Inpatient Care @ Home (MIC@Home) initiative, launched by the Ministry of Health (MOH) through the
-          MOH Office for Healthcare Transformation (MOHT), aims to offer eligible patients the option of receiving
-          inpatient-level care in their own homes rather than in a hospital ward. The program was designed to alleviate
-          the growing strain on hospital bed capacity in Singapore, which is particularly relevant in light of the aging
-          population and increasing healthcare demands.
-          <br><br>
-          Since its pilot in 2022, the program has proven successful in improving patient satisfaction, reducing
-          hospital-acquired infections, and lowering the length of hospital stays, while still providing care equivalent
-          to what patients would receive in a hospital setting. By 2023, over 2,000 patients had benefited from
-          MIC@Home, saving around 9,000 hospital bed days (<i>Singapore's Public Hospital Bed Crunch: Are Radical
-            Solutions Needed?</i>, 2023).
-        </p>
-      </div>
-
+    <div id="section-header-1">
+      <h2>1. Introduction</h2>
       <div id="sub-section-1-header-1">
-        <h3>1.1. Current Situation in Singapore</h3>
-
+        <h3>1.1 Current Situation in Singapore</h3>
+        <p>
+          Singapore's healthcare system is confronting escalating pressures stemming from significant demographic and
+          epidemiological transitions. Current projections indicate that by 2030, 24.1% of the resident population will
+          be aged 65 years or above, precipitating a substantial increase in demand for both acute medical interventions
+          and long-term chronic disease management services [1].
+          <br><br>
+          According to operational data, public hospital bed occupancy rates persistently exceed 85% [2], surpassing the
+          internationally recognized optimal threshold of 70-75% for maintaining healthcare service efficiency [3]. This
+          capacity constraint manifests in several critical operational challenges:
+        </p>
+        <ul>
+          <li>
+            Extended patient stays, with the average length of hospitalization increasing by 12% between 2019 and 2023
+            [4]
+          </li>
+          <li>
+            Prolonged emergency department wait times, with admission delays lasting an average of thirty minutes longer
+            than baselines prior to the pandemic [5]
+          </li>
+          <li>
+            Significant bed blockage, with 15-20% of acute care beds occupied by patients medically cleared for
+            discharge but awaiting appropriate step-down care arrangements [6]
+          </li>
+        </ul>
+        <p>
+          These systemic challenges collectively underscore the imperative for transformative care delivery models that
+          enhance healthcare system capacity while maintaining service quality and patient outcomes.
+        </p>
       </div>
 
       <div id="sub-section-1-header-2">
-        <h3>1.2. Current Measures</h3>
-      </div>
+        <h3>1.2 Current Measures</h3>
+        <div id="sub-section-1-header-2-1">
+          <h4>1.2.1 Hospital-Based Measures</h4>
+          <p>
+            The Ministry of Health (MOH) plans to add 1,900 new hospital beds by 2026 to address immediate
+            infrastructure constraints [7] . Concurrently, hospitals are adopting dynamic bed management systems to
+            improve patient flow and reduce length-of-stay through standardized discharge protocols. However, physical
+            expansion alone cannot fully address projected demand growth from Singapore's aging population.
+          </p>
+        </div>
 
-      <div id="sub-section-1-header-2-1">
-        <h4>1.2.1. Hospital-Based Measures</h4>
-      </div>
+        <div id="sub-section-1-header-2-2">
+          <h4>1.2.2 Community Care Apartments</h4>
+          <p>
+            Singapore has implemented Community Care Apartments (CCAs) as a transitional care solution, integrating
+            senior housing with basic healthcare services to alleviate pressure on hospital bed capacity. As of 2025,
+            the program has expanded to 1,200 units across five housing estates, demonstrating measurable impact through
+            a 22% reduction in hospital readmissions among residents [8]. However, current capacity meets only an
+            estimated 15% of projected needs, with waiting periods extending six to eight months in high-demand regions
+            [9]. The model's physical infrastructure requirements present inherent scalability limitations in
+            land-constrained Singapore, necessitating complementary virtual care solutions to achieve meaningful
+            system-wide impact.
+          </p>
+        </div>
 
-      <div id="sub-section-1-header-2-2">
-        <h4>1.2.2. Community Care Apartments</h4>
-        <p>
-          The outsourced medical team complements the hospital department by providing additional support tailored to
-          the patient's needs. Their roles include:
-        <ul>
-          <li>Monitoring patient health remotely and in person, ensuring continuous care and early detection of any
-            issues.</li>
-          <li>Administering care such as wound dressing, medication management, and other specialized treatments as
-            required.</li>
-          <li>Filling in gaps in hospital coverage, with flexible scheduling that allows them to provide support on a
-            case-by-case basis.</li>
-          <li>Responding to patient needs in emergencies, ensuring that appropriate actions are taken to maintain
-            patient safety.</li>
-        </ul>
-        </p>
-      </div>
-
-      <div id="sub-section-1-header-2-3">
-        <h4>1.2.3. Mobile Inpatient Care @ Home (MIC@Home)</h4>
+        <div id="sub-section-1-header-2-3">
+          <h4>1.2.3 Mobile Inpatient Care @ Home (MIC@Home)</h4>
+          <p>
+            MIC@Home is an innovative healthcare delivery model developed by MOH to provide hospital-level care in
+            patients' homes. This program represents a fundamental shift in healthcare delivery, combining advanced
+            remote monitoring technologies with in-person clinical care from multidisciplinary medical teams.
+          </p>
+          <image-component id="fig-1" tag="image" source="assets/fig1.png" subtitle="Figure 1. Overview of MIC@Home">
+          </image-component>
+          <p>
+            The MIC@Home program simultaneously addresses multiple critical healthcare system challenges through its
+            innovative design. Primarily, it mitigates bed capacity constraints through the establishment of "virtual
+            wards," having demonstrated the conservation of over 9,000 hospital bed days since program inception in 2022
+            [10]. Clinically, the model has shown superior patient outcomes, including a 35% reduction in
+            hospital-acquired infections alongside exceptional patient satisfaction scores of 92%. From a health
+            economics perspective, the program delivers substantial efficiency gains, providing equivalent care at
+            20-25% reduced cost per episode relative to conventional hospitalization[11].
+            <br><br>
+            This care model holds particular strategic value for Singapore's unique urban context, offering a scalable
+            healthcare solution unconstrained by physical infrastructure limitations. With current expansion plans
+            targeting 300 virtual beds, MIC@Home serves dual purposes: as an immediate capacity enhancement measure and
+            as a pioneering prototype for next-generation healthcare delivery models [12].
+          </p>
+        </div>
       </div>
     </div>
     <br><br>
 
     <sl-divider></sl-divider>
-    <div>
-      <div id="section-header-2">
-        <h2>2. Problem Framing</h2>
-      </div>
+    <div id="section-header-2">
+      <h2>2. Problem Framing</h2>
 
       <div id="sub-section-2-header-1">
-        <h3>2.1. Current Pain Points of MIC@Home</h3>
+        <h3>2.1 Current Issues of MIC@Home</h3>
+        <p>
+          Without predefined problem statements from MOHT, our research concentrated on identifying operational
+          challenges in the MIC@Home program. Through extensive stakeholder engagement, including in-depth interviews
+          with nursing staff and consultation sessions with the MOHT implementation team, we developed a patient journey
+          map.
+        </p>
+        <image-component id="fig-2" tag="image" source="assets/fig2.png"
+          subtitle="Figure 2. Storyboard of MIC@Home journey">
+        </image-component>
+        <p>
+          From this storyboard, several key areas of inconvenience and inefficiency can be identified in the journeys of
+          patients. These pain points are summarised below in the table and figure.
+        </p>
+        <table id="table-1" style="margin-left:auto; margin-right:auto;">
+          <caption><i>Table 1. Patient Pain Points</i></caption>
+          <tr>
+            <th>Phase of Treatment</th>
+            <th>Pain Points</th>
+            <th>Design Opportunities</th>
+          </tr>
+
+          <!-- Row 1 -->
+          <tr>
+            <td>Hospital-to-Home Transition</td>
+            <td>
+              <ul>
+                <li>
+                  Patients experience significant difficulties in operating medical monitoring equipment due to
+                  insufficient training prior to discharge.
+                </li>
+                <li>
+                  Many individuals report uncertainty about the accuracy of their self-measured vital signs, creating
+                  anxiety about their health status.
+                </li>
+                <li>
+                  The current documentation process requires manual recording and photographing of readings, which
+                  introduces errors and inefficiencies.
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>
+                  Step-by-step visual guides for treatments and device usage.
+                </li>
+                <li>
+                  Smart medical devices with automatic calibration features could ensure measurement accuracy and
+                  provide real-time feedback to users.
+                </li>
+                <li>
+                  A secure cloud-based platform for vital sign documentation would eliminate manual recording while
+                  maintaining data integrity.
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Row 2 -->
+          <tr>
+            <td>Independent Monitoring</td>
+            <td>
+              <ul>
+                <li>
+                  The absence of immediate professional feedback leaves patients uncertain about their health status
+                  between visits.
+                </li>
+                <li>
+                  Medication adherence suffers due to complex dosing schedules and lack of structured reminders.
+                </li>
+                <li>
+                  Psychological distress develops from isolation and the burden of continuous self-monitoring.
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>
+                  An AI-powered monitoring system could automatically detect and flag abnormal readings for clinical
+                  review.
+                </li>
+                <li>
+                  Scheduled medication reminders.
+                </li>
+                <li>
+                  Integrated messaging system with provider alerts for urgent values.
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Row 3 -->
+          <tr>
+            <td>Provider Home Visits</td>
+            <td>
+              <ul>
+                <li>
+                  Patients frequently forget important care instructions provided during home visits.
+                </li>
+                <li>
+                  Physical examinations often leave patients feeling fatigued and uncomfortable.
+                </li>
+                <li>
+                  Time limitations prevent thorough discussion of all health concerns during visits.
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>
+                  Context-aware reminders synced with individual care plans.
+                </li>
+                <li>
+                  Digital care plan updates accessible via patient portals would reinforce verbal instructions.
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Row 4 -->
+          <tr>
+            <td>Long-Term Recovery</td>
+            <td>
+              <ul>
+                <li>
+                  The sudden reduction in clinical support creates feelings of abandonment during recovery.
+                </li>
+                <li>
+                  Patients lack clear indicators to assess their recovery progress objectively.
+                </li>
+                <li>
+                  Emotional challenges emerge as patients adjust to managing their health independently.
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>
+                  Personalized recovery dashboards would visualize progress metrics and milestones.
+                </li>
+                <li>
+                  Scheduled provider check-ins and automated wellness messages.
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <image-component id="fig-3" tag="image" source="assets/fig3.png"
+          subtitle="Figure 3. User Journey Map of MIC@Home patients">
+        </image-component>
+        <p>
+          The MIC@Home program reveals inherent tensions between healthcare efficiency and patient-centered care. While
+          intended to streamline post-hospitalization recovery, the current model inadvertently places excessive
+          responsibility on patients without providing adequate support systems. The identified pain points,
+          particularly around technological complexity and care transitions reflect deeper systemic issues in how we
+          operationalize home-based care. Digital solutions present compelling opportunities, but their effectiveness
+          hinges on addressing three critical dimensions:
+        </p>
+        <ul>
+          <li>
+            Redesigning clinician workflows to accommodate remote monitoring
+          </li>
+          <li>
+            Rebuilding patient trust in self-management tools
+          </li>
+          <li>
+            Creating meaningful feedback loops between patients and providers
+          </li>
+        </ul>
+        <p>
+          Therefore, there are certainly multiple design opportunities for MIC@Home to be further
+          optimised to increase its outreach, to reach the target of 10% of hospital beds in Singapore.
+        </p>
       </div>
 
       <div id="sub-section-2-header-2">
         <h3>2.2. How-Might-We Statements</h3>
-      </div>
-
-      <div id="sub-section-2-header-2-3">
-        <h4>2.3. Problem Statement</h4>
-      </div>
-    </div>
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-
-    <div>
-      <!-- This is an example of what a section might look like -->
-      <div id="section-header-3">
-        <h2>3. Value Proposition</h2>
         <p>
-          Based on the How-Might-We statements and pain points identified in the user journey maps, essential insights
-          were organized into a value proposition canvas:
-          <br><br>
+          Using these design opportunities, several How-Might-We statements are generated to better
+          frame the problem:
+        </p>
+        <ul>
+          <li>
+            How might we provide patients with simple, personalized reminders and guides to help them manage medication,
+            monitor vitals and follow daily care routines independently?
+          </li>
+          <li>
+            How might we provide patients with instant, personalized health reassurance and smart escalation to
+            healthcare providers when needed?
+          </li>
+          <li>
+            How might we create an intuitive vital sign monitoring system that helps patients track their health trends
+            with clarity and confidence, reducing unnecessary anxiety?
+          </li>
+        </ul>
+      </div>
 
-          <image-component tag="image" source="assets/patient_value_prop_1.png"
-            subtitle="Figure 9: Value Proposition Canvas Zoomed-In (Patients)">
-          </image-component>
-          <br><br>
-
-          <image-component tag="image" source="assets/patient_value_prop_2.png"
-            subtitle="Figure 9: Value Proposition Canvas Zoomed-In (Patients)">
-          </image-component>
-          <br><br>
+      <div id="sub-section-2-header-3">
+        <h3>2.3. Problem Statement</h3>
+        <p>
+          Patients recovering at home need a supportive way to monitor their health, receive personalized feedback, and
+          stay connected to their healthcare team because they often feel isolated and anxious without clear guidance
+          and real-time insights into their condition. This lack of support diminishes their confidence in the recovery
+          process and hinders their ability to actively engage in their own health journey.
         </p>
       </div>
     </div>
-    <br />
-    <br />
+    <br><br>
     <sl-divider></sl-divider>
 
-    <div>
-      <!-- This is an example of what a section might look like -->
-      <div id="section-header-4">
-        <h2>4. Design Statement</h2>
-      </div>
+    <!-- Section 3 -->
+    <div id="section-header-3">
+      <h2>3. Value Proposition</h2>
+      <p>
+        Based on the How-Might-We statements and pain points identified in the user journey maps, essential insights
+        were organized into a value proposition canvas:
+      </p>
+      <image-component id="fig-4" tag="image" source="assets/fig4.png"
+        subtitle="Figure 4. Value Proposition Canvas Zoomed-In Part 1 (Patients)">
+      </image-component>
+      <image-component id="fig-5" tag="image" source="assets/fig5.png"
+        subtitle="Figure 5. Value Proposition Canvas Zoomed-In Part 2 (Patients)">
+      </image-component>
+      <p>
+        The MIC@Home Monitoring System delivers an integrated digital health platform that transforms remote patient
+        care through three key services:
+      </p>
+      <ol>
+        <li>
+          Smart Communication Platform - Secure messaging and automated alerts connect patients with clinicians in
+          real-time, reducing isolation and enabling timely interventions.
+        </li>
+        <li>
+          Intelligent Vital Monitoring - AI-powered trend analysis with intuitive traffic-light displays helps patients
+          understand their health status while flagging critical changes for care teams.
+        </li>
+        <li>
+          Personalized Care Engine - An adaptive support system that delivers context-aware medication and measurement
+          reminders, intelligently adjusts notification frequency based on patient preferences and compliance patterns,
+          and provides tailored educational content aligned with each patient's recovery journey.
+        </li>
+      </ol>
     </div>
-    <br />
-    <br />
+    <br><br>
     <sl-divider></sl-divider>
 
-    <div>
-      <!-- This is an example of what a section might look like -->
-      <div id="section-header-5">
-        <h2>5. Concept Design</h2>
-      </div>
+    <!-- Section 4 -->
+    <div id="section-header-4">
+      <h2>4. Design Statement</h2>
+      <p>
+        The project aims to develop a comprehensive solution for virtual patient monitoring that facilitates seamless
+        communication between patients and the healthcare team. This will be achieved through a software system
+        featuring modules tailored to meet the specific needs of patients, nurses, and hospital care teams. A key
+        component of this solution is the integration of Large Language Models (LLMs) to power an advanced chatbot
+        feature. This chatbot will enhance patient engagement by addressing secondary-level concerns in the absence of
+        healthcare professionals, providing reminders for medication and vital signs monitoring, and generating
+        concise summaries for nursing staff. This approach is designed to improve care coordination, streamline
+        workflows, and ultimately enhance patient outcomes.
+      </p>
+    </div>
+    <br><br>
+    <sl-divider></sl-divider>
+
+    <div id="section-header-5">
+      <h2>5. Concept Design</h2>
       <div id="sub-section-5-header-1">
-        <h3>5.1. Functional Requirements</h3>
+        <h3>5.1 Functional Requirements</h3>
+        <table id="table-2" style="margin-left:auto; margin-right:auto;">
+          <caption><i>Table 2. List of Conceptual Functional Requirements</i></caption>
+
+          <!-- Row 1 -->
+          <tr>
+            <th>Main Functional Requirements</th>
+            <th>Features that address functional requirements</th>
+            <th>Enhanced Features with LLM Integration</th>
+          </tr>
+
+          <!-- Row 2 -->
+          <tr>
+            <td>Engaging patients in their recovery journey</td>
+            <td>
+              A chatbot that can provide:
+              <ul>
+                <li>tailored advice</li>
+                <li>reminders and nudges</li>
+                <li>personalized resources that suits patients' unique recovery needs</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>
+                  Chatbot to generate personalized, context-aware messages.
+                </li>
+                <li>
+                  Tailored advice based on medical history, care plan, habits and recovery progress.
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Row 3 -->
+          <tr>
+            <td>Handling secondary-level patient concerns</td>
+            <td>
+              Well constrained chatbot to handle simple medical queries with appropriate escalation of patient concerns
+              <ul>
+                <li>
+                  To handle non-urgent health concerns like dietary advice, medication clarification, or general
+                  symptoms
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>
+                  <em>Smart Triage:</em> Using predefined clinical protocols, chatbot can access patient concerns and
+                  escalate when necessary
+                </li>
+                <li>
+                  <em>Natural Language Symptom Input:</em> Chatbot understands and clarifies symptoms described in
+                  everyday language
+                </li>
+                <li>
+                  <em>Automated Summaries:</em> Generates concise summaries of patient issues for efficient clinical
+                  follow-up
+                </li>
+                <li>
+                  <Em>Domain-constrained responses:</Em> Uses a tailored system prompt and medical database to ensure
+                  safe, accurate replies
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Row 4 -->
+          <tr>
+            <td>Automated Medication and Vitals Monitoring</td>
+            <td>
+              <ul>
+                <li>
+                  Scheduled reminders for medications, vital signs measurement, and hydration.
+                </li>
+                <li>
+                  Alert generation for missed inputs or abnormal values.
+                </li>
+                <li>
+                  Educational support about normal ranges and interpretation of vitals.
+                </li>
+                <li>
+                  Alerts if readings are significantly off.
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>
+                  Personalized scheduling and reminder adjustments based on patient behavior and history.
+                </li>
+                <li>
+                  Anomaly detection using past vitals and dynamic chatbot follow-ups.
+                </li>
+                <li>
+                  LLMs can summarize patient adherence and trends for weekly nurse review.
+                </li>
+                <li>
+                  Contextual chatbot coaching for vitals-taking errors (e.g., “try relaxing for 5 mins and rechecking
+                  your BP”).
+                </li>
+                <li>
+                  Explains results using layperson language and answers patient questions (“What does 145/90 BP mean?”).
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Row 5 -->
+          <tr>
+            <td>Escalation for Emergency Situations</td>
+            <td>
+              Detection of critical symptoms from chat input or vital sign anomalies.
+            </td>
+            <td>
+              Chatbot understands symptom escalation (e.g., chest pain + dizziness) and triggers emergency workflow.
+            </td>
+          </tr>
+
+          <!-- Row 6 -->
+          <tr>
+            <td>Patient Summary Generation for Nurses</td>
+            <td>
+              Convert patient-chat interaction, vitals, and medication data into concise summaries.
+            </td>
+            <td>
+              Automatic nurse report generation summarizing:
+              <ul>
+                <li>
+                  Key concerns raised by the patient 
+                </li>
+                <li>
+                  Medication and vitals adherence 
+                </li>
+                <li>
+                  Any anomalies or red flags for review 
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
       </div>
 
       <div id="sub-section-5-header-2">
         <h3>5.2. Design Specifications</h3>
-
       </div>
     </div>
-    <br />
-    <br />
+    <br><br>
     <sl-divider></sl-divider>
 
     <div>
