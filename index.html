@@ -2658,6 +2658,117 @@
     <br><br>
     <sl-divider></sl-divider>
 
+    <div id="section-header-11">
+      <h2>11. Evaluation whether intended deliverables were met</h2>
+      <p>
+        For the final version of the prototype, the application' UI design remains unchanged from the last frontend
+        iteration, while implementation bugs caught during the integration and user tests were fixed. For the backend,
+        the system prompt was improved with the addition of a few additional clauses to alter the chatbot's response.
+      </p>
+      <table id="table-30" style="margin-left:auto; margin-right:auto; border:none; padding:0px;">
+        <caption><i>Table 30. Evaluation of Intended Deliverables</i></caption>
+        <th style="border: none;">
+          <img src="assets/table30.png" style="max-width:800px;">
+        </th>
+      </table>
+    </div>
+
+    <div id="section-header-12">
+      <h2>12. Future Works and Conclusion</h2>
+
+      <div id="sub-section-12-header-1">
+        <h3>12.1 Frontend</h3>
+        <image-component id="fig-32" tag="image" source="assets/fig32.png" subtitle="Figure 32. Sample Nurse Wireframe">
+        </image-component>
+        <p>
+          The nurse side of this application, following the design phase's future work, can be implemented fully as a
+          desktop application to be used by nurses and staff at the hospital.
+          <br><br>
+          The open source packages used restrict the design of the application, preventing some functional features,
+          like website recommendations, from being implemented. Creating the components from scratch is much more
+          time-consuming, but allows a much greater level of customisation in UI and functionality of the application.
+          Thus, implementing these packages is part of future work.
+          <br><br>
+          The current implementation also does not have proper authentication protocols implemented, due to the
+          time-consuming nature of programming with data security in mind. For future work, user authentication can be
+          implemented in a secure fashion with authentication of the user during bootstrapping and login, and proper
+          data encryption protocols implemented for all communication between the frontend and backend.
+          <br><br>
+          The current implementation can also improve the efficiency at which it sends and retrieves user data from the
+          backend. Since multiple screens actually require the same set of data, such as medications and vitals
+          measurements, a class meant to retrieve and cache user data from the backend can be implemented to reduce
+          requests sent to the backend while ensuring that user data is updated periodically on the frontend.
+        </p>
+      </div>
+
+      <div id="sub-section-12-header-2">
+        <h3>12.2 Backend</h3>
+        <p>
+          While the chatbot is capable of providing medically relevant responses based on the knowledge base provided,
+          it does not always deliver fully satisfactory interactions for users, as major healthcare decisions are still
+          deferred to medical professionals. Thus, leaving users dissatisfied by its response. To improve the chatbot's
+          effectiveness and ensure appropriate handling of medical inquiries, future enhancements can focus on
+          implementing a differentiated response mechanism based on the severity and urgency of patient queries. This
+          could include integrating the chatbot with features that loops nurses to intervene and assist with more
+          serious concerns, thereby ensuring that users receive timely, accurate support when needed. A continuous
+          learning mechanism will be implemented where the chatbot analyzes user feedback to refine its conversational
+          style. By adapting its responses based on previous interactions and feedback, the chatbot can develop a more
+          natural, empathetic and human-like conversational tone over time.
+        </p>
+      </div>
+
+      <div id="sub-section-12-header-3">
+        <h3>12.3 Speech and Image Recognition</h3>
+        <p>
+          To enhance MediHeal's accessibility for elderly users, we recommend implementing speech-to-text (STT) and
+          image-to-text (ITT) functionality through a carefully designed technical integration. The system would utilize
+          Google's Cloud Speech-to-Text API with medical domain adaptation to ensure accurate transcription of
+          medication and vitals data. This would be configured with continuous dictation capabilities and wake-word
+          detection, while incorporating noise reduction algorithms to accommodate various home environments. A
+          HIPAA-compliant audio processing pipeline would maintain data security throughout the voice interaction
+          process [21].
+          <br><br>
+          For visual data capture, we propose implementing Tesseract OCR with custom-trained models specifically
+          optimized for medical use cases. These models would be capable of parsing prescription labels to extract
+          dosage, frequency, and administration instructions, while also recognizing data from medical device displays
+          such as glucose meters and blood pressure monitors. The system would include image preprocessing features
+          including perspective correction and glare reduction to handle imperfect capture conditions. This
+          comprehensive technical solution would significantly improve accessibility while maintaining rigorous data
+          security and privacy standards.
+          <br><br>
+          The implementation would follow a phased approach, beginning with core STT functionality before adding ITT
+          capabilities. Each phase would include extensive testing with elderly users to refine the interface and
+          interaction models. The technical architecture would be designed for scalability, allowing for future
+          enhancements such as multilingual support or integration with additional medical devices. This recommendation
+          aligns with MediHeal's commitment to inclusive healthcare technology while addressing the specific needs of
+          elderly users through thoughtful technical implementation.
+        </p>
+      </div>
+
+      <div id="sub-section-12-header-4">
+        <h3>12.4 Conclusion</h3>
+        <p>
+          With the emergence of MIC@Home as part of a movement towards shifting care away from the hospital, great care
+          must be taken to ensure the quality of patient care at home does not diminish even without a nurse present
+          24/7. MediHeal was designed with the needs of these patients in mind, to streamline the patient-provider
+          connection and relieve the mental burden placed on patients.
+          <br><br>
+          With the focus on patient task and query management, a set of functional and non-functional requirements were
+          drafted for MediHeal, specifying backend and frontend goals. From these requirement specifications, multiple
+          iterations of prototyping were conducted, each one building off the last and using feedback from various forms
+          of testing to refine the application.
+          <br><br>
+          Integrated user testing revealed positive aspects of the application such as the convenient user interface,
+          while there was room to improve in terms of chatbot satisfaction. For the future, there are certainly areas of
+          refinement and expansion, like the refinement of the backend chatbot prompts and architecture, and the design
+          and implementation of a nurse-facing aspect of the application.
+          <br><br>
+          All in all, although such an application might not be able to fully replace a nurse's duties, it certainly has
+          the potential to fill in the gaps left by nurses during their hospital stay at home.
+        </p>
+      </div>
+    </div>
+
     <!-- This is an example of how you can use the references component to create references -->
     <div id="references" class="references">
       <h2>References</h2>
