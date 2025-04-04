@@ -904,6 +904,7 @@
     <br><br>
     <sl-divider></sl-divider>
 
+    <!-- Section 5 -->
     <div id="section-header-5">
       <h2>5. Concept Design</h2>
       <div id="sub-section-5-header-1">
@@ -1037,13 +1038,13 @@
               Automatic nurse report generation summarizing:
               <ul>
                 <li>
-                  Key concerns raised by the patient 
+                  Key concerns raised by the patient
                 </li>
                 <li>
-                  Medication and vitals adherence 
+                  Medication and vitals adherence
                 </li>
                 <li>
-                  Any anomalies or red flags for review 
+                  Any anomalies or red flags for review
                 </li>
               </ul>
             </td>
@@ -1053,28 +1054,153 @@
 
       <div id="sub-section-5-header-2">
         <h3>5.2. Design Specifications</h3>
+        <table id="table-3" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+          <caption><i>Table 3. List of Design Specifications</i></caption>
+          <th style="border:none;">
+            <img src="assets/table3.png" style="max-width:800px;">
+          </th>
+        </table>
       </div>
     </div>
     <br><br>
     <sl-divider></sl-divider>
 
-    <div>
-      <!-- This is an example of what a section might look like -->
-      <div id="section-header-6">
-        <h2>6. Concept Generation</h2>
-      </div>
-
+    <!-- Section 6 -->
+    <div id="section-header-6">
+      <h2>6. Concept Generation</h2>
       <div id="sub-section-6-header-1">
-        <h3>6.1. Overall Concept</h3>
+        <h3>6.1 Overall Concept</h3>
+        <p>
+          This project envisions a comprehensive, AI-powered virtual care platform designed to enhance patient recovery,
+          and improve care coordination for MIC@Home patients. At its core is an AI-powered chatbot interface, powered
+          by Large Language Models (LLMs) with Retrieval-Augmented Generation (RAG), enabling responsive, safe, and
+          context-aware communication between patients and the healthcare team.
+        </p>
+        <table id="table-4" style="margin-left:auto; margin-right:auto; padding:0px; border:none;">
+          <caption><i>Table 4. Conceptual Features of Application</i></caption>
+          <th style="border:none;">
+            <img src="assets/table4.png" style="max-width:800px;">
+          </th>
+        </table>
+        <p>
+          With the functional requirements, design specifications, and overall concept clearly defined, the virtual
+          patient care system presents a robust, scalable, and intelligent framework for enhancing patient care at home.
+          The architecture combines a domain-constrained LLM chatbot with system-prompt-driven behaviour, tailored
+          reminders, and backend monitoring to ensure high-quality patient engagement and effective clinical oversight.
+          <br><br>
+          Each system component has been mapped to specific use cases and healthcare workflows, forming a technical
+          foundation that is to be translated into a user-facing application, Mediheal.
+          <br><br>
+          Like most systems-level applications, this project follows a clear separation of concerns between the frontend
+          and backend components.
+        </p>
+        <ul>
+          <li>
+            The frontend serves as the main interface between the user and the application, responsible for delivering
+            the system's core features through an aesthetically pleasing, intuitive, and responsive interface.
+          </li>
+          <li>
+            The backend manages the functional and system logic, data processing, and system integrations - including
+            the LLM model, patient database and vitals and medication scheduler engine.
+          </li>
+        </ul>
       </div>
     </div>
+    <br><br>
     <sl-divider></sl-divider>
 
-    <div>
-      <div id="section-header-7">
-        <h2>7. Developmental Phases of MediHeal</h2>
-      </div>
+    <!-- Section 7 -->
+    <div id="section-header-7">
+      <h2>7. Developmental Phases of MediHeal</h2>
+      <p>
+        The development of MediHeal followed a structured approach with clearly defined roles and responsibilities
+        across the team. The project was divided into three key phases - Winter Break, Semester 2 Part 1, and Semester 2
+        Part 2 - with work distributed among team members based on their expertise.
+      </p>
+      <ol>
+        <li>
+          Winter Break Development (Weeks 1-4)
+          <br><br>
+          The initial development phase established the foundational architecture of the system. The backend team
+          focused on implementing the conversation-saving architecture and testing integration with the vitals database,
+          while simultaneously finalizing the medical knowledge base for jaundice. Concurrently, the frontend team
+          developed the core chat interface and established API connections to support basic functionality. This phase
+          concluded with initial integration testing between frontend and backend components, along with validation of
+          the medical knowledge base for two additional use cases.
+        </li>
+        <br>
+        <li>
+          Semester 2: Core Implementation (Weeks 1-6)
+          <br><br>
+          The project entered its intensive development phase during the first half of Semester 2. Key achievements
+          included:
+          <br><br>
+          <ul>
+            <li>
+              Implementation of the integrated RAG architecture for enhanced chatbot functionality
+            </li>
+            <li>
+              Completion of remaining frontend screens with particular focus on vitals monitoring interfaces
+            </li>
+            <li>
+              Full system integration testing to verify seamless data flow between components
+            </li>
+            <li>
+              Buffer time allocation to address unforeseen technical challenges
+            </li>
+            <li>
+              Initial user acceptance testing to gather early feedback on core features
+            </li>
+            <li>
+              Finalizing medical knowledge base for Dengue
+            </li>
+          </ul>
+        </li>
+        <br>
+        <li>
+          Semester 2: Refinement and Validation (Weeks 7-12)
+          <br><br>
+          The final phase prioritized refinement and system validation:
+          <br><br>
+          <ul>
+            <li>
+              Backend and frontend revisions based on user feedback collected during testing
+            </li>
+            <li>
+              Comprehensive user acceptance testing with clinical stakeholders
+            </li>
+            <li>
+              Final system integration testing to ensure all components worked cohesively
+            </li>
+            <li>
+              Preparation and delivery of the final project presentation
+            </li>
+            <li>
+              Additional validation of the expanded medical knowledge base to include Urinary Tract Infection (UTI)
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <p>
+        Areas of Focus & Responsibilities:
+      </p>
+      <ul>
+        <li>UI/UX Design & User Research (Deebika)</li>
+        <li>Frontend Development (Jun Boon)</li>
+        <li>Backend Development & AI Integration (Hasina)</li>
+      </ul>
+      <p>
+        Given the project's broad scope, we adopted a structured approach to prioritize development by categorizing
+        features into must-have and nice-to-have functionalities. This classification ensured we focused first on core
+        components critical for patient care while allowing flexibility for enhancements. The feature list served as our
+        primary reference for sprint planning, with must-have items completed during initial phases before addressing
+        enhancement opportunities.
+      </p>
+      <image-component id="fig-6" tag="image" source="assets/fig6.png"
+        subtitle="Figure 6. Must-Have vs. Nice-to-Have Feature Classification">
+      </image-component>
     </div>
+
     <sl-divider></sl-divider>
 
     <div>
@@ -1140,7 +1266,16 @@
       <div id="sub-section-9-header-1">
         <h3>9.1. Purpose and Objectives</h3>
         <p>
-          The backend of the system is designed to support a patient-centric home recovery platform, integrating an AI-powered chatbot for patient interactions and real-time reporting of medication adherence and vital signs. It provides a structured, scalable and secure infrastructure for seamless data management and communication between patients and healthcare providers. By leveraging structured data management, AI-driven conversational interactions, and automated notifications, the backend aims to bridge the gap between remote patients and healthcare providers. The key objectives include enabling efficient storage and retrieval of patient records, ensuring fast and contextually relevant chatbot responses, automating reminders for medication and vitals monitoring and maintaining data security and privacy through localized AI processing. Ultimately, the system seeks to optimize patient recovery outcomes while reducing the burden on healthcare facilities through proactive monitoring and intervention.
+          The backend of the system is designed to support a patient-centric home recovery platform, integrating an
+          AI-powered chatbot for patient interactions and real-time reporting of medication adherence and vital signs.
+          It provides a structured, scalable and secure infrastructure for seamless data management and communication
+          between patients and healthcare providers. By leveraging structured data management, AI-driven conversational
+          interactions, and automated notifications, the backend aims to bridge the gap between remote patients and
+          healthcare providers. The key objectives include enabling efficient storage and retrieval of patient records,
+          ensuring fast and contextually relevant chatbot responses, automating reminders for medication and vitals
+          monitoring and maintaining data security and privacy through localized AI processing. Ultimately, the system
+          seeks to optimize patient recovery outcomes while reducing the burden on healthcare facilities through
+          proactive monitoring and intervention.
         </p>
       </div>
       <div id="sub-section-9-header-2">
@@ -1151,8 +1286,7 @@
           </caption>
           <tr>
             <td style="border: none; padding: 0;">
-              <image-component id="image" source="assets/backend_tasks.png"
-              subtitle="">
+              <image-component id="image" source="assets/backend_tasks.png" subtitle="">
               </image-component>
             </td>
           </tr>
@@ -1160,65 +1294,72 @@
       </div>
       <div id="sub-section-9-header-3">
         <h3>9.3. Overview of Backend Architecture</h3>
-        <p> 
-          The backend architecture for our application is as follows: 
+        <p>
+          The backend architecture for our application is as follows:
         </p>
         <image-component tag="image" source="assets/backend_architecture.png"
-            subtitle="Figure 18. Backend architecture">
+          subtitle="Figure 18. Backend architecture">
         </image-component>
         <br><br>
-        <p> 
-          The illustration above summarizes the backend architecture of our implementation, designed to support the necessary functions of the front end. The architecture ensures seamless interaction between the patient-facing interface, AI chatbot resources and backend data management components. The flow of information is represented through directional arrows, illustrating how data moves between the front-end interface, AI-driven chatbot processing, and hospital monitoring systems. Additionally, to facilitate real-time monitoring and proactive patient care, the backend integrates structured data management and automated notifications. A detailed explanation of the information flow is provided in <b>Appendix C.</b>
+        <p>
+          The illustration above summarizes the backend architecture of our implementation, designed to support the
+          necessary functions of the front end. The architecture ensures seamless interaction between the patient-facing
+          interface, AI chatbot resources and backend data management components. The flow of information is represented
+          through directional arrows, illustrating how data moves between the front-end interface, AI-driven chatbot
+          processing, and hospital monitoring systems. Additionally, to facilitate real-time monitoring and proactive
+          patient care, the backend integrates structured data management and automated notifications. A detailed
+          explanation of the information flow is provided in <b>Appendix C.</b>
           <br><br>
-          Following the planning phase, the design specifications taken into considerations for the backend development are as follows: 
+          Following the planning phase, the design specifications taken into considerations for the backend development
+          are as follows:
           <br><br>
           <b> A. Functional Requirements </b>
           <br><br>
-          The following define the system’s core functionalities necessary for patient data management, chatbot interaction and user engagement.
+          The following define the system’s core functionalities necessary for patient data management, chatbot
+          interaction and user engagement.
           <br><br>
-          <table id="table-24" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
-            <caption style="caption-side: top; text-align: center;">
-              <i>Table 24. Functional Requirements of Backend</i>
-            </caption>
-            <tr>
-              <td style="border: none; padding: 0;">
-                <image-component id="image" source="assets/backend_func_req.png"
-                subtitle="">
-                </image-component>
-              </td>
-            </tr>
-          </table>
-          <br><br>
-          <b> B. Non-Functional Requirements </b>
-          <br><br>
-          <table id="table-25" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
-            <caption style="caption-side: top; text-align: center;">
-              <i>Table 25. Non-Functional Requirements for Backend</i>
-            </caption>
-            <tr>
-              <td style="border: none; padding: 0;">
-                <image-component id="image" source="assets/backend_nonfunc_req.png"
-                subtitle="">
-                </image-component>
-              </td>
-            </tr>
-          </table>
-          <br><br>
-          <b> C. Endpoints </b>
-          <br><br>
-          The backend provides a set of endpoints to support key functionalities within the system, enabling smooth communication between the front end, AI chatbot and data storage components. The following table outlines the available API endpoints, their functions, inputs, responses and HTTP methods used.
-          <table id="table-26" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
-            <caption style="caption-side: top; text-align: center;">
-              <i>Table 26. Endpoints of Backend</i>
-            </caption>
-            <tr>
-              <td style="border: none; padding: 0;">
-                <image-component id="image" source="assets/backend_endpoints.png"
-                subtitle="">
-                </image-component>
-              </td>
-            </tr>
-          </table>
+        <table id="table-24" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
+          <caption style="caption-side: top; text-align: center;">
+            <i>Table 24. Functional Requirements of Backend</i>
+          </caption>
+          <tr>
+            <td style="border: none; padding: 0;">
+              <image-component id="image" source="assets/backend_func_req.png" subtitle="">
+              </image-component>
+            </td>
+          </tr>
+        </table>
+        <br><br>
+        <b> B. Non-Functional Requirements </b>
+        <br><br>
+        <table id="table-25" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
+          <caption style="caption-side: top; text-align: center;">
+            <i>Table 25. Non-Functional Requirements for Backend</i>
+          </caption>
+          <tr>
+            <td style="border: none; padding: 0;">
+              <image-component id="image" source="assets/backend_nonfunc_req.png" subtitle="">
+              </image-component>
+            </td>
+          </tr>
+        </table>
+        <br><br>
+        <b> C. Endpoints </b>
+        <br><br>
+        The backend provides a set of endpoints to support key functionalities within the system, enabling smooth
+        communication between the front end, AI chatbot and data storage components. The following table outlines the
+        available API endpoints, their functions, inputs, responses and HTTP methods used.
+        <table id="table-26" style="margin-left:auto; margin-right:auto;border: none; padding: 0;">
+          <caption style="caption-side: top; text-align: center;">
+            <i>Table 26. Endpoints of Backend</i>
+          </caption>
+          <tr>
+            <td style="border: none; padding: 0;">
+              <image-component id="image" source="assets/backend_endpoints.png" subtitle="">
+              </image-component>
+            </td>
+          </tr>
+        </table>
         </p>
       </div>
       <div id="sub-section-9-header-4">
@@ -1227,32 +1368,39 @@
       <div id="sub-section-9-header-4-1">
         <h3>9.4.1. Chatbot Architecture</h3>
         <p>
-          The chatbot in this project is implemented using LangGraph, leveraging a graph-based architecture to manage conversation flow dynamically. This approach allows for flexible decision-making, ensuring the chatbot can efficiently retrieve relevant information while maintaining a structured dialogue with the user. The figure below shows the set up of the chatbot architecture. 
+          The chatbot in this project is implemented using LangGraph, leveraging a graph-based architecture to manage
+          conversation flow dynamically. This approach allows for flexible decision-making, ensuring the chatbot can
+          efficiently retrieve relevant information while maintaining a structured dialogue with the user. The figure
+          below shows the set up of the chatbot architecture.
         </p>
         <image-component id="fig-19" tag="image" source="assets/fig19.png"
-        subtitle="Figure 19. Diagrammatic overview of the chatbot's graph-based structure">
+          subtitle="Figure 19. Diagrammatic overview of the chatbot's graph-based structure">
         </image-component>
         <p>
           The conversation flow is structured around interconnected nodes, each serving a specific function:
         </p>
         <ol>
           <li>
-          <b> Start Node:</b> Initiates the interaction and transfers control to the Chatbot Node.
+            <b> Start Node:</b> Initiates the interaction and transfers control to the Chatbot Node.
           </li>
           <li>
-          <b> Chatbot Node:</b> The central hub responsible for analyzing user input and determining the appropriate course of action.
+            <b> Chatbot Node:</b> The central hub responsible for analyzing user input and determining the appropriate
+            course of action.
           </li>
           <li>
-          <b> RAG tools Node:</b> Houses specialized tools to enhance response accuracy, with the following tools:
+            <b> RAG tools Node:</b> Houses specialized tools to enhance response accuracy, with the following tools:
             <ul>
               <li>
-                Semantic Search Tool: Retrieves relevant information on specific medical conditions (e.g., jaundice, dengue, UTI) from a structured knowledge base.
+                Semantic Search Tool: Retrieves relevant information on specific medical conditions (e.g., jaundice,
+                dengue, UTI) from a structured knowledge base.
               </li>
               <li>
-                Internet Search Tool: Engages an external search function for broader information retrieval when necessary.
+                Internet Search Tool: Engages an external search function for broader information retrieval when
+                necessary.
               </li>
               <li>
-                Schedule Tool: Queries the user's medication timing and vital sign monitoring schedules stored in the database.
+                Schedule Tool: Queries the user's medication timing and vital sign monitoring schedules stored in the
+                database.
               </li>
             </ul>
           </li>
@@ -1260,14 +1408,22 @@
             <b> End Node:</b> Marks the completion of the interaction if no further actions are required.
           </li>
         </ol>
-        <p> 
-          When the RAG Tools Node is activated, it performs its designated function and returns control to the Chatbot Node, which integrates the acquired information into its response. This structured, cyclical process allows the chatbot to efficiently utilize external tools while maintaining conversation flow, resulting in more intelligent and context-aware interactions.
+        <p>
+          When the RAG Tools Node is activated, it performs its designated function and returns control to the Chatbot
+          Node, which integrates the acquired information into its response. This structured, cyclical process allows
+          the chatbot to efficiently utilize external tools while maintaining conversation flow, resulting in more
+          intelligent and context-aware interactions.
         </p>
       </div>
       <div id="sub-section-9-header-4-2">
         <h3>9.4.2. Personalized Response Generation with Modifiable System Prompts</h3>
         <p>
-          The chatbot node serves as a critical juncture in the system, where a system prompt is utilized to guide the Language Model's (LLM) responses. This prompt defines the LLM's role and provides it with the essential protocol required to address user queries effectively. The system prompt is designed with a standardized template as its foundation. This template ensures consistency in the chatbot's basic functionality across all interactions. However, to provide personalized and contextually relevant responses, the system prompt template is augmented with user-specific information. This additional data includes:
+          The chatbot node serves as a critical juncture in the system, where a system prompt is utilized to guide the
+          Language Model's (LLM) responses. This prompt defines the LLM's role and provides it with the essential
+          protocol required to address user queries effectively. The system prompt is designed with a standardized
+          template as its foundation. This template ensures consistency in the chatbot's basic functionality across all
+          interactions. However, to provide personalized and contextually relevant responses, the system prompt template
+          is augmented with user-specific information. This additional data includes:
         </p>
         <ul>
           <li>
@@ -1281,41 +1437,48 @@
           </li>
         </ul>
         <p>
-          By appending this user-specific information to the standard template, the system creates a tailored prompt for each interaction. This approach enables the chatbot to generate responses that are not only aligned with its general role but also highly relevant to the individual user's medical context and history as well as within the guidelines set by the healthcare professionals. 
+          By appending this user-specific information to the standard template, the system creates a tailored prompt for
+          each interaction. This approach enables the chatbot to generate responses that are not only aligned with its
+          general role but also highly relevant to the individual user's medical context and history as well as within
+          the guidelines set by the healthcare professionals.
         </p>
-        <image-component id="fig-20" tag="image" source="assets/fig20.png"
-        subtitle="Figure 20. System Prompt Template">
+        <image-component id="fig-20" tag="image" source="assets/fig20.png" subtitle="Figure 20. System Prompt Template">
         </image-component>
       </div>
       <div id="sub-section-9-header-4-3">
         <h3>9.4.3. Structured Patient Database and AI-Driven Data Extraction</h3>
         <p>
-          A structured MySQL database is implemented to securely store and manage patient data, ensuring seamless integration with the hospital dashboard. The database consists of five main tables, each designed to support key functionalities such as patient monitoring, medication adherence, and chatbot interaction logging. The tables include:
+          A structured MySQL database is implemented to securely store and manage patient data, ensuring seamless
+          integration with the hospital dashboard. The database consists of five main tables, each designed to support
+          key functionalities such as patient monitoring, medication adherence, and chatbot interaction logging. The
+          tables include:
         </p>
         <ol>
           <li>
-          Patient Information Table – Stores patient information needed for sign up or log in for the frontend.
+            Patient Information Table – Stores patient information needed for sign up or log in for the frontend.
           </li>
           <li>
-          Medication Schedule Table – Maintains prescribed medications, including name, dosage, and timing.
+            Medication Schedule Table – Maintains prescribed medications, including name, dosage, and timing.
           </li>
           <li>
-          Vitals Schedule Table – Logs the required vital sign monitoring schedule for each patient.
+            Vitals Schedule Table – Logs the required vital sign monitoring schedule for each patient.
           </li>
           <li>
-          Tracker Table – Generates a daily schedule based on medication and vital sign requirements, used for push notification alerts.
+            Tracker Table – Generates a daily schedule based on medication and vital sign requirements, used for push
+            notification alerts.
           </li>
           <li>
             Chat History Table – Captures patient-chatbot interactions, enabling review by healthcare professionals.
           </li>
         </ol>
         <image-component id="fig-21" tag="image" source="assets/fig21.png"
-        subtitle="Figure 21. Overview of Patient Database Schema">
+          subtitle="Figure 21. Overview of Patient Database Schema">
         </image-component>
         <p>
           <b>AI Integrations</b>
           <b>A. AI-Driven Extraction of Medication and Vitals from Care Plans </b>
-          When a patient care plan is provided, the system utilizes AI-based extraction to identify and store key details such as:
+          When a patient care plan is provided, the system utilizes AI-based extraction to identify and store key
+          details such as:
         </p>
         <ul>
           <li>
@@ -1332,22 +1495,27 @@
           </li>
         </ul>
         <p>
-          This extracted information is stored in the database and linked to the tracker table, which generates a daily schedule for the patient. The system then queries this schedule to send automated push notifications via Firebase, reminding users when medications or vitals checks are due. An example of the prompt template for the AI extraction and output is shown in the figure below. 
+          This extracted information is stored in the database and linked to the tracker table, which generates a daily
+          schedule for the patient. The system then queries this schedule to send automated push notifications via
+          Firebase, reminding users when medications or vitals checks are due. An example of the prompt template for the
+          AI extraction and output is shown in the figure below.
         </p>
         <image-component id="fig-22" tag="image" source="assets/fig22.png"
-        subtitle="Figure 22. Prompt Template for Medication and Vitals Extraction">
+          subtitle="Figure 22. Prompt Template for Medication and Vitals Extraction">
         </image-component>
         <image-component id="fig-23" tag="image" source="assets/fig23.png"
-        subtitle="Figure 23.  JSON Output from AI Extraction">
+          subtitle="Figure 23.  JSON Output from AI Extraction">
         </image-component>
         <image-component id="fig-24" tag="image" source="assets/fig24.png"
-        subtitle="Figure 24. Tracker Table with Daily Medication and Vital Reminders">
+          subtitle="Figure 24. Tracker Table with Daily Medication and Vital Reminders">
         </image-component>
         <p>
           <br><br>
           <b>B. AI-Generated Summaries for Medication and Vitals Reporting</b>
           <br><br>
-          Following medication intake or vital sign recording, patients can report their status directly via the chatbot. The AI system continuously extracts these updates and compiles summarized reports, which are then transmitted to the hospital dashboard. This enables healthcare professionals to:
+          Following medication intake or vital sign recording, patients can report their status directly via the
+          chatbot. The AI system continuously extracts these updates and compiles summarized reports, which are then
+          transmitted to the hospital dashboard. This enables healthcare professionals to:
         </p>
         <ul>
           <li>
@@ -1361,10 +1529,12 @@
           </li>
         </ul>
         <p>
-          By leveraging AI-driven data extraction and structured database management, the system ensures real-time patient monitoring and proactive healthcare intervention, improving patient outcomes and adherence to treatment plans.
+          By leveraging AI-driven data extraction and structured database management, the system ensures real-time
+          patient monitoring and proactive healthcare intervention, improving patient outcomes and adherence to
+          treatment plans.
         </p>
         <image-component id="fig-25" tag="image" source="assets/fig25.png"
-        subtitle="Figure 25. JSON Output from Chat History and Updating Tracker Table">
+          subtitle="Figure 25. JSON Output from Chat History and Updating Tracker Table">
         </image-component>
       </div>
       <div id="sub-section-9-header-5">
