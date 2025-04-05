@@ -692,10 +692,10 @@
             <a href="#fig-31">Figure 31. Latency Analysis Results</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#fig-x">Figure X. Feedback From MOHT Team</a>
+            <a href="#fig-32">Figure 32. Feedback From MOHT Team</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#fig-32">Figure 32. Sample Nurse Wireframe</a>
+            <a href="#fig-33">Figure 33. Sample Nurse Wireframe</a>
           </sl-tree-item>
         </sl-tree>
       </div>
@@ -3041,16 +3041,7 @@
             Prompts
           </h3>
           <p>
-            The chatbot node serves as a critical juncture in the system, where
-            a system prompt is utilized to guide the Language Model's (LLM)
-            responses. This prompt defines the LLM's role and provides it with
-            the essential protocol required to address user queries effectively.
-            The system prompt is designed with a standardized template as its
-            foundation. This template ensures consistency in the chatbot's basic
-            functionality across all interactions. However, to provide
-            personalized and contextually relevant responses, the system prompt
-            template is augmented with user-specific information. This
-            additional data includes:
+            The chatbot node serves as a critical juncture in the system, where a system prompt is utilized to guide the Language Model's (LLM) responses. This prompt defines the LLM's role and equips it with the essential protocols required to address user queries effectively. It is built upon a standardized template, the COSTAR framework (Context, Objective, Style, Tone, Audience, Response), which serves as the foundation for prompt design. The system prompt is designed with a standardized template as its foundation. By applying COSTAR, the chatbot maintains consistency, clarity, and reliability in its responses across all user interactions. However, to provide personalized and contextually relevant responses, the system prompt template is augmented with user-specific information. This additional data includes:
           </p>
           <ul>
             <li>The user's individualized care plan</li>
@@ -3283,13 +3274,9 @@
           >
           </image-component>
           <p>
-            The initial testing provided critical insights into preliminary
-            chatbot response and the usage of tools given the background context
-            of the user. It also provided insights into the chatbot’s retrieval
-            accuracy and tool selection process. For the next stage of
-            assessment, we consolidated the responses from the chatbot to assess
-            the chatbot accuracy and user friendliness. Below are the chatbot
-            responses and the assessment we conducted (figure 29).
+            The initial round of testing provided valuable insights into the chatbot’s performance within the context of user interactions, particularly for dengue-related queries. This phase not only assessed the accuracy of the chatbot's responses and its use of embedded tools, but also allowed for observation of its retrieval patterns and conversational flow.
+            <br /><br />
+            To further evaluate chatbot performance, a detailed qualitative analysis was conducted on individual responses. Each chatbot-generated answer was reviewed for factual accuracy, tone, and alignment with expected behaviour (e.g., avoiding references to internal tools or the care plan). Additionally, a selective user testing exercise was carried out with nursing and medical students, who provided clinical feedback on the appropriateness, clarity, and usefulness of the answers.Below are the chatbot responses and the assessment we conducted (figure 29).
           </p>
           <image-component
             id="fig-29"
@@ -3299,15 +3286,7 @@
           >
           </image-component>
           <p>
-            During testing, a key issue identified was the chatbot's tendency to
-            explicitly mention the sources of its retrieved information, such as
-            referencing the tools used or directly stating that the response was
-            derived from the care plan. While this approach provides
-            transparency, it was found to be less user-friendly and detracted
-            from a natural conversational experience. Users may not need to know
-            the technical details of how responses are generated, instead, they
-            expect clear and human-like interactions that provide relevant
-            information without unnecessary system references.
+            One of the key issues identified during this phase was the chatbot’s tendency to reference backend processes or data sources—for instance, stating that an answer was derived "from the care plan" or mentioning tool usage. While this level of transparency reflects internal logic traceability, it detracted from the natural, patient-friendly tone expected in a conversational interface. Users generally prefer concise, empathetic, and informative responses without overt mention of backend mechanics.
           </p>
           <table
             id="table-27"
@@ -3528,12 +3507,12 @@
             structure emerged from the need for consistent, scalable, and
             context-sensitive chatbot behavior, particularly in healthcare
             settings where clarity, empathy, and safety are critical. The
-            updated prompt (Appendix D) goes beyond role definition to include
+            updated prompt goes beyond role definition to include
             specific capabilities, safety rules, tone and language preferences,
             and examples of how the chatbot should respond across different
             scenarios. These improvements were informed by academic studies
             which emphasizes [23] the importance of precise task framing and
-            user-level adaptation, and demonstrates [e] how contextual prompts
+            user-level adaptation, and demonstrates how contextual prompts
             enhance LLM-based decision support in clinical settings.
           </p>
 
@@ -3550,14 +3529,14 @@
 
           <p>
             With this prompt structure, a reassessment of the FAQs was conducted
-            and MOHT validated the responses and provided feedback (Appendix D)
+            and MOHT validated the responses and provided feedback
             for each of the responses.
           </p>
           <image-component
-            id="fig-x"
+            id="fig-32"
             tag="image"
-            source="assets/figx.png"
-            subtitle="Figure X. Feedback From MOHT Team"
+            source="assets/fig32.png"
+            subtitle="Figure 32. Feedback From MOHT Team"
           >
           </image-component>
         </div>
@@ -3728,16 +3707,7 @@
               <li>The ability of reminders to alert the user</li>
             </ol>
             <p>
-              Most of these issues stem from the chatbot. In particular, these
-              are issues with the size of the knowledge base and with the system
-              prompt in the backend. These necessitate the expansion of our
-              current knowledge base and fine tuning of the system prompt to
-              introduce more variation in sentence structure and to encourage
-              resolution of a patient's issues over referring the patient to
-              their health provider. The ability for the chatbot to give useful
-              suggestions is integral to the functioning of the chatbot, and
-              thus the system prompt modification will be worked on for the
-              final prototype.
+              Despite having a structured knowledge base and a detailed system prompt, the chatbot occasionally fails to deliver accurate suggestions, effectively resolve user concerns, or provide sufficiently humanised responses. These shortcomings are especially evident in conversations involving patient symptoms, where the bot either defaults to vague advice or redirects the user unnecessarily to a healthcare provider.
             </p>
             <table
               id="table-31"
@@ -3759,16 +3729,10 @@
               </th>
             </table>
             <p>
-              On the frontend, the current notifications system is deemed by
-              some users not to be sustained and impactful enough. This can be
-              improved with an opt-in calling or alarm system that can better
-              incentivise these patients to conduct their daily routine tasks.
-              The chatbot interface can also be overhauled to allow the display
-              of links from relevant websites to assure patients that the
-              chatbot's information comes from reliable sources. These issues
-              are less critical to the function of the application, and so the
-              priority for the resolution of these issues is medium to low and
-              can be slated for future works.
+              The ability of the chatbot to deliver relevant and empathetic guidance is central to its utility. As we move toward the final prototype, the focus will be on reinforcing instruction-following behaviour, improving intent anchoring, and validating performance through user-based feedback. These steps will ensure a more reliable and human-centred chatbot experience.
+              <br /><br />
+              On the frontend, the current notifications system is deemed by some users not to be sustained and impactful enough. This can be improved with an opt-in calling or alarm system that can better incentivise these patients to conduct their daily routine tasks. The chatbot interface can also be overhauled to allow the display of links from relevant websites to assure patients that the chatbot’s information comes from reliable sources. These issues are less critical to the function of the application, and so the priority for the resolution of these issues is medium to low and can be slated for future works.
+
             </p>
           </div>
         </div>
@@ -3810,10 +3774,10 @@
         <div id="sub-section-12-header-1">
           <h3>12.1 Frontend</h3>
           <image-component
-            id="fig-32"
+            id="fig-33"
             tag="image"
-            source="assets/fig32.png"
-            subtitle="Figure 32. Sample Nurse Wireframe"
+            source="assets/fig33.png"
+            subtitle="Figure 33. Sample Nurse Wireframe"
           >
           </image-component>
           <p>
